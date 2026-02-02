@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Centinela - Conversational Analytics</title>
+    <meta name="description" content="Simple, transparent pricing for Centinela. Choose the plan that fits your business needs.">
+
+    <link rel="shortcut icon" href="../favicon.png" type="image/png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/Icono-Morado.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/Icono-Morado.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/Icono-Morado.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #463886;
+            --primary-light: #5a4a9e;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --cyan: #0BD5E0;
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-tertiary: #1a1a24;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --text-tertiary: rgba(255, 255, 255, 0.4);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --gradient-accent: linear-gradient(135deg, #6366f1 0%, #0BD5E0 100%);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #fafafa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f5f5f5;
+            --bg-card: rgba(0, 0, 0, 0.02);
+            --text-primary: #0a0a0f;
+            --text-secondary: rgba(0, 0, 0, 0.6);
+            --text-tertiary: rgba(0, 0, 0, 0.4);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(0, 0, 0, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        [data-theme="light"] .navbar {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 32px;
+            transition: opacity 0.3s;
+        }
+
+        .logo .logo-light { display: none; }
+        [data-theme="light"] .logo .logo-dark { display: none; }
+        [data-theme="light"] .logo .logo-light { display: block; }
+
+        .logo-tagline {
+            font-size: 0.65rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-left: 1px solid var(--border-color);
+            padding-left: 12px;
+            line-height: 1.2;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--text-primary); }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle:hover { border-color: var(--border-hover); }
+        .theme-toggle svg { width: 18px; height: 18px; color: var(--text-secondary); }
+        .theme-toggle .icon-sun { display: none; }
+        .theme-toggle .icon-moon { display: block; }
+        [data-theme="light"] .theme-toggle .icon-sun { display: block; }
+        [data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+        .lang-switcher {
+            display: flex;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .lang-btn {
+            padding: 0.5rem 0.75rem;
+            background: transparent;
+            border: none;
+            color: var(--text-tertiary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        /* Hero Section */
+        .pricing-hero {
+            padding: 160px 5% 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.15), transparent),
+                radial-gradient(ellipse 60% 40% at 80% 50%, rgba(11, 213, 224, 0.1), transparent);
+            pointer-events: none;
+        }
+
+        .pricing-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .pricing-hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Pricing Cards */
+        .pricing-section {
+            padding: 40px 5% 120px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(30, 27, 46, 0.5) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(11, 213, 224, 0.05) 100%);
+        }
+
+        .pricing-card.featured::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 24px 24px 0 0;
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            padding: 6px 14px;
+            background: var(--gradient-accent);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-card .tagline {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-currency {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .price-amount {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: var(--text-tertiary);
+        }
+
+        .price-note {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            margin-bottom: 2rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-list .icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .features-list .icon-check {
+            color: #10b981;
+        }
+
+        .features-list .icon-x {
+            color: var(--text-tertiary);
+            opacity: 0.5;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 5%;
+            background: var(--bg-secondary);
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 5%;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(99, 102, 241, 0.1), transparent);
+            pointer-events: none;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            padding: 60px 5% 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            max-width: 300px;
+        }
+
+        .footer-brand .logo img {
+            height: 40px;
+        }
+
+        .footer-column h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-copy {
+            color: var(--text-tertiary);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
+            .footer-main { grid-template-columns: 1fr 1fr; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+
+        @media (max-width: 480px) {
+            .footer-main { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <a href="../index.html" class="logo">
+            <img src="../assets/img/Logo-Blanco.png" alt="Centinela" class="logo-dark">
+            <img src="../assets/img/Logo-Morado.png" alt="Centinela" class="logo-light">
+            <span class="logo-tagline">Context<br>Graphs</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="../index.html#demo" data-i18n="nav.product">Product</a></li>
+            <li><a href="../index.html#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="../index.html#security" data-i18n="nav.security">Security</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+            </button>
+
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+
+            <a href="contact.html" class="btn btn-primary" data-i18n="nav.requestDemo">Request Demo</a>
+        </div>
+    </nav>
+
+    <main role="main">
+        <section class="pricing-hero">
+            <h1 data-i18n="pricing.title">Simple, Transparent Pricing</h1>
+            <p data-i18n="pricing.subtitle">Choose the plan that fits your business. All plans include access to +400 data connectors.</p>
+        </section>
+
+        <section class="pricing-section">
+            <div class="pricing-grid">
+                <!-- Essential Plan -->
+                <div class="pricing-card">
+                    <h3 data-i18n="pricing.essentialName">Essential</h3>
+                    <p class="tagline" data-i18n="pricing.essentialTagline">Self-service data connection</p>
+
+                    <div class="price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">1,500</span>
+                        <span class="price-period" data-i18n="pricing.perMonth">/month</span>
+                    </div>
+                    <p class="price-note" data-i18n="pricing.essentialNote">Connect and query on your own</p>
+
+                    <ul class="features-list">
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.feature400">+400 data connectors</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureNL">Natural language queries</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureDashboard">Basic dashboard access</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            <span data-i18n="pricing.featureNoSupport">No dedicated support</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            <span data-i18n="pricing.featureNoMeetings">No strategy meetings</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            <span data-i18n="pricing.featureNoAutomations">No automations</span>
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="btn btn-secondary" data-i18n="pricing.getStarted">Get Started</a>
+                </div>
+
+                <!-- Growth Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <span class="pricing-badge" data-i18n="pricing.popular">Most Popular</span>
+                    <h3 data-i18n="pricing.growthName">Growth</h3>
+                    <p class="tagline" data-i18n="pricing.growthTagline">Full support & continuous improvement</p>
+
+                    <div class="price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">3,500</span>
+                        <span class="price-period" data-i18n="pricing.perMonth">/month</span>
+                    </div>
+                    <p class="price-note" data-i18n="pricing.growthNote">Everything you need to scale</p>
+
+                    <ul class="features-list">
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.feature400">+400 data connectors</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureNL">Natural language queries</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureAutoViz">Automatic visualizations</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureSupport">Dedicated support team</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureMeetings">Weekly strategy meetings</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureImprovements">Incremental improvements</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            <span data-i18n="pricing.featureNoActions">No system actions</span>
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="btn btn-primary" data-i18n="pricing.getStarted">Get Started</a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <h3 data-i18n="pricing.enterpriseName">Enterprise</h3>
+                    <p class="tagline" data-i18n="pricing.enterpriseTagline">Full automation & system actions</p>
+
+                    <div class="price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">5,000</span>
+                        <span class="price-period" data-i18n="pricing.perMonth">/month</span>
+                    </div>
+                    <p class="price-note" data-i18n="pricing.enterpriseNote">Complete data automation</p>
+
+                    <ul class="features-list">
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureEverything">Everything in Growth</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureActions">System actions & automations</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureWorkflows">Custom workflow automation</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureAlerts">Automated alerts & triggers</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featurePriority">Priority support (24/7)</span>
+                        </li>
+                        <li>
+                            <svg class="icon icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="pricing.featureCustom">Custom integrations</span>
+                        </li>
+                    </ul>
+
+                    <a href="contact.html" class="btn btn-secondary" data-i18n="pricing.contactSales">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 data-i18n="pricing.faqTitle">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4 data-i18n="pricing.faq1Q">What are system actions?</h4>
+                    <p data-i18n="pricing.faq1A">System actions allow Centinela to not just read your data, but also write back to your systems. Create invoices, update CRM records, send notifications—all through natural language commands.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="pricing.faq2Q">Can I upgrade my plan later?</h4>
+                    <p data-i18n="pricing.faq2A">Yes! You can upgrade at any time and only pay the difference. Your data and configurations will transfer seamlessly.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="pricing.faq3Q">What's included in dedicated support?</h4>
+                    <p data-i18n="pricing.faq3A">Dedicated support includes weekly strategy meetings, direct Slack/Teams access to our team, custom training, and priority response times.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 data-i18n="pricing.faq4Q">How long does setup take?</h4>
+                    <p data-i18n="pricing.faq4A">Most companies are up and running within 3 weeks. Complex Enterprise deployments may take 4-6 weeks depending on the number of integrations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2 data-i18n="pricing.ctaTitle">Ready to unify your data?</h2>
+            <p data-i18n="pricing.ctaSubtitle">Start with a free consultation. We'll analyze your data landscape and recommend the best approach.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-primary btn-large" data-i18n="pricing.ctaButton">Schedule a Call</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/img/Logo-Blanco.png" alt="Centinela" class="logo-dark">
+                        <img src="../assets/img/Logo-Morado.png" alt="Centinela" class="logo-light">
+                    </a>
+                    <p data-i18n="footer.description">Centinela connects all your data sources and lets you query them in natural language.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4 data-i18n="footer.product">Product</h4>
+                    <ul>
+                        <li><a href="../index.html#features" data-i18n="footer.features">Features</a></li>
+                        <li><a href="pricing.html" data-i18n="footer.pricing">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 data-i18n="footer.company">Company</h4>
+                    <ul>
+                        <li><a href="about.html" data-i18n="footer.about">About</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 data-i18n="footer.resources">Resources</h4>
+                    <ul>
+                        <li><a href="contact.html" data-i18n="footer.support">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Centinela. <span data-i18n="footer.copy">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const savedTheme = localStorage.getItem('centinela-theme');
+
+        if (savedTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+
+        themeToggle?.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? '' : 'light';
+
+            if (newTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('centinela-theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('centinela-theme', 'dark');
+            }
+        });
+
+        // Language Switcher
+        const langBtns = document.querySelectorAll('.lang-btn');
+        const savedLang = localStorage.getItem('centinela-lang') || 'en';
+
+        langBtns.forEach(btn => {
+            if (btn.dataset.lang === savedLang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+
+            btn.addEventListener('click', () => {
+                langBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                localStorage.setItem('centinela-lang', btn.dataset.lang);
+                // Reload to apply translations
+                location.reload();
+            });
+        });
+    </script>
+</body>
+</html>

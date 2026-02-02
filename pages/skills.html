@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Skills | Centinela</title>
+    <meta name="description" content="Explore Centinela's pre-built AI skills for Finance, Sales, Operations, and more. Deploy in days, not months.">
+
+    <link rel="icon" type="image/png" href="../assets/img/Icono-Morado.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #463886;
+            --primary-light: #5a4a9e;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --cyan: #0BD5E0;
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #111118;
+            --bg-tertiary: #1a1a24;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --bg-card-hover: rgba(255, 255, 255, 0.06);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --text-tertiary: rgba(255, 255, 255, 0.4);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --gradient-accent: linear-gradient(135deg, #6366f1 0%, #0BD5E0 100%);
+            --gradient-text: linear-gradient(135deg, #6366f1 0%, #0BD5E0 100%);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #fafafa;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f5f5f5;
+            --bg-card: rgba(0, 0, 0, 0.02);
+            --bg-card-hover: rgba(0, 0, 0, 0.04);
+            --text-primary: #0a0a0f;
+            --text-secondary: rgba(0, 0, 0, 0.6);
+            --text-tertiary: rgba(0, 0, 0, 0.4);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(0, 0, 0, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(10, 10, 15, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        [data-theme="light"] .navbar {
+            background: rgba(250, 250, 250, 0.9);
+        }
+
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo img { height: 32px; width: auto; }
+        .logo-dark { display: block; }
+        .logo-light { display: none; }
+        [data-theme="light"] .logo-dark { display: none; }
+        [data-theme="light"] .logo-light { display: block; }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover { color: var(--text-primary); }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover { border-color: var(--border-hover); }
+        .theme-toggle svg { width: 18px; height: 18px; color: var(--text-secondary); }
+        .theme-toggle .icon-sun { display: none; }
+        .theme-toggle .icon-moon { display: block; }
+        [data-theme="light"] .theme-toggle .icon-sun { display: block; }
+        [data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+        .lang-switcher {
+            display: flex;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+
+        .menu-toggle { display: none; }
+
+        /* Page Header */
+        .page-header {
+            padding: 180px 5% 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            padding: 0 5% 100px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Skill Detail */
+        .skill-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .skill-detail:last-child {
+            border-bottom: none;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .skill-info h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .skill-info > p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .skill-info h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .skill-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .skill-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .skill-features li svg {
+            width: 18px;
+            height: 18px;
+            color: var(--cyan);
+            flex-shrink: 0;
+        }
+
+        /* Skill Demo */
+        .skill-demo {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+
+        .skill-demo h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-query {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .demo-query:last-child {
+            margin-bottom: 0;
+        }
+
+        .demo-query:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 5%;
+            text-align: center;
+            background: var(--bg-secondary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 5% 2rem;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-primary);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+
+        /* Scroll animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .skill-detail {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu { display: none; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../assets/img/Logo-Blanco.png" alt="Centinela" class="logo-dark">
+            <img src="../assets/img/Logo-Morado.png" alt="Centinela" class="logo-light">
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="../index.html#demo" data-i18n="nav.product">Product</a></li>
+            <li><a href="../index.html#features" data-i18n="nav.features">Features</a></li>
+            <li><a href="../index.html#how" data-i18n="nav.howItWorks">How it Works</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+            </button>
+
+            <a href="contact.html" class="btn btn-primary" data-i18n="nav.requestDemo">Request Demo</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1>Intelligence Skills</h1>
+        <p>Pre-built AI capabilities that understand your business domain. Deploy in days, not months.</p>
+    </header>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <!-- Finance Skill -->
+            <div class="skill-detail reveal">
+                <div class="skill-info">
+                    <span class="skill-tag">READY</span>
+                    <h2>Finance Intelligence</h2>
+                    <p>Cash flow analysis, P&L insights, budget variance, financial forecasting in natural language.</p>
+
+                    <h4>Key Capabilities</h4>
+                    <ul class="skill-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Cash flow analysis and projections
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            P&L breakdown by department, product, or period
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Budget vs actual variance analysis
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Financial KPI tracking (EBITDA, margins, ratios)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Runway and burn rate calculations
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-demo">
+                    <h4>Sample Queries</h4>
+                    <div class="demo-query">"What's our cash runway at current burn rate?"</div>
+                    <div class="demo-query">"Show me P&L for Q4 compared to Q3"</div>
+                    <div class="demo-query">"Which departments are over budget?"</div>
+                    <div class="demo-query">"What's our EBITDA margin trend?"</div>
+                </div>
+            </div>
+
+            <!-- Sales Skill -->
+            <div class="skill-detail reveal">
+                <div class="skill-info">
+                    <span class="skill-tag">READY</span>
+                    <h2>Sales Intelligence</h2>
+                    <p>Pipeline analysis, conversion metrics, forecast accuracy, rep performance insights.</p>
+
+                    <h4>Key Capabilities</h4>
+                    <ul class="skill-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Pipeline health and deal tracking
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Conversion rates by stage, rep, or product
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Sales forecast and attainment tracking
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Rep performance leaderboards
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Deal velocity and cycle time analysis
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-demo">
+                    <h4>Sample Queries</h4>
+                    <div class="demo-query">"Show me deals at risk this month"</div>
+                    <div class="demo-query">"Who are the top 5 performers by revenue?"</div>
+                    <div class="demo-query">"What's our average deal cycle time?"</div>
+                    <div class="demo-query">"Pipeline value by stage"</div>
+                </div>
+            </div>
+
+            <!-- Operations Skill -->
+            <div class="skill-detail reveal">
+                <div class="skill-info">
+                    <span class="skill-tag">READY</span>
+                    <h2>Operations Intelligence</h2>
+                    <p>Inventory optimization, supply chain visibility, production metrics, logistics tracking.</p>
+
+                    <h4>Key Capabilities</h4>
+                    <ul class="skill-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Inventory levels and stock alerts
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Supplier performance and lead times
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Order fulfillment and shipping status
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Production efficiency metrics
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Demand forecasting
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-demo">
+                    <h4>Sample Queries</h4>
+                    <div class="demo-query">"Which products are below safety stock?"</div>
+                    <div class="demo-query">"Average lead time by supplier"</div>
+                    <div class="demo-query">"Pending shipments for this week"</div>
+                    <div class="demo-query">"Inventory turnover by category"</div>
+                </div>
+            </div>
+
+            <!-- Accounting Skill -->
+            <div class="skill-detail reveal">
+                <div class="skill-info">
+                    <span class="skill-tag">READY</span>
+                    <h2>Accounting Intelligence</h2>
+                    <p>Accounts receivable aging, journal analysis, reconciliation status, compliance checks.</p>
+
+                    <h4>Key Capabilities</h4>
+                    <ul class="skill-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            AR/AP aging reports
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Balance sheet and trial balance
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Bank reconciliation status
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Journal entry analysis
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Tax liability tracking
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-demo">
+                    <h4>Sample Queries</h4>
+                    <div class="demo-query">"Invoices overdue more than 30 days"</div>
+                    <div class="demo-query">"Balance sheet as of yesterday"</div>
+                    <div class="demo-query">"Unreconciled transactions this month"</div>
+                    <div class="demo-query">"Top 10 customers by outstanding balance"</div>
+                </div>
+            </div>
+
+            <!-- Marketing Skill -->
+            <div class="skill-detail reveal">
+                <div class="skill-info">
+                    <h2>Marketing Intelligence</h2>
+                    <p>Campaign ROI, channel attribution, CAC analysis, funnel optimization insights.</p>
+
+                    <h4>Key Capabilities</h4>
+                    <ul class="skill-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Campaign performance tracking
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Channel attribution analysis
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            CAC/LTV calculations
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Funnel conversion analysis
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            A/B test results
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-demo">
+                    <h4>Sample Queries</h4>
+                    <div class="demo-query">"CAC trend over the last 6 months"</div>
+                    <div class="demo-query">"Best performing channels by LTV"</div>
+                    <div class="demo-query">"Landing page conversion rates"</div>
+                    <div class="demo-query">"ROI by campaign this quarter"</div>
+                </div>
+            </div>
+
+            <!-- HR Skill -->
+            <div class="skill-detail reveal">
+                <div class="skill-info">
+                    <h2>HR Intelligence</h2>
+                    <p>Headcount analytics, turnover analysis, compensation benchmarks, hiring funnel metrics.</p>
+
+                    <h4>Key Capabilities</h4>
+                    <ul class="skill-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Headcount tracking by department
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Employee turnover analysis
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Compensation and payroll insights
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Hiring funnel metrics
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Time-off and attendance tracking
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-demo">
+                    <h4>Sample Queries</h4>
+                    <div class="demo-query">"Turnover rate by department"</div>
+                    <div class="demo-query">"Time to hire for engineering roles"</div>
+                    <div class="demo-query">"Payroll cost vs budget"</div>
+                    <div class="demo-query">"Open positions by team"</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content reveal">
+            <h2>Need a Custom Skill?</h2>
+            <p>We can build domain-specific intelligence for your industry. Let's talk about your requirements.</p>
+            <a href="contact.html" class="btn btn-primary btn-large">
+                Schedule a Demo
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <a href="../index.html" class="logo">
+                    <img src="../assets/img/Logo-Blanco.png" alt="Centinela" class="logo-dark" style="height: 28px;">
+                    <img src="../assets/img/Logo-Morado.png" alt="Centinela" class="logo-light" style="height: 28px;">
+                </a>
+                <p class="footer-copy">2026 Centinela. <span data-i18n="footer.copy">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/i18n.js"></script>
+    <script>
+        // Theme toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        const savedTheme = localStorage.getItem('centinela-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        themeToggle?.addEventListener('click', () => {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('centinela-theme', next);
+        });
+
+        // Scroll reveal
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
