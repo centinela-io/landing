@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centinela | Conversational Analytics - All Your Data, One Conversation</title>
-    <meta name="description" content="Connect your ERP, CRM, databases, and spreadsheets. Ask questions in natural language. Get real-time insights without writing SQL or waiting for reports.">
-    <meta name="keywords" content="conversational analytics, data unification, natural language queries, business intelligence, ERP integration, CRM integration, data connectors">
+    <title>Centinela | Knowledge Layer & Cognitive Sovereignty for Your Organization</title>
+    <meta name="description" content="Centinela builds your organization's knowledge layer — connects your systems, captures your business logic, and gives you sovereignty over your organizational intelligence.">
+    <meta name="keywords" content="knowledge layer, cognitive sovereignty, institutional memory, context graphs, business intelligence, knowledge infrastructure, AI enterprise, reconciliation, compliance, revenue intelligence">
     <meta name="author" content="Centinela">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://centinela.ai/">
-    <meta property="og:title" content="Centinela | Conversational Analytics - All Your Data, One Conversation">
-    <meta property="og:description" content="Connect your ERP, CRM, databases, and spreadsheets. Ask questions in natural language. Get real-time insights without writing SQL.">
+    <meta property="og:title" content="Centinela | Your Knowledge. Your Competitive Edge.">
+    <meta property="og:description" content="Build your organization's knowledge layer. Connect your systems, capture your business logic, and turn scattered data into actionable intelligence.">
     <meta property="og:image" content="https://centinela.ai/assets/img/og-image.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="es_ES">
@@ -21,8 +21,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://centinela.ai/">
-    <meta name="twitter:title" content="Centinela | Conversational Analytics">
-    <meta name="twitter:description" content="All your data sources, one conversation. No SQL required.">
+    <meta name="twitter:title" content="Centinela | Knowledge Layer & Cognitive Sovereignty">
+    <meta name="twitter:description" content="Your knowledge. Your competitive edge. Build the knowledge layer that gives your company sovereignty over its own intelligence.">
     <meta name="twitter:image" content="https://centinela.ai/assets/img/og-image.png">
 
     <!-- Canonical URL -->
@@ -965,6 +965,60 @@
             margin-top: 4px;
         }
 
+        /* Demo Section - Use Case Tabs */
+        .demo-usecase-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .demo-tab {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .demo-tab svg {
+            width: 16px;
+            height: 16px;
+            opacity: 0.6;
+        }
+
+        .demo-tab:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        .demo-tab.active {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+
+        .demo-tab.active svg {
+            opacity: 1;
+            color: var(--accent);
+        }
+
+        .demo-usecase-panel {
+            display: none;
+        }
+
+        .demo-usecase-panel.active {
+            display: flex;
+        }
+
         /* Demo Section - Premium Enhancements */
         .demo-ai-icon {
             width: 16px;
@@ -1491,68 +1545,236 @@
         /* ============================================
            PRICING PREVIEW
            ============================================ */
-        .pricing-preview {
-            padding: 80px 5%;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(11, 213, 224, 0.05));
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
+        /* Full Pricing Section */
+        .pricing-full-section {
+            padding: 100px 5%;
+            background: var(--bg-primary);
         }
 
-        .pricing-preview-content {
-            max-width: 900px;
+        .pricing-full-container {
+            max-width: 1100px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 3rem;
-            align-items: center;
         }
 
-        .pricing-preview-text h3 {
-            font-size: 1.75rem;
+        .pricing-full-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-full-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-full-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .pricing-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .pricing-toggle-label {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .pricing-toggle-switch {
+            position: relative;
+            width: 48px;
+            height: 26px;
+        }
+
+        .pricing-toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .pricing-toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 26px;
+            transition: 0.3s;
+        }
+
+        .pricing-toggle-slider::before {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background: var(--accent);
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .pricing-toggle-switch input:checked + .pricing-toggle-slider::before {
+            transform: translateX(22px);
+        }
+
+        .pricing-save-badge {
+            font-size: 0.75rem;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-weight: 600;
+        }
+
+        /* Tier Cards */
+        .pricing-tiers {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 3rem;
+        }
+
+        .pricing-tier-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-tier-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .pricing-tier-popular {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(99, 102, 241, 0.2);
+        }
+
+        .pricing-popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 16px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-tier-name {
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
         }
 
-        .pricing-preview-text p {
+        .pricing-tier-tagline {
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            font-size: 1.05rem;
             margin-bottom: 1.5rem;
         }
 
-        .pricing-highlights {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
+        .pricing-tier-price {
+            margin-bottom: 1.5rem;
         }
 
-        .pricing-highlight {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
+        .pricing-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .pricing-period {
+            font-size: 1rem;
             color: var(--text-secondary);
         }
 
-        .pricing-highlight svg {
-            width: 18px;
-            height: 18px;
-            stroke: #10b981;
+        .pricing-tier-cta {
+            width: 100%;
+            display: block;
+            text-align: center;
         }
 
-        .pricing-preview-cta .btn {
-            padding: 1rem 2rem;
-            font-size: 1.05rem;
+        /* Feature Comparison Table */
+        .pricing-table-wrap {
+            margin-top: 2rem;
+        }
+
+        .pricing-table-wrap h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+        }
+
+        .pricing-table-scroll {
+            overflow-x: auto;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .pricing-table thead th {
+            text-align: center;
+            padding: 12px 16px;
+            font-weight: 700;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .pricing-table thead th:first-child {
+            text-align: left;
+        }
+
+        .pricing-table-popular {
+            color: var(--accent) !important;
+        }
+
+        .pricing-table tbody td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .pricing-table tbody td:first-child {
+            font-weight: 600;
+            color: var(--text-primary);
+            text-align: left;
+        }
+
+        .pricing-table tbody tr:hover {
+            background: rgba(99, 102, 241, 0.03);
         }
 
         @media (max-width: 768px) {
-            .pricing-preview-content {
+            .pricing-tiers {
                 grid-template-columns: 1fr;
-                text-align: center;
             }
 
-            .pricing-highlights {
-                justify-content: center;
+            .pricing-full-header h2 {
+                font-size: 1.75rem;
             }
 
             .trusted-logos {
@@ -4156,6 +4378,9 @@
             .demo-ai-findings { gap: 6px; }
             .demo-finding { padding: 6px 10px; font-size: 0.8rem; }
             .demo-recommendation { padding: 10px 12px; font-size: 0.8rem; }
+            .demo-usecase-tabs { gap: 6px; }
+            .demo-tab { padding: 8px 14px; font-size: 0.8rem; }
+            .demo-tab svg { width: 14px; height: 14px; }
 
             .comparison-column { padding: 1.5rem; }
             .comparison-column h3 { font-size: 1.1rem; }
@@ -4959,7 +5184,7 @@
         .skill-card.strategy { --skill-color: #8b5cf6; --skill-bg: rgba(139, 92, 246, 0.15); }
         .skill-card.logistics { --skill-color: #ec4899; --skill-bg: rgba(236, 72, 153, 0.15); }
         .skill-card.accounting { --skill-color: #14b8a6; --skill-bg: rgba(20, 184, 166, 0.15); }
-        .skill-card.hr { --skill-color: #f97316; --skill-bg: rgba(249, 115, 22, 0.15); }
+        .skill-card.compliance { --skill-color: #f59e0b; --skill-bg: rgba(245, 158, 11, 0.15); }
 
         /* Knowledge Quote */
         .knowledge-quote {
@@ -5490,7 +5715,7 @@
             <li><a href="#features" data-i18n="nav.features">Features</a></li>
             <li><a href="#security" data-i18n="nav.security">Security</a></li>
             <li><a href="pages/about.html" data-i18n="nav.about">About</a></li>
-            <li><a href="pages/pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+            <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
         </ul>
 
         <div class="nav-actions">
@@ -5529,18 +5754,18 @@
 
         <div class="hero-badge">
             <span class="pulse-dot"></span>
-            <span data-i18n="hero.badge">Conversational Analytics</span>
+            <span data-i18n="hero.badge">Soberanía cognitiva para tu empresa</span>
         </div>
 
-        <h1><span data-i18n="hero.titleLine1">All your data.</span><br><span class="gradient" data-i18n="hero.titleLine2">One conversation.</span></h1>
+        <h1><span data-i18n="hero.titleLine1">Tu conocimiento.</span><br><span class="gradient" data-i18n="hero.titleLine2">Tu ventaja competitiva.</span></h1>
 
         <p class="hero-description" data-i18n="hero.description">
-            Connect your ERP, CRM, databases, and spreadsheets. Ask questions in natural language. Get real-time insights without writing SQL or waiting for reports.
+            Centinela construye la capa de conocimiento de tu organización — conecta tus sistemas, captura tu lógica de negocio y convierte datos dispersos en inteligencia accionable. Sin depender de APIs externas.
         </p>
 
         <div class="hero-cta">
             <a href="pages/contact.html" class="btn btn-primary btn-large">
-                <span data-i18n="hero.ctaPrimary">Connect Your Data</span>
+                <span data-i18n="hero.ctaPrimary">Ver cómo funciona</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -5549,7 +5774,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polygon points="5 3 19 12 5 21 5 3"/>
                 </svg>
-                <span data-i18n="hero.ctaSecondary">See How It Works</span>
+                <span data-i18n="hero.ctaSecondary">Solicitar demo</span>
             </a>
         </div>
 
@@ -5572,14 +5797,14 @@
                         <path d="M12 2v4m0 12v4M2 12h4m12 0h4"/>
                     </svg>
                 </div>
-                <span class="loop-label" data-i18n="hero.loopEmbed">Understand</span>
+                <span class="loop-label" data-i18n="hero.loopEmbed">Modelar</span>
             </div>
             <span class="loop-arrow">→</span>
             <div class="loop-item loop-item-centinela">
                 <div class="loop-icon loop-icon-centinela">
                     <img src="assets/img/Icono-Blanco.png" alt="Centinela" class="loop-centinela-logo">
                 </div>
-                <span class="loop-label" data-i18n="hero.loopOwn">Answer</span>
+                <span class="loop-label" data-i18n="hero.loopOwn">Decide</span>
             </div>
         </div>
 
@@ -5598,30 +5823,16 @@
         <div class="container">
             <div class="problem-grid reveal">
                 <div class="problem-left">
-                    <span class="problem-label" data-i18n="problem.sectionLabel">The Hidden Cost</span>
-                    <h2 class="problem-headline" data-i18n="problem.headline">Your best decisions live in the wrong places</h2>
-                    <p class="problem-question" data-i18n="problem.question">What if every decision your company ever made was one question away?</p>
-                    <a href="pages/contact.html" class="problem-cta" data-i18n="problem.ctaText">Make it searchable →</a>
+                    <span class="problem-label" data-i18n="problem.sectionLabel">The Challenge</span>
+                    <h2 class="problem-headline" data-i18n="problem.headline">Your team wastes hours finding data to make a decision</h2>
+                    <p class="problem-question" data-i18n="problem.question">What if every answer was one question away?</p>
+                    <a href="pages/contact.html" class="problem-cta" data-i18n="problem.ctaText">Solve it now →</a>
                 </div>
                 <div class="problem-right">
                     <div class="problem-cards">
                         <div class="problem-card data-source" style="--delay: 0.1s;">
                             <div class="problem-card-icon">
-                                <!-- ERP Icon -->
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="3" width="20" height="14" rx="2"/>
-                                    <path d="M8 21h8"/>
-                                    <path d="M12 17v4"/>
-                                    <path d="M6 8h4"/>
-                                    <path d="M6 11h8"/>
-                                </svg>
-                            </div>
-                            <span data-i18n="problem.point1">In your ERP system</span>
-                            <div class="problem-card-pulse data"></div>
-                        </div>
-                        <div class="problem-card data-source" style="--delay: 0.2s;">
-                            <div class="problem-card-icon">
-                                <!-- CRM Icon -->
+                                <!-- Brain/Users Icon -->
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                                     <circle cx="9" cy="7" r="4"/>
@@ -5629,32 +5840,45 @@
                                     <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                                 </svg>
                             </div>
-                            <span data-i18n="problem.point2">Spread across CRM records</span>
+                            <span data-i18n="problem.point1">Critical knowledge lives in 3 people's heads</span>
+                            <div class="problem-card-pulse data"></div>
+                        </div>
+                        <div class="problem-card data-source" style="--delay: 0.2s;">
+                            <div class="problem-card-icon">
+                                <!-- User-Plus Icon -->
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="8.5" cy="7" r="4"/>
+                                    <line x1="20" y1="8" x2="20" y2="14"/>
+                                    <line x1="23" y1="11" x2="17" y2="11"/>
+                                </svg>
+                            </div>
+                            <span data-i18n="problem.point2">Every new employee starts from zero</span>
                             <div class="problem-card-pulse data"></div>
                         </div>
                         <div class="problem-card data-source" style="--delay: 0.3s;">
                             <div class="problem-card-icon">
-                                <!-- Spreadsheet Icon -->
+                                <!-- Alert-Triangle Icon -->
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
-                                    <line x1="3" y1="9" x2="21" y2="9"/>
-                                    <line x1="3" y1="15" x2="21" y2="15"/>
-                                    <line x1="9" y1="3" x2="9" y2="21"/>
-                                    <line x1="15" y1="3" x2="15" y2="21"/>
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                                    <line x1="12" y1="9" x2="12" y2="13"/>
+                                    <line x1="12" y1="17" x2="12.01" y2="17"/>
                                 </svg>
                             </div>
-                            <span data-i18n="problem.point3">Hidden in spreadsheets</span>
+                            <span data-i18n="problem.point3">Decisions are made with incomplete data</span>
                             <div class="problem-card-pulse data"></div>
                         </div>
                         <div class="problem-card data-source" style="--delay: 0.4s;">
                             <div class="problem-card-icon">
-                                <!-- Email/Chat Icon -->
+                                <!-- File-X Icon -->
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="9.5" y1="12.5" x2="14.5" y2="17.5"/>
+                                    <line x1="14.5" y1="12.5" x2="9.5" y2="17.5"/>
                                 </svg>
                             </div>
-                            <span data-i18n="problem.point4">Lost in emails and chat</span>
+                            <span data-i18n="problem.point4">Business logic isn't documented</span>
                             <div class="problem-card-pulse data"></div>
                         </div>
                     </div>
@@ -5690,12 +5914,36 @@
         </div>
     </section>
 
-    <!-- Product Demo -->
+    <!-- Product Demo - Use Case Tabs -->
     <section id="demo" class="demo-section">
         <div class="demo-container">
             <div class="demo-header reveal">
-                <h2 data-i18n="demo.title">Ask anything. Get answers.</h2>
-                <p data-i18n="demo.subtitle">Your ERP, CRM, databases, and spreadsheets—all connected, all queryable, all in one conversation.</p>
+                <h2 data-i18n="demo.title">Real questions. Concrete answers.</h2>
+                <p data-i18n="demo.subtitle">See how Centinela responds to questions your team asks every day.</p>
+            </div>
+
+            <!-- Use Case Tabs -->
+            <div class="demo-usecase-tabs reveal">
+                <button class="demo-tab active" data-tab="uc1">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    <span data-i18n="demo.tab1">Reconciliations</span>
+                </button>
+                <button class="demo-tab" data-tab="uc2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <span data-i18n="demo.tab2">Revenue Intelligence</span>
+                </button>
+                <button class="demo-tab" data-tab="uc3">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span data-i18n="demo.tab3">Compliance</span>
+                </button>
+                <button class="demo-tab" data-tab="uc4">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span data-i18n="demo.tab4">Operations</span>
+                </button>
+                <button class="demo-tab" data-tab="uc5">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                    <span data-i18n="demo.tab5">Marketing Digital</span>
+                </button>
             </div>
 
             <div class="demo-mockup reveal">
@@ -5707,100 +5955,168 @@
                         <div class="demo-browser-url">app.centinela.ai</div>
                     </div>
                     <div class="demo-content">
+                        <!-- Sidebar (restored) -->
                         <div class="demo-sidebar">
-                            <div class="demo-sidebar-item active centinela-sidebar-item">
-                                <span class="centinela-inline-icon">
-                                    <img src="assets/img/Icono-Blanco.png" alt="Centinela">
-                                </span>
-                                <span data-i18n="demo.sidebarAsk">Ask Centinela</span>
+                            <div class="demo-sidebar-item active">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg>
+                                <span>Ask Centinela</span>
                             </div>
                             <div class="demo-sidebar-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/><path d="M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83"/></svg>
-                                <span data-i18n="demo.sidebarGraph">Context Graph</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83"/></svg>
+                                <span>Data Graph</span>
                             </div>
                             <div class="demo-sidebar-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
-                                <span data-i18n="demo.sidebarSources">Connected Sources</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                                <span>Connected Sources</span>
                             </div>
                             <div class="demo-sidebar-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                                <span data-i18n="demo.sidebarInsights">Insights</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7.5L12 17l-6.5 3.5 2-7.5L2 9h7z"/></svg>
+                                <span>Insights</span>
                             </div>
                             <div class="demo-sidebar-item">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                                <span data-i18n="demo.sidebarHistory">Decision Log</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                <span>Query Log</span>
                             </div>
                         </div>
                         <div class="demo-main">
-                            <div class="demo-chat" id="demoChat">
+                            <!-- UC1: Reconciliations -->
+                            <div class="demo-chat demo-usecase-panel active" id="demoPanelUc1">
                                 <div class="demo-message user-message">
                                     <div class="demo-message-avatar user">
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                                     </div>
-                                    <div class="demo-message-content" data-i18n="demo.userQuestion">
-                                        What's our current inventory status for organic goldenberries?
-                                    </div>
+                                    <div class="demo-message-content" data-i18n="demo.uc1Question">How many unreconciled invoices do we have this month?</div>
                                 </div>
                                 <div class="demo-message ai-message">
                                     <div class="demo-message-avatar ai">
                                         <img src="assets/img/Icono-Blanco.png" alt="Centinela" class="demo-ai-icon">
                                     </div>
                                     <div class="demo-message-content ai">
-                                        <span data-i18n="demo.aiResponse">Here's what I found across your systems:</span><br><br>
+                                        <span data-i18n="demo.uc1Response">Here's the reconciliation status for this month:</span><br><br>
                                         <div class="demo-ai-findings">
-                                            <div class="demo-finding">
-                                                <span class="demo-finding-icon">📦</span>
-                                                <span data-i18n="demo.aiResponseDetail1">Organic Goldenberries: 12,450 kg available</span>
-                                            </div>
-                                            <div class="demo-finding">
-                                                <span class="demo-finding-icon">📍</span>
-                                                <span data-i18n="demo.aiResponseDetail2">Location: Bogota Warehouse A (your SOPs mark this as priority)</span>
-                                            </div>
-                                            <div class="demo-finding">
-                                                <span class="demo-finding-icon">✅</span>
-                                                <span data-i18n="demo.aiResponseDetail3">Certification: USDA Organic, Fair Trade verified</span>
-                                            </div>
-                                            <div class="demo-finding alert">
-                                                <span class="demo-finding-icon">⚠️</span>
-                                                <span data-i18n="demo.aiResponseDetail4">Alert: 2,100 kg expiring in 14 days</span>
-                                            </div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">📋</span><span data-i18n="demo.uc1Detail1">247 invoices pending reconciliation</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">✅</span><span data-i18n="demo.uc1Detail2">89% automatic match — 220 invoices reconciled</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">🔍</span><span data-i18n="demo.uc1Detail3">27 require manual review (top 3 differences listed below)</span></div>
+                                            <div class="demo-finding alert"><span class="demo-finding-icon">⚠️</span><span data-i18n="demo.uc1Detail4">Alert: $125K in invoices older than 30 days</span></div>
                                         </div>
                                         <div class="demo-recommendation">
-                                            <div class="demo-recommendation-header">
-                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7.5L12 17l-6.5 3.5 2-7.5L2 9h7z"/></svg>
-                                                <span>Recommendation</span>
-                                            </div>
-                                            <span data-i18n="demo.aiRecommendation">Based on your sales history: EU clients typically accept short shelf-life inventory. Consider prioritizing shipment to that region.</span>
+                                            <div class="demo-recommendation-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7.5L12 17l-6.5 3.5 2-7.5L2 9h7z"/></svg><span>Recommendation</span></div>
+                                            <span data-i18n="demo.uc1Recommendation">The 27 manual cases are concentrated in 3 suppliers. I recommend scheduling a review session with the accounts payable team this week.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- UC2: Revenue Intelligence -->
+                            <div class="demo-chat demo-usecase-panel" id="demoPanelUc2">
+                                <div class="demo-message user-message">
+                                    <div class="demo-message-avatar user">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    </div>
+                                    <div class="demo-message-content" data-i18n="demo.uc2Question">What's the revenue forecast for Q2 vs budget?</div>
+                                </div>
+                                <div class="demo-message ai-message">
+                                    <div class="demo-message-avatar ai">
+                                        <img src="assets/img/Icono-Blanco.png" alt="Centinela" class="demo-ai-icon">
+                                    </div>
+                                    <div class="demo-message-content ai">
+                                        <span data-i18n="demo.uc2Response">Here's the Q2 revenue analysis:</span><br><br>
+                                        <div class="demo-ai-findings">
+                                            <div class="demo-finding"><span class="demo-finding-icon">📈</span><span data-i18n="demo.uc2Detail1">Q2 Forecast: $3.2M (+8% vs budget)</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">⚠️</span><span data-i18n="demo.uc2Detail2">Risk: 3 large accounts pending renewal ($480K)</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">🎯</span><span data-i18n="demo.uc2Detail3">Weighted pipeline: $4.1M (78% confidence)</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">🏆</span><span data-i18n="demo.uc2Detail4">Best channel: Enterprise direct (+23% vs last year)</span></div>
+                                        </div>
+                                        <div class="demo-recommendation">
+                                            <div class="demo-recommendation-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7.5L12 17l-6.5 3.5 2-7.5L2 9h7z"/></svg><span>Recommendation</span></div>
+                                            <span data-i18n="demo.uc2Recommendation">The 3 pending renewals represent 15% of the forecast. I recommend prioritizing contact with these accounts before end of month.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- UC3: Compliance -->
+                            <div class="demo-chat demo-usecase-panel" id="demoPanelUc3">
+                                <div class="demo-message user-message">
+                                    <div class="demo-message-avatar user">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    </div>
+                                    <div class="demo-message-content" data-i18n="demo.uc3Question">Are we up to date with tax filings?</div>
+                                </div>
+                                <div class="demo-message ai-message">
+                                    <div class="demo-message-avatar ai">
+                                        <img src="assets/img/Icono-Blanco.png" alt="Centinela" class="demo-ai-icon">
+                                    </div>
+                                    <div class="demo-message-content ai">
+                                        <span data-i18n="demo.uc3Response">Current tax compliance status:</span><br><br>
+                                        <div class="demo-ai-findings">
+                                            <div class="demo-finding"><span class="demo-finding-icon">✅</span><span data-i18n="demo.uc3Detail1">VAT: Filed and up to date</span></div>
+                                            <div class="demo-finding alert"><span class="demo-finding-icon">⏰</span><span data-i18n="demo.uc3Detail2">Withholding tax: February filing pending (due Feb 20)</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">📅</span><span data-i18n="demo.uc3Detail3">Income tax: Next deadline March 15</span></div>
+                                            <div class="demo-finding alert"><span class="demo-finding-icon">🔔</span><span data-i18n="demo.uc3Detail4">2 active alerts: municipal tax + regulatory update</span></div>
+                                        </div>
+                                        <div class="demo-recommendation">
+                                            <div class="demo-recommendation-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7.5L12 17l-6.5 3.5 2-7.5L2 9h7z"/></svg><span>Recommendation</span></div>
+                                            <span data-i18n="demo.uc3Recommendation">The February withholding tax filing is 4 days away. All supporting documents are ready in the system. Should I generate the filing report?</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- UC4: Operations -->
+                            <div class="demo-chat demo-usecase-panel" id="demoPanelUc4">
+                                <div class="demo-message user-message">
+                                    <div class="demo-message-avatar user">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    </div>
+                                    <div class="demo-message-content" data-i18n="demo.uc4Question">What's the status of January's close?</div>
+                                </div>
+                                <div class="demo-message ai-message">
+                                    <div class="demo-message-avatar ai">
+                                        <img src="assets/img/Icono-Blanco.png" alt="Centinela" class="demo-ai-icon">
+                                    </div>
+                                    <div class="demo-message-content ai">
+                                        <span data-i18n="demo.uc4Response">January close progress:</span><br><br>
+                                        <div class="demo-ai-findings">
+                                            <div class="demo-finding"><span class="demo-finding-icon">📊</span><span data-i18n="demo.uc4Detail1">87% completed (13 of 15 tasks done)</span></div>
+                                            <div class="demo-finding alert"><span class="demo-finding-icon">🏦</span><span data-i18n="demo.uc4Detail2">Pending: bank reconciliation ($45K difference)</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">📝</span><span data-i18n="demo.uc4Detail3">Pending: portfolio provisions and FX adjustments</span></div>
+                                            <div class="demo-finding alert"><span class="demo-finding-icon">🔒</span><span data-i18n="demo.uc4Detail4">Blocked: waiting for 3 supplier invoices</span></div>
+                                        </div>
+                                        <div class="demo-recommendation">
+                                            <div class="demo-recommendation-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7.5L12 17l-6.5 3.5 2-7.5L2 9h7z"/></svg><span>Recommendation</span></div>
+                                            <span data-i18n="demo.uc4Recommendation">The $45K bank difference is traced to 2 transactions from Jan 28. I recommend verifying with the treasury team before closing.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- UC5: Marketing Digital -->
+                            <div class="demo-chat demo-usecase-panel" id="demoPanelUc5">
+                                <div class="demo-message user-message">
+                                    <div class="demo-message-avatar user">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    </div>
+                                    <div class="demo-message-content" data-i18n="demo.uc5Question">How are this month's campaigns performing and where should I reallocate budget?</div>
+                                </div>
+                                <div class="demo-message ai-message">
+                                    <div class="demo-message-avatar ai">
+                                        <img src="assets/img/Icono-Blanco.png" alt="Centinela" class="demo-ai-icon">
+                                    </div>
+                                    <div class="demo-message-content ai">
+                                        <span data-i18n="demo.uc5Response">Active campaign analysis:</span><br><br>
+                                        <div class="demo-ai-findings">
+                                            <div class="demo-finding"><span class="demo-finding-icon">📈</span><span data-i18n="demo.uc5Detail1">Google Ads: ROAS 4.2x (above 3.5x target) — $12K spent</span></div>
+                                            <div class="demo-finding alert"><span class="demo-finding-icon">⚠️</span><span data-i18n="demo.uc5Detail2">Meta Ads: ROAS 1.8x (below target) — "lookalike professionals" audience saturated</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">💎</span><span data-i18n="demo.uc5Detail3">LinkedIn: CPA $45 but highest quality leads (32% close rate vs 12% Meta)</span></div>
+                                            <div class="demo-finding alert"><span class="demo-finding-icon">🎯</span><span data-i18n="demo.uc5Detail4">Opportunity: $3K from Meta → LinkedIn would generate ~67 additional high-value leads</span></div>
+                                        </div>
+                                        <div class="demo-recommendation">
+                                            <div class="demo-recommendation-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7.5L12 17l-6.5 3.5 2-7.5L2 9h7z"/></svg><span>Recommendation</span></div>
+                                            <span data-i18n="demo.uc5Recommendation">I recommend reallocating $3K from Meta to LinkedIn this week. The lookalike audience is exhausted. LinkedIn CPL is higher but close value is 3x. Should I execute the reallocation?</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="demo-input">
-                                <input type="text" data-i18n-placeholder="demo.inputPlaceholder" placeholder="Ask anything about your business..." aria-label="Ask a question about your business data">
+                                <input type="text" data-i18n-placeholder="demo.inputPlaceholder" placeholder="Ask anything about your data..." aria-label="Ask a question about your business data">
                                 <button data-i18n="demo.inputButton">Ask</button>
-                            </div>
-                            <div class="demo-metrics">
-                                <div class="demo-metric-card">
-                                    <div class="demo-metric-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="16 13 12 17 8 13"/></svg>
-                                    </div>
-                                    <div class="demo-metric-value" data-count="12847">12,847</div>
-                                    <div class="demo-metric-label" data-i18n="demo.metricKnowledge">Decisions Captured</div>
-                                </div>
-                                <div class="demo-metric-card">
-                                    <div class="demo-metric-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                                    </div>
-                                    <div class="demo-metric-value">15+</div>
-                                    <div class="demo-metric-label" data-i18n="demo.metricSources">Sources Connected</div>
-                                </div>
-                                <div class="demo-metric-card">
-                                    <div class="demo-metric-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                    </div>
-                                    <div class="demo-metric-value" data-count="3847">3,847</div>
-                                    <div class="demo-metric-label" data-i18n="demo.metricDecisions">Questions Answered</div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -5824,8 +6140,8 @@
                         </svg>
                     </div>
                     <div class="stat-content">
-                        <div class="stat-value-large" data-i18n="stats.stat1Value">10x</div>
-                        <div class="stat-label-premium" data-i18n="stats.stat1Label">Faster answers to complex questions</div>
+                        <div class="stat-value-large" data-i18n="stats.stat1Value">85%</div>
+                        <div class="stat-label-premium" data-i18n="stats.stat1Label">Less time on accounting closes</div>
                     </div>
                     <div class="stat-graph">
                         <svg viewBox="0 0 100 40" preserveAspectRatio="none">
@@ -5842,8 +6158,8 @@
                         </svg>
                     </div>
                     <div class="stat-content">
-                        <div class="stat-value-large" data-i18n="stats.stat2Value">20+</div>
-                        <div class="stat-label-premium" data-i18n="stats.stat2Label">Years of knowledge, instantly searchable</div>
+                        <div class="stat-value-large" data-i18n="stats.stat2Value">90%</div>
+                        <div class="stat-label-premium" data-i18n="stats.stat2Label">Automatic invoice reconciliation</div>
                     </div>
                     <div class="stat-graph">
                         <svg viewBox="0 0 100 40" preserveAspectRatio="none">
@@ -5855,12 +6171,15 @@
                     <div class="stat-glow"></div>
                     <div class="stat-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
                         </svg>
                     </div>
                     <div class="stat-content">
-                        <div class="stat-value-large" data-i18n="stats.stat3Value">1</div>
-                        <div class="stat-label-premium" data-i18n="stats.stat3Label">Place to ask any question</div>
+                        <div class="stat-value-large" data-i18n="stats.stat3Value">3wk</div>
+                        <div class="stat-label-premium" data-i18n="stats.stat3Label">To production deployment</div>
                     </div>
                     <div class="stat-graph">
                         <svg viewBox="0 0 100 40" preserveAspectRatio="none">
@@ -5873,13 +6192,12 @@
                     <div class="stat-glow"></div>
                     <div class="stat-icon-wrap">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
                     <div class="stat-content">
-                        <div class="stat-value-large" data-i18n="stats.stat4Value">3wk</div>
-                        <div class="stat-label-premium" data-i18n="stats.stat4Label">To full deployment</div>
+                        <div class="stat-value-large" data-i18n="stats.stat4Value">24/7</div>
+                        <div class="stat-label-premium" data-i18n="stats.stat4Label">Compliance monitoring</div>
                     </div>
                     <div class="stat-graph">
                         <svg viewBox="0 0 100 40" preserveAspectRatio="none">
@@ -5990,29 +6308,31 @@
                         </div>
                         <span class="skills-count" data-i18n="knowledgeLayer.skillsCount">+50 skills</span>
                     </div>
-                    <div class="agent-skills-grid">
-                        <!-- Finance -->
+                    <div class="agent-skills-grid agent-skills-grid-4">
+                        <!-- Revenue Intelligence -->
                         <div class="skill-card finance">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="12" y1="1" x2="12" y2="23"/>
-                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                                </svg>
-                            </div>
-                            <h4 data-i18n="knowledgeLayer.skill1Title">Finance</h4>
-                            <p data-i18n="knowledgeLayer.skill1Desc">Cash flow, forecasting, financial modeling</p>
-                            <div class="skill-example" data-i18n="knowledgeLayer.skill1Ex">"Project cash flow for next quarter"</div>
-                        </div>
-                        <!-- Marketing -->
-                        <div class="skill-card marketing">
                             <div class="skill-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                                 </svg>
                             </div>
-                            <h4 data-i18n="knowledgeLayer.skill2Title">Marketing</h4>
-                            <p data-i18n="knowledgeLayer.skill2Desc">Campaign analysis, attribution, ROI</p>
-                            <div class="skill-example" data-i18n="knowledgeLayer.skill2Ex">"Which campaigns drove conversions?"</div>
+                            <h4 data-i18n="knowledgeLayer.skill1Title">Revenue Intelligence</h4>
+                            <p data-i18n="knowledgeLayer.skill1Desc">Forecast, pipeline, account analysis, revenue trends</p>
+                            <div class="skill-example" data-i18n="knowledgeLayer.skill1Ex">"What's the revenue forecast for Q2 vs budget?"</div>
+                        </div>
+                        <!-- Accounting & Reconciliations -->
+                        <div class="skill-card accounting">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                </svg>
+                            </div>
+                            <h4 data-i18n="knowledgeLayer.skill2Title">Accounting & Reconciliations</h4>
+                            <p data-i18n="knowledgeLayer.skill2Desc">Closes, reconciliations, provisions, financial reporting</p>
+                            <div class="skill-example" data-i18n="knowledgeLayer.skill2Ex">"Show me unreconciled invoices this month"</div>
                         </div>
                         <!-- Operations -->
                         <div class="skill-card operations">
@@ -6023,74 +6343,19 @@
                                 </svg>
                             </div>
                             <h4 data-i18n="knowledgeLayer.skill3Title">Operations</h4>
-                            <p data-i18n="knowledgeLayer.skill3Desc">Process optimization, capacity planning</p>
-                            <div class="skill-example" data-i18n="knowledgeLayer.skill3Ex">"Identify bottlenecks in production"</div>
+                            <p data-i18n="knowledgeLayer.skill3Desc">Inventory, supply chain, efficiency, capacity planning</p>
+                            <div class="skill-example" data-i18n="knowledgeLayer.skill3Ex">"What's our current inventory turnover rate?"</div>
                         </div>
-                        <!-- Analytics -->
-                        <div class="skill-card analytics">
+                        <!-- Compliance & Regulatory -->
+                        <div class="skill-card compliance">
                             <div class="skill-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 3v18h18"/>
-                                    <path d="M18 17V9M13 17V5M8 17v-3"/>
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                                 </svg>
                             </div>
-                            <h4 data-i18n="knowledgeLayer.skill4Title">Data Analysis</h4>
-                            <p data-i18n="knowledgeLayer.skill4Desc">KPIs, trends, anomaly detection</p>
-                            <div class="skill-example" data-i18n="knowledgeLayer.skill4Ex">"Why did revenue spike last week?"</div>
-                        </div>
-                        <!-- Logistics -->
-                        <div class="skill-card logistics">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="1" y="3" width="15" height="13"/>
-                                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                                    <circle cx="5.5" cy="18.5" r="2.5"/>
-                                    <circle cx="18.5" cy="18.5" r="2.5"/>
-                                </svg>
-                            </div>
-                            <h4 data-i18n="knowledgeLayer.skill5Title">Logistics</h4>
-                            <p data-i18n="knowledgeLayer.skill5Desc">Inventory, shipping, supply chain</p>
-                            <div class="skill-example" data-i18n="knowledgeLayer.skill5Ex">"Optimize delivery routes for EU"</div>
-                        </div>
-                        <!-- Strategy -->
-                        <div class="skill-card strategy">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                                    <polyline points="2 17 12 22 22 17"/>
-                                    <polyline points="2 12 12 17 22 12"/>
-                                </svg>
-                            </div>
-                            <h4 data-i18n="knowledgeLayer.skill6Title">Strategy</h4>
-                            <p data-i18n="knowledgeLayer.skill6Desc">Market sizing, competitive analysis</p>
-                            <div class="skill-example" data-i18n="knowledgeLayer.skill6Ex">"Analyze market opportunity in LATAM"</div>
-                        </div>
-                        <!-- Accounting -->
-                        <div class="skill-card accounting">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                    <polyline points="14 2 14 8 20 8"/>
-                                    <line x1="16" y1="13" x2="8" y2="13"/>
-                                    <line x1="16" y1="17" x2="8" y2="17"/>
-                                </svg>
-                            </div>
-                            <h4 data-i18n="knowledgeLayer.skill7Title">Accounting</h4>
-                            <p data-i18n="knowledgeLayer.skill7Desc">Reconciliation, reporting, compliance</p>
-                            <div class="skill-example" data-i18n="knowledgeLayer.skill7Ex">"Reconcile accounts for Q3 close"</div>
-                        </div>
-                        <!-- HR -->
-                        <div class="skill-card hr">
-                            <div class="skill-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-                                </svg>
-                            </div>
-                            <h4 data-i18n="knowledgeLayer.skill8Title">HR & Admin</h4>
-                            <p data-i18n="knowledgeLayer.skill8Desc">Team metrics, resource planning</p>
-                            <div class="skill-example" data-i18n="knowledgeLayer.skill8Ex">"Analyze hiring needs for Q4"</div>
+                            <h4 data-i18n="knowledgeLayer.skill4Title">Compliance & Regulatory</h4>
+                            <p data-i18n="knowledgeLayer.skill4Desc">Tax filings, audits, alerts, regulatory monitoring</p>
+                            <div class="skill-example" data-i18n="knowledgeLayer.skill4Ex">"Are we up to date on tax filings?"</div>
                         </div>
                     </div>
                 </div>
@@ -6385,10 +6650,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
                     <span>ISO 42001</span>
                 </div>
-                <div class="mini-cert-badge">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    <span>PCI DSS</span>
-                </div>
+                <!-- PCI DSS removed - not certified -->
                 <div class="mini-cert-badge">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="18" height="18"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
                     <span>ISO 27701</span>
@@ -6487,12 +6749,12 @@
         </defs>
     </svg>
 
-    <!-- A New Way to Access Knowledge -->
+    <!-- Traditional BI vs Knowledge Layer -->
     <section class="comparison-section">
         <div class="container">
             <div class="section-header reveal">
-                <h2 data-i18n="comparison.title">A New Way to Access Your Data</h2>
-                <p data-i18n="comparison.subtitle">From scattered information to unified intelligence</p>
+                <h2 data-i18n="comparison.title">BI Tradicional vs Knowledge Layer</h2>
+                <p data-i18n="comparison.subtitle">La diferencia no es velocidad — es soberanía</p>
             </div>
 
             <div class="comparison-grid reveal">
@@ -6716,33 +6978,135 @@
                         <p data-i18n="faq.a5">Las herramientas de BI requieren dashboards predefinidos y conocimiento técnico. Con Centinela, cualquier persona puede hacer cualquier pregunta sin limitarse a lo que alguien diseñó previamente. Es la diferencia entre buscar en un menú fijo y tener un chef que cocina lo que pidas.</p>
                     </div>
                 </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h3 data-i18n="faq.q6">¿Qué es la "capa de conocimiento"?</h3>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a6">Es la infraestructura que captura y organiza no solo tus datos, sino la lógica de negocio, relaciones entre entidades y contexto de tu empresa. Es como la "memoria institucional" de tu organización, accesible para todos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h3 data-i18n="faq.q7">¿En qué se diferencia de un chatbot con IA?</h3>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a7">Un chatbot usa modelos genéricos. Centinela construye un modelo de conocimiento PROPIO de tu empresa — entiende tu terminología, tus métricas, tus relaciones de negocio. Es la diferencia entre preguntarle a un extraño y preguntarle a alguien que lleva 10 años en tu empresa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h3 data-i18n="faq.q8">¿Mis datos alimentan modelos de terceros?</h3>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a8">No. Tu conocimiento se queda en tu infraestructura. Ofrecemos Zero Data Retention. Tu soberanía cognitiva es nuestra prioridad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <h3 data-i18n="faq.q9">¿Qué puede automatizar Centinela en mi día a día?</h3>
+                        <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a9">Nuestra meta es que cada lunes, cada persona de tu equipo inicie sesión y tenga todo listo: qué debe saber, qué aprobar o rechazar para continuar con su trabajo de alto impacto. Todo lo demás — recopilar datos, generar reportes, monitorear compliance — lo hace Centinela automáticamente.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Preview -->
-    <section class="pricing-preview">
-        <div class="pricing-preview-content reveal">
-            <div class="pricing-preview-text">
-                <h3 data-i18n="pricingPreview.title">Planes adaptados a tu empresa</h3>
-                <p data-i18n="pricingPreview.subtitle">Desde startups hasta grandes corporaciones, tenemos el plan perfecto para ti.</p>
-                <div class="pricing-highlights">
-                    <div class="pricing-highlight">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                        <span data-i18n="pricingPreview.highlight1">Sin costos ocultos</span>
-                    </div>
-                    <div class="pricing-highlight">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                        <span data-i18n="pricingPreview.highlight2">Prueba gratuita</span>
-                    </div>
-                    <div class="pricing-highlight">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                        <span data-i18n="pricingPreview.highlight3">Cancela cuando quieras</span>
-                    </div>
+    <!-- Full Pricing Section -->
+    <section class="pricing-full-section" id="pricing">
+        <div class="pricing-full-container">
+            <div class="pricing-full-header reveal">
+                <h2 data-i18n="pricing.title">Precios Simples y Transparentes</h2>
+                <p data-i18n="pricing.subtitle">Elige el plan que se ajuste a tu negocio. Todos los planes incluyen acceso a +400 conectores de datos.</p>
+                <!-- Toggle -->
+                <div class="pricing-toggle">
+                    <span class="pricing-toggle-label" data-i18n="pricing.toggleMonthly">Mensual</span>
+                    <label class="pricing-toggle-switch">
+                        <input type="checkbox" id="pricingToggle">
+                        <span class="pricing-toggle-slider"></span>
+                    </label>
+                    <span class="pricing-toggle-label" data-i18n="pricing.toggleAnnual">Anual</span>
+                    <span class="pricing-save-badge" data-i18n="pricing.saveBadge">Ahorra 15%</span>
                 </div>
             </div>
-            <div class="pricing-preview-cta">
-                <a href="pages/pricing.html" class="btn btn-primary" data-i18n="pricingPreview.cta">Ver planes y precios</a>
+
+            <!-- 3 Tier Cards -->
+            <div class="pricing-tiers reveal">
+                <!-- Essential -->
+                <div class="pricing-tier-card">
+                    <div class="pricing-tier-name" data-i18n="pricing.essentialName">Essential</div>
+                    <div class="pricing-tier-tagline" data-i18n="pricing.essentialTagline">Conexión de datos self-service</div>
+                    <div class="pricing-tier-price">
+                        <span class="pricing-amount" data-i18n="pricing.essentialPrice">$3,500</span>
+                        <span class="pricing-period" data-i18n="pricing.perMonth">/mes</span>
+                    </div>
+                    <a href="pages/contact.html" class="btn btn-secondary pricing-tier-cta" data-i18n="pricing.getStarted">Comenzar</a>
+                </div>
+                <!-- Growth (Popular) -->
+                <div class="pricing-tier-card pricing-tier-popular">
+                    <div class="pricing-popular-badge" data-i18n="pricing.popular">Más Popular</div>
+                    <div class="pricing-tier-name" data-i18n="pricing.growthName">Growth</div>
+                    <div class="pricing-tier-tagline" data-i18n="pricing.growthTagline">Soporte completo y mejora continua</div>
+                    <div class="pricing-tier-price">
+                        <span class="pricing-amount" data-i18n="pricing.growthPrice">$5,000</span>
+                        <span class="pricing-period" data-i18n="pricing.perMonth">/mes</span>
+                    </div>
+                    <a href="pages/contact.html" class="btn btn-primary pricing-tier-cta" data-i18n="pricing.getStarted">Comenzar</a>
+                </div>
+                <!-- Enterprise -->
+                <div class="pricing-tier-card">
+                    <div class="pricing-tier-name" data-i18n="pricing.enterpriseName">Enterprise</div>
+                    <div class="pricing-tier-tagline" data-i18n="pricing.enterpriseTagline">Automatización completa y acciones</div>
+                    <div class="pricing-tier-price">
+                        <span class="pricing-amount" data-i18n="pricing.enterprisePrice">A medida</span>
+                    </div>
+                    <a href="pages/contact.html" class="btn btn-secondary pricing-tier-cta" data-i18n="pricing.contactSales">Contactar Ventas</a>
+                </div>
+            </div>
+
+            <!-- Feature Comparison Table -->
+            <div class="pricing-table-wrap reveal">
+                <h3 data-i18n="pricing.tableTitle">Compara los planes en detalle</h3>
+                <div class="pricing-table-scroll">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th data-i18n="pricing.essentialName">Essential</th>
+                                <th class="pricing-table-popular" data-i18n="pricing.growthName">Growth</th>
+                                <th data-i18n="pricing.enterpriseName">Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td data-i18n="pricing.rowConnectors">Conectores</td><td data-i18n="pricing.essConnectors">+400 conectores de datos</td><td data-i18n="pricing.groConnectors">+400 conectores de datos</td><td data-i18n="pricing.entConnectors">+400 + custom</td></tr>
+                            <tr><td data-i18n="pricing.rowQueries">Consultas</td><td data-i18n="pricing.essQueries">Lenguaje natural</td><td data-i18n="pricing.groQueries">Lenguaje natural</td><td data-i18n="pricing.entQueries">Lenguaje natural</td></tr>
+                            <tr><td data-i18n="pricing.rowKnowledgeLayer">Knowledge Layer</td><td data-i18n="pricing.essKnowledge">Básico</td><td data-i18n="pricing.groKnowledge">Avanzado (grafos de contexto)</td><td data-i18n="pricing.entKnowledge">Completo (grafos + agent skills)</td></tr>
+                            <tr><td data-i18n="pricing.rowDashboards">Dashboards</td><td data-i18n="pricing.essDashboards">Acceso básico</td><td data-i18n="pricing.groDashboards">Visualizaciones automáticas</td><td data-i18n="pricing.entDashboards">Visualizaciones + reportes custom</td></tr>
+                            <tr><td data-i18n="pricing.rowVerticals">Verticales</td><td data-i18n="pricing.essVerticals">1 vertical</td><td data-i18n="pricing.groVerticals">Hasta 3 verticales</td><td data-i18n="pricing.entVerticals">Ilimitadas</td></tr>
+                            <tr><td data-i18n="pricing.rowSupport">Soporte</td><td data-i18n="pricing.essSupport">Documentación</td><td data-i18n="pricing.groSupport">Equipo dedicado</td><td data-i18n="pricing.entSupport">Prioritario 24/7</td></tr>
+                            <tr><td data-i18n="pricing.rowMeetings">Reuniones</td><td data-i18n="pricing.essMeetings">—</td><td data-i18n="pricing.groMeetings">Reuniones semanales de estrategia</td><td data-i18n="pricing.entMeetings">Reuniones + roadmap dedicado</td></tr>
+                            <tr><td data-i18n="pricing.rowImprovements">Mejoras</td><td data-i18n="pricing.essImprovements">—</td><td data-i18n="pricing.groImprovements">Mejoras incrementales</td><td data-i18n="pricing.entImprovements">Mejoras + desarrollo custom</td></tr>
+                            <tr><td data-i18n="pricing.rowActions">Acciones en sistemas</td><td data-i18n="pricing.essActions">—</td><td data-i18n="pricing.groActions">—</td><td data-i18n="pricing.entActions">Escritura en sistemas (facturas, CRM, etc.)</td></tr>
+                            <tr><td data-i18n="pricing.rowWorkflows">Workflows</td><td data-i18n="pricing.essWorkflows">—</td><td data-i18n="pricing.groWorkflows">—</td><td data-i18n="pricing.entWorkflows">Automatización de flujos custom</td></tr>
+                            <tr><td data-i18n="pricing.rowAlerts">Alertas</td><td data-i18n="pricing.essAlerts">Básicas</td><td data-i18n="pricing.groAlerts">Configurables</td><td data-i18n="pricing.entAlerts">Alertas + triggers automáticos</td></tr>
+                            <tr><td data-i18n="pricing.rowUsers">Usuarios</td><td data-i18n="pricing.essUsers">Hasta 5</td><td data-i18n="pricing.groUsers">Hasta 20</td><td data-i18n="pricing.entUsers">Ilimitados</td></tr>
+                            <tr><td data-i18n="pricing.rowCustomIntegrations">Integraciones custom</td><td data-i18n="pricing.essCustom">—</td><td data-i18n="pricing.groCustom">—</td><td data-i18n="pricing.entCustom">Incluidas</td></tr>
+                            <tr><td data-i18n="pricing.rowSLA">SLA</td><td data-i18n="pricing.essSLA">—</td><td data-i18n="pricing.groSLA">99.5%</td><td data-i18n="pricing.entSLA">99.9%</td></tr>
+                            <tr><td data-i18n="pricing.rowSecurity">Seguridad</td><td data-i18n="pricing.essSecurity">Estándar</td><td data-i18n="pricing.groSecurity">SOC 2</td><td data-i18n="pricing.entSecurity">SOC 2 + configs custom</td></tr>
+                            <tr><td data-i18n="pricing.rowOnboarding">Onboarding</td><td data-i18n="pricing.essOnboarding">Self-service</td><td data-i18n="pricing.groOnboarding">Guiado (3 semanas)</td><td data-i18n="pricing.entOnboarding">White-glove (dedicado)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
@@ -6758,16 +7122,16 @@
                     Centinela
                 </span>
             </div>
-            <h2 data-i18n="cta.title">Ready to unify your data?</h2>
-            <p data-i18n="cta.description">Stop hunting through systems. Stop waiting for reports. Connect your data sources and start asking questions today.</p>
+            <h2 data-i18n="cta.title">¿Listo para construir tu capa de conocimiento?</h2>
+            <p data-i18n="cta.description">Deja de depender de datos dispersos y APIs genéricas. Construye la soberanía cognitiva de tu empresa.</p>
             <div class="cta-buttons">
                 <a href="pages/contact.html" class="btn btn-primary btn-large">
-                    <span data-i18n="cta.btnPrimary">Connect Your Data</span>
+                    <span data-i18n="cta.btnPrimary">Solicitar demo</span>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
-                <a href="#features" class="btn btn-secondary btn-large" data-i18n="cta.btnSecondary">Talk to Us</a>
+                <a href="#features" class="btn btn-secondary btn-large" data-i18n="cta.btnSecondary">Hablemos</a>
             </div>
         </div>
     </section>
@@ -7213,6 +7577,44 @@
                 if (!isActive) {
                     faqItem.classList.add('active');
                 }
+            });
+        });
+
+        // Pricing toggle (monthly / annual)
+        const pricingToggle = document.getElementById('pricingToggle');
+        if (pricingToggle) {
+            const monthlyPrices = { essential: '$3,500', growth: '$5,000' };
+            const annualPrices = { essential: '$2,975', growth: '$4,250' };
+            const periodKeys = { monthly: { en: '/month', es: '/mes' }, annual: { en: '/year', es: '/año' } };
+            const priceEls = document.querySelectorAll('.pricing-amount');
+            const periodEls = document.querySelectorAll('.pricing-period');
+
+            pricingToggle.addEventListener('change', () => {
+                const isAnnual = pricingToggle.checked;
+                const prices = isAnnual ? annualPrices : monthlyPrices;
+                const lang = currentLang || 'es';
+                const periodText = isAnnual ? periodKeys.annual[lang] : periodKeys.monthly[lang];
+
+                // Essential = first card, Growth = second card
+                if (priceEls[0]) priceEls[0].textContent = prices.essential;
+                if (priceEls[1]) priceEls[1].textContent = prices.growth;
+                // Enterprise stays the same
+                if (periodEls[0]) periodEls[0].textContent = periodText;
+                if (periodEls[1]) periodEls[1].textContent = periodText;
+            });
+        }
+
+        // Demo use-case tab switching
+        document.querySelectorAll('.demo-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetId = tab.getAttribute('data-tab');
+                // Update active tab
+                document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                // Update active panel
+                document.querySelectorAll('.demo-usecase-panel').forEach(panel => panel.classList.remove('active'));
+                const targetPanel = document.getElementById('demoPanel' + targetId.charAt(0).toUpperCase() + targetId.slice(1));
+                if (targetPanel) targetPanel.classList.add('active');
             });
         });
 

@@ -2,7 +2,7 @@
  * Centinela - Internationalization (i18n) Module
  * Supports: English (en), Spanish (es)
  *
- * Positioning: Conversational Analytics - All your data in one conversation
+ * Positioning: Cognitive Sovereignty — Knowledge Layer for your organization
  */
 
 const translations = {
@@ -18,29 +18,29 @@ const translations = {
             requestDemo: "Request Demo"
         },
 
-        // Hero Section - CONVERSATIONAL ANALYTICS
+        // Hero Section - COGNITIVE SOVEREIGNTY
         hero: {
-            badge: "Conversational Analytics",
-            titleLine1: "All your data.",
-            titleLine2: "One conversation.",
-            description: "Connect your ERP, CRM, databases, and spreadsheets. Ask questions in natural language. Get real-time insights without writing SQL or waiting for reports.",
-            ctaPrimary: "Connect Your Data",
-            ctaSecondary: "See How It Works",
+            badge: "Cognitive sovereignty for your company",
+            titleLine1: "Your knowledge.",
+            titleLine2: "Your competitive edge.",
+            description: "Centinela builds your organization's knowledge layer — connects your systems, captures your business logic, and turns scattered data into actionable intelligence. No external API dependency.",
+            ctaPrimary: "See how it works",
+            ctaSecondary: "Request demo",
             loopCapture: "Connect",
-            loopEmbed: "Analyze",
-            loopOwn: "Answer"
+            loopEmbed: "Model",
+            loopOwn: "Decide"
         },
 
-        // The Problem Section - Data Fragmentation
+        // The Problem Section - Knowledge Loss
         problem: {
-            sectionLabel: "The Challenge",
-            headline: "Your data lives in too many places",
-            point1: "In your ERP system",
-            point2: "Spread across CRM records",
-            point3: "Hidden in spreadsheets",
-            point4: "Lost in emails and chat",
-            question: "What if you could query ALL your data sources with a single conversation?",
-            ctaText: "Unify your data →"
+            sectionLabel: "The hidden cost",
+            headline: "Your company knows more than it can use",
+            point1: "Critical knowledge lives in 3 people's heads",
+            point2: "Every new employee starts from zero",
+            point3: "Decisions are made with incomplete data",
+            point4: "Business logic isn't documented",
+            question: "What if your organization's accumulated knowledge was one question away?",
+            ctaText: "Build your knowledge layer →"
         },
 
         // Trusted Section
@@ -48,40 +48,71 @@ const translations = {
             label: "Trusted by data-driven companies"
         },
 
-        // Demo Section
+        // Demo Section - Knowledge by Vertical
         demo: {
-            title: "Ask anything. Get answers.",
-            subtitle: "Your ERP, CRM, databases, and spreadsheets—all connected, all queryable, all in one conversation.",
+            title: "Knowledge activated by vertical",
+            subtitle: "Every department has its own knowledge layer. See how Centinela responds with real context from your company.",
+            // Tab labels
+            tab1: "Reconciliations",
+            tab2: "Revenue Intelligence",
+            tab3: "Compliance",
+            tab4: "Operations",
+            tab5: "Marketing Digital",
+            // Use case 1: Reconciliations
+            uc1Question: "How many unreconciled invoices do we have this month?",
+            uc1Response: "Here's the reconciliation status for this month:",
+            uc1Detail1: "247 invoices pending reconciliation",
+            uc1Detail2: "89% automatic match — 220 invoices reconciled",
+            uc1Detail3: "27 require manual review (top 3 differences listed below)",
+            uc1Detail4: "Alert: $125K in invoices older than 30 days",
+            uc1Recommendation: "The 27 manual cases are concentrated in 3 suppliers. I recommend scheduling a review session with the accounts payable team this week.",
+            // Use case 2: Revenue Intelligence
+            uc2Question: "What's the revenue forecast for Q2 vs budget?",
+            uc2Response: "Here's the Q2 revenue analysis:",
+            uc2Detail1: "Q2 Forecast: $3.2M (+8% vs budget)",
+            uc2Detail2: "Risk: 3 large accounts pending renewal ($480K)",
+            uc2Detail3: "Weighted pipeline: $4.1M (78% confidence)",
+            uc2Detail4: "Best channel: Enterprise direct (+23% vs last year)",
+            uc2Recommendation: "The 3 pending renewals represent 15% of the forecast. I recommend prioritizing contact with these accounts before end of month.",
+            // Use case 3: Compliance
+            uc3Question: "Are we up to date with tax filings?",
+            uc3Response: "Current tax compliance status:",
+            uc3Detail1: "VAT: Filed and up to date",
+            uc3Detail2: "Withholding tax: February filing pending (due Feb 20)",
+            uc3Detail3: "Income tax: Next deadline March 15",
+            uc3Detail4: "2 active alerts: municipal tax + regulatory update",
+            uc3Recommendation: "The February withholding tax filing is 4 days away. All supporting documents are ready in the system. Should I generate the filing report?",
+            // Use case 4: Operations
+            uc4Question: "What's the status of January's close?",
+            uc4Response: "January close progress:",
+            uc4Detail1: "87% completed (13 of 15 tasks done)",
+            uc4Detail2: "Pending: bank reconciliation ($45K difference)",
+            uc4Detail3: "Pending: portfolio provisions and FX adjustments",
+            uc4Detail4: "Blocked: waiting for 3 supplier invoices",
+            uc4Recommendation: "The $45K difference traces to 2 transactions from Jan 28. Verify with treasury.",
+            // Use case 5: Marketing Digital
+            uc5Question: "How are this month's campaigns performing and where should I reallocate budget?",
+            uc5Response: "Active campaign analysis:",
+            uc5Detail1: "Google Ads: ROAS 4.2x (above 3.5x target) — $12K spent",
+            uc5Detail2: "Meta Ads: ROAS 1.8x (below target) — \"lookalike professionals\" audience saturated",
+            uc5Detail3: "LinkedIn: CPA $45 but highest quality leads (32% close rate vs 12% Meta)",
+            uc5Detail4: "Opportunity: $3K from Meta → LinkedIn would generate ~67 additional high-value leads",
+            uc5Recommendation: "I recommend reallocating $3K from Meta to LinkedIn this week. The lookalike audience is exhausted. LinkedIn CPL is higher but close value is 3x. Should I execute the reallocation?",
             browserUrl: "app.centinela.ai",
-            sidebarAsk: "Ask Centinela",
-            sidebarGraph: "Data Graph",
-            sidebarSources: "Connected Sources",
-            sidebarInsights: "Insights",
-            sidebarHistory: "Query Log",
-            userQuestion: "What's our current inventory status for organic goldenberries?",
-            aiResponse: "Here's what I found across your systems:",
-            aiResponseDetail1: "Organic Goldenberries: 12,450 kg available",
-            aiResponseDetail2: "Location: Bogota Warehouse A (marked as priority in your ERP)",
-            aiResponseDetail3: "Certification: USDA Organic, Fair Trade verified",
-            aiResponseDetail4: "Alert: 2,100 kg expiring in 14 days",
-            aiRecommendation: "Based on your sales history: EU clients typically accept short shelf-life inventory. Consider prioritizing shipment to that region.",
             inputPlaceholder: "Ask anything about your data...",
-            inputButton: "Ask",
-            metricKnowledge: "Data Points Indexed",
-            metricSources: "Sources Connected",
-            metricDecisions: "Questions Answered"
+            inputButton: "Ask"
         },
 
-        // Stats Section - VALUE METRICS
+        // Stats Section - CONCRETE RESULTS
         stats: {
-            stat1Value: "10x",
-            stat1Label: "Faster answers to complex questions",
-            stat2Value: "400+",
-            stat2Label: "Data connectors available",
-            stat3Value: "1",
-            stat3Label: "Place to query all your data",
-            stat4Value: "3wk",
-            stat4Label: "To full deployment"
+            stat1Value: "85%",
+            stat1Label: "Less time on accounting closes",
+            stat2Value: "90%",
+            stat2Label: "Automatic invoice reconciliation",
+            stat3Value: "3wk",
+            stat3Label: "To production deployment",
+            stat4Value: "24/7",
+            stat4Label: "Compliance monitoring"
         },
 
         // Features Section - THE DATA STACK
@@ -122,7 +153,7 @@ const translations = {
             badge: "Knowledge Infrastructure",
             title: "Knowledge Layer.",
             titleHighlight: "Context Graphs.",
-            subtitle: "Infrastructure that captures, preserves, and activates your business knowledge. Not just data—the logic, relationships, and reasoning behind every decision.",
+            subtitle: "Not a chatbot that answers questions. It's infrastructure that captures, preserves, and activates your company's knowledge — the logic, relationships, and reasoning behind every decision. Your cognitive sovereignty.",
             // Knowledge Layers
             layer1Title: "Data Layer",
             layer1Desc: "All your sources, unified",
@@ -130,35 +161,23 @@ const translations = {
             layer2Desc: "Relationships & business logic",
             layer3Title: "Agent Skills",
             layer3Desc: "Specialized by vertical",
-            // Agent Skills
+            // Agent Skills - Focused on 4 use cases
             skillsTitle: "Agent Skills",
-            skillsCount: "+50 skills",
-            skill1Title: "Finance",
-            skill1Desc: "Cash flow, forecasting, financial modeling",
-            skill1Ex: "\"Project cash flow for next quarter\"",
-            skill2Title: "Marketing",
-            skill2Desc: "Campaign analysis, attribution, ROI",
-            skill2Ex: "\"Which campaigns drove conversions?\"",
+            skillsCount: "Specialized agents",
+            skill1Title: "Revenue Intelligence",
+            skill1Desc: "Forecast, pipeline, account analysis, revenue trends",
+            skill1Ex: "\"What's the revenue forecast for Q2 vs budget?\"",
+            skill2Title: "Accounting & Reconciliations",
+            skill2Desc: "Closes, reconciliations, provisions, financial reporting",
+            skill2Ex: "\"Show me unreconciled invoices this month\"",
             skill3Title: "Operations",
-            skill3Desc: "Process optimization, capacity planning",
-            skill3Ex: "\"Identify bottlenecks in production\"",
-            skill4Title: "Data Analysis",
-            skill4Desc: "KPIs, trends, anomaly detection",
-            skill4Ex: "\"Why did revenue spike last week?\"",
-            skill5Title: "Logistics",
-            skill5Desc: "Inventory, shipping, supply chain",
-            skill5Ex: "\"Optimize delivery routes for EU\"",
-            skill6Title: "Strategy",
-            skill6Desc: "Market sizing, competitive analysis",
-            skill6Ex: "\"Analyze market opportunity in LATAM\"",
-            skill7Title: "Accounting",
-            skill7Desc: "Reconciliation, reporting, compliance",
-            skill7Ex: "\"Reconcile accounts for Q3 close\"",
-            skill8Title: "HR & Admin",
-            skill8Desc: "Team metrics, resource planning",
-            skill8Ex: "\"Analyze hiring needs for Q4\"",
+            skill3Desc: "Inventory, supply chain, efficiency, capacity planning",
+            skill3Ex: "\"What's our current inventory turnover rate?\"",
+            skill4Title: "Compliance & Regulatory",
+            skill4Desc: "Tax filings, audits, alerts, regulatory monitoring",
+            skill4Ex: "\"Are we up to date on tax filings?\"",
             // Quote & CTA
-            quote: "Not just analytics. Institutional memory.",
+            quote: "Not just analytics. Institutional memory. Cognitive sovereignty.",
             cta: "See it in action"
         },
 
@@ -204,8 +223,8 @@ const translations = {
             stage4Title: "AI that understands your business",
             stage4Story: "\"I want to ask questions without knowing SQL or depending on technicians...\"",
             stage4Desc: "Our AI layer learns your company's context: terminology, key metrics, relationships between areas. It understands when you ask \"how are sales going?\" what data it needs to query.",
-            finaleTitle: "The result: instant answers",
-            finaleSubtitle: "Ask whatever you want, get answers with real data",
+            finaleTitle: "The result: decisions with context",
+            finaleSubtitle: "Your company's knowledge, activated and accessible to everyone",
             output1Title: "Ask in plain English",
             output1Desc: "\"How much did we sell last month vs last year?\" — answer in seconds, with data from all your sources.",
             output2Title: "Automatic dashboards",
@@ -214,22 +233,22 @@ const translations = {
             ctaNote: "No commitment · Setup in 3 weeks"
         },
 
-        // Comparison Section - TRADITIONAL vs CENTINELA
+        // Comparison Section - Traditional BI / Generic APIs vs Knowledge Layer
         comparison: {
-            title: "A New Way to Access Your Data",
-            subtitle: "From scattered information to unified intelligence",
-            traditionalTitle: "The Old Way",
+            title: "Traditional BI vs Knowledge Layer",
+            subtitle: "The difference isn't speed — it's sovereignty",
+            traditionalTitle: "Traditional BI / Generic APIs",
             centinelaTitle: "With Centinela",
-            traditional1: "Search 5 systems to find one answer",
-            traditional2: "Export data, merge spreadsheets manually",
-            traditional3: "Wait days for custom reports",
-            traditional4: "Data silos with no connection",
-            traditional5: "Questions limited by dashboard design",
-            centinela1: "One question, complete answer",
-            centinela2: "All your sources, instantly connected",
-            centinela3: "Real-time insights, no waiting",
-            centinela4: "Data unified across all systems",
-            centinela5: "Ask anything in natural language"
+            traditional1: "Fixed dashboards nobody updates",
+            traditional2: "Data without business context",
+            traditional3: "Knowledge leaves when people leave",
+            traditional4: "Dependency on external APIs (you leak your value)",
+            traditional5: "Generic answers without your context",
+            centinela1: "Living knowledge that updates itself",
+            centinela2: "Graphs that understand YOUR logic",
+            centinela3: "Institutional memory that's preserved",
+            centinela4: "Sovereignty over your knowledge",
+            centinela5: "Answers with your company's context"
         },
 
         // How it Works Section
@@ -250,7 +269,7 @@ const translations = {
             subtitle: "See how companies are transforming their data access",
             testimonial1Role: "Operations Director",
             testimonial1Company: "Ocati - Exotic Fruit Exporter",
-            testimonial1Quote: "We used to spend hours pulling data from different systems. Now we just ask Centinela and get answers in seconds. Our team can focus on decisions, not data hunting.",
+            testimonial1Quote: "Before, the knowledge of our operation lived in 3 people's heads. Now it's in Centinela and anyone on the team can query with full context.",
             testimonial1Metric1Value: "15+",
             testimonial1Metric1Label: "Systems Connected",
             testimonial1Metric2Value: "3 weeks",
@@ -259,7 +278,7 @@ const translations = {
             testimonial1Metric3Label: "Faster Reports",
             testimonial2Role: "CFO",
             testimonial2Company: "Regional Bank",
-            testimonial2Quote: "Reports that took 3 days to compile now take 30 seconds. We just ask in plain language and get the data we need.",
+            testimonial2Quote: "Centinela captured the institutional knowledge that used to exist only in Excel files and people's heads. Now any analyst can make decisions with complete context.",
             testimonial2Metric1Value: "30 sec",
             testimonial2Metric1Label: "Average Query Time",
             testimonial2Metric2Value: "15+",
@@ -285,10 +304,10 @@ const translations = {
 
         // CTA Section
         cta: {
-            title: "Ready to unify your data?",
-            description: "Stop hunting through systems. Stop waiting for reports. Connect your data sources and start asking questions today.",
-            btnPrimary: "Connect Your Data",
-            btnSecondary: "Talk to Us"
+            title: "Ready to build your knowledge layer?",
+            description: "Stop depending on scattered data and generic APIs. Build your company's cognitive sovereignty.",
+            btnPrimary: "Request demo",
+            btnSecondary: "Let's talk"
         },
 
         // Security Section
@@ -338,7 +357,15 @@ const translations = {
             q4: "Do I need technical knowledge to use it?",
             a4: "No. Centinela is designed for business users. Just type your question in English (or Spanish) and get answers. No SQL, Python, or any technical language required.",
             q5: "How does it compare to traditional BI tools?",
-            a5: "BI tools require predefined dashboards and technical knowledge. With Centinela, anyone can ask any question without being limited to what someone designed previously. It's the difference between searching a fixed menu and having a chef who cooks whatever you ask."
+            a5: "BI tools require predefined dashboards and technical knowledge. With Centinela, anyone can ask any question without being limited to what someone designed previously. It's the difference between searching a fixed menu and having a chef who cooks whatever you ask.",
+            q6: "What is the \"knowledge layer\"?",
+            a6: "It's the infrastructure that captures and organizes not just your data, but your business logic, relationships between entities, and your company's context. It's like your organization's \"institutional memory\", accessible to everyone.",
+            q7: "How is this different from an AI chatbot?",
+            a7: "A chatbot uses generic models. Centinela builds a knowledge model SPECIFIC to your company — it understands your terminology, your metrics, your business relationships. It's the difference between asking a stranger and asking someone who's been at your company for 10 years.",
+            q8: "Does my data feed third-party models?",
+            a8: "No. Your knowledge stays in your infrastructure. We offer Zero Data Retention. Your cognitive sovereignty is our priority.",
+            q9: "What can Centinela automate in my day-to-day?",
+            a9: "Our goal is that every Monday, each person on your team logs in and finds everything ready: what they need to know, what to approve or reject to move forward with high-impact work. Everything else — gathering data, generating reports, monitoring compliance — Centinela handles automatically."
         },
 
         // Pricing Preview
@@ -375,23 +402,23 @@ const translations = {
         // About Page
         about: {
             pageTitle: "About Centinela",
-            pageSubtitle: "We're building the bridge between your data and your decisions.",
+            pageSubtitle: "Building the knowledge infrastructure that gives companies sovereignty over their own intelligence.",
             missionTitle: "Our Mission",
-            missionText: "Every company has valuable data locked in silos. We're making it accessible to everyone through natural language.",
+            missionText: "We believe a company's accumulated knowledge is its most valuable asset — and its most wasted one. Our mission is for every organization to have sovereignty over its own intelligence: its business logic, decisions, and institutional knowledge captured, preserved, and accessible to everyone, forever.",
             storyTitle: "Why We Exist",
-            storyText1: "We watched companies struggle to get simple answers because their data lived in too many places. Teams spent days pulling reports that should take minutes.",
-            storyText2: "Centinela changes that. We connect all your data sources and let anyone ask questions in plain language. No SQL. No waiting. Just answers.",
-            teamTitle: "Built by Data Engineers",
-            teamText: "Our team has built data pipelines and analytics platforms. We know the pain of data silos firsthand, and we built Centinela to solve it.",
-            valuesTitle: "Our Values",
-            value1Title: "Data Should Flow",
-            value1Desc: "Information locked in silos doesn't help anyone make better decisions.",
-            value2Title: "Simplicity Wins",
-            value2Desc: "If you need SQL to get answers, we've failed. Just ask.",
-            value3Title: "Real-Time Matters",
-            value3Desc: "Yesterday's data leads to yesterday's decisions. We keep you current.",
-            value4Title: "Connect Everything",
-            value4Desc: "+400 connectors and counting. If you use it, we can connect it."
+            storyText1: "We saw how critical business knowledge was locked inside 3 people's heads, lost in spreadsheets, or scattered across disconnected systems. When someone left, years of institutional knowledge went with them.",
+            storyText2: "Centinela is the answer: a knowledge layer that captures, preserves, and activates the intelligence your company has built over years — so it never depends on a single person or a single system again.",
+            teamTitle: "Built by Knowledge Engineers",
+            teamText: "Our team has built data infrastructure and AI systems for enterprises across Latin America. We understand the pain of knowledge loss firsthand, and we built Centinela to solve it.",
+            valuesTitle: "Our Principles",
+            value1Title: "Cognitive Sovereignty",
+            value1Desc: "Your company should own its intelligence. Not rent it from an API. Not lose it when people leave.",
+            value2Title: "Knowledge Over Answers",
+            value2Desc: "Answers are easy to replicate. A knowledge layer that understands your business logic is not.",
+            value3Title: "Context Is Everything",
+            value3Desc: "Data without business context is noise. We build graphs that understand YOUR logic, YOUR relationships, YOUR metrics.",
+            value4Title: "Institutional Memory",
+            value4Desc: "Every decision, every pattern, every insight your company generates should be captured and accessible — forever."
         },
 
         // Contact Page
@@ -473,9 +500,90 @@ const translations = {
             faq4Q: "How long does setup take?",
             faq4A: "Most companies are up and running within 3 weeks. Complex Enterprise deployments may take 4-6 weeks depending on the number of integrations.",
 
-            ctaTitle: "Ready to unify your data?",
+            ctaTitle: "Ready to build your knowledge layer?",
             ctaSubtitle: "Start with a free consultation. We'll analyze your data landscape and recommend the best approach.",
-            ctaButton: "Schedule a Call"
+            ctaButton: "Schedule a Call",
+
+            // Inline pricing section (landing page)
+            toggleMonthly: "Monthly",
+            toggleAnnual: "Annual",
+            saveBadge: "Save 15%",
+            essentialPrice: "$3,500",
+            growthPrice: "$5,000",
+            enterprisePrice: "Custom",
+
+            // Feature table
+            tableTitle: "Compare plans in detail",
+            rowConnectors: "Connectors",
+            rowQueries: "Queries",
+            rowKnowledgeLayer: "Knowledge Layer",
+            rowDashboards: "Dashboards",
+            rowVerticals: "Verticals",
+            rowSupport: "Support",
+            rowMeetings: "Meetings",
+            rowImprovements: "Improvements",
+            rowActions: "System actions",
+            rowWorkflows: "Workflows",
+            rowAlerts: "Alerts",
+            rowUsers: "Users",
+            rowCustomIntegrations: "Custom integrations",
+            rowSLA: "SLA",
+            rowSecurity: "Security",
+            rowOnboarding: "Onboarding",
+
+            // Essential values
+            essConnectors: "+400 data connectors",
+            essQueries: "Natural language",
+            essKnowledge: "Basic",
+            essDashboards: "Basic access",
+            essVerticals: "1 vertical",
+            essSupport: "Documentation",
+            essMeetings: "—",
+            essImprovements: "—",
+            essActions: "—",
+            essWorkflows: "—",
+            essAlerts: "Basic",
+            essUsers: "Up to 5",
+            essCustom: "—",
+            essSLA: "—",
+            essSecurity: "Standard",
+            essOnboarding: "Self-service",
+
+            // Growth values
+            groConnectors: "+400 data connectors",
+            groQueries: "Natural language",
+            groKnowledge: "Advanced (context graphs)",
+            groDashboards: "Automatic visualizations",
+            groVerticals: "Up to 3 verticals",
+            groSupport: "Dedicated team",
+            groMeetings: "Weekly strategy meetings",
+            groImprovements: "Incremental improvements",
+            groActions: "—",
+            groWorkflows: "—",
+            groAlerts: "Configurable",
+            groUsers: "Up to 20",
+            groCustom: "—",
+            groSLA: "99.5%",
+            groSecurity: "SOC 2",
+            groOnboarding: "Guided (3 weeks)",
+
+            // Enterprise values
+            entConnectors: "+400 + custom",
+            entQueries: "Natural language",
+            entKnowledge: "Complete (graphs + agent skills)",
+            entDashboards: "Visualizations + custom reports",
+            entVerticals: "Unlimited",
+            entSupport: "Priority 24/7",
+            entMeetings: "Meetings + dedicated roadmap",
+            entImprovements: "Improvements + custom development",
+            entActions: "Write to systems (invoices, CRM, etc.)",
+            entWorkflows: "Custom workflow automation",
+            entAlerts: "Alerts + automatic triggers",
+            entUsers: "Unlimited",
+            entCustom: "Included",
+            entSLA: "99.9%",
+            entSecurity: "SOC 2 + custom configs",
+            entOnboarding: "White-glove (dedicated)"
         }
     },
 
@@ -491,29 +599,29 @@ const translations = {
             requestDemo: "Solicitar Demo"
         },
 
-        // Hero Section - CONVERSATIONAL ANALYTICS
+        // Hero Section - SOBERANÍA COGNITIVA
         hero: {
-            badge: "Analytics Conversacional",
-            titleLine1: "Todos tus datos.",
-            titleLine2: "Una conversación.",
-            description: "Conecta tu ERP, CRM, bases de datos y hojas de cálculo. Haz preguntas en lenguaje natural. Obtén insights en tiempo real sin escribir SQL ni esperar reportes.",
-            ctaPrimary: "Conecta tus Datos",
-            ctaSecondary: "Ver Cómo Funciona",
+            badge: "Soberanía cognitiva para tu empresa",
+            titleLine1: "Tu conocimiento.",
+            titleLine2: "Tu ventaja competitiva.",
+            description: "Centinela construye la capa de conocimiento de tu organización — conecta tus sistemas, captura tu lógica de negocio y convierte datos dispersos en inteligencia accionable. Sin depender de APIs externas.",
+            ctaPrimary: "Ver cómo funciona",
+            ctaSecondary: "Solicitar demo",
             loopCapture: "Conectar",
-            loopEmbed: "Analizar",
-            loopOwn: "Responder"
+            loopEmbed: "Modelar",
+            loopOwn: "Decidir"
         },
 
-        // The Problem Section - Data Fragmentation
+        // The Problem Section - Pérdida de conocimiento
         problem: {
-            sectionLabel: "El Desafío",
-            headline: "Tu información vive en demasiados lugares",
-            point1: "En tu sistema ERP",
-            point2: "Dispersa en registros del CRM",
-            point3: "Oculta en hojas de cálculo",
-            point4: "Perdida en emails y chats",
-            question: "¿Y si pudieras consultar TODAS tus fuentes de datos en una sola conversación?",
-            ctaText: "Unifica tus datos →"
+            sectionLabel: "El costo oculto",
+            headline: "Tu empresa sabe más de lo que puede usar",
+            point1: "El conocimiento vive en la cabeza de 3 personas",
+            point2: "Cada nuevo empleado parte de cero",
+            point3: "Las decisiones se toman con datos incompletos",
+            point4: "La lógica de negocio no está documentada",
+            question: "¿Qué pasaría si el conocimiento acumulado de tu organización estuviera a una pregunta de distancia?",
+            ctaText: "Construye tu capa de conocimiento →"
         },
 
         // Trusted Section
@@ -521,40 +629,71 @@ const translations = {
             label: "Empresas data-driven confían en nosotros"
         },
 
-        // Demo Section
+        // Demo Section - Conocimiento por Vertical
         demo: {
-            title: "Pregunta lo que sea. Obtén respuestas.",
-            subtitle: "Tu ERP, CRM, bases de datos y hojas de cálculo—todo conectado, todo consultable, todo en una conversación.",
+            title: "Conocimiento activado por vertical",
+            subtitle: "Cada departamento tiene su propia capa de conocimiento. Mira cómo Centinela responde con contexto real de tu empresa.",
+            // Tab labels
+            tab1: "Reconciliaciones",
+            tab2: "Revenue Intelligence",
+            tab3: "Compliance",
+            tab4: "Operaciones",
+            tab5: "Marketing Digital",
+            // Caso 1: Reconciliaciones
+            uc1Question: "¿Cuántas facturas sin conciliar tenemos este mes?",
+            uc1Response: "Este es el estado de conciliación del mes:",
+            uc1Detail1: "247 facturas pendientes de conciliación",
+            uc1Detail2: "89% match automático — 220 facturas conciliadas",
+            uc1Detail3: "27 requieren revisión manual (top 3 diferencias listadas abajo)",
+            uc1Detail4: "Alerta: $125K en facturas con más de 30 días",
+            uc1Recommendation: "Los 27 casos manuales se concentran en 3 proveedores. Recomiendo agendar sesión de revisión con el equipo de cuentas por pagar esta semana.",
+            // Caso 2: Revenue Intelligence
+            uc2Question: "¿Cuál es el revenue forecast para Q2 vs presupuesto?",
+            uc2Response: "Este es el análisis de revenue para Q2:",
+            uc2Detail1: "Forecast Q2: $3.2M (+8% vs presupuesto)",
+            uc2Detail2: "Riesgo: 3 cuentas grandes sin renovar ($480K)",
+            uc2Detail3: "Pipeline ponderado: $4.1M (78% confianza)",
+            uc2Detail4: "Mejor canal: Enterprise directo (+23% vs año anterior)",
+            uc2Recommendation: "Las 3 renovaciones pendientes representan 15% del forecast. Recomiendo priorizar contacto con estas cuentas antes de fin de mes.",
+            // Caso 3: Compliance
+            uc3Question: "¿Estamos al día con las declaraciones tributarias?",
+            uc3Response: "Estado actual de cumplimiento tributario:",
+            uc3Detail1: "IVA: Presentado y al día",
+            uc3Detail2: "Retención en la fuente: Pendiente Feb (vence 20 Feb)",
+            uc3Detail3: "Renta: Próxima fecha Mar 15",
+            uc3Detail4: "2 alertas activas: impuesto municipal + actualización normativa",
+            uc3Recommendation: "La retención de febrero vence en 4 días. Todos los soportes están listos en el sistema. ¿Genero el reporte de presentación?",
+            // Caso 4: Operaciones
+            uc4Question: "¿Cuál es el estado del cierre de enero?",
+            uc4Response: "Progreso del cierre de enero:",
+            uc4Detail1: "87% completado (13 de 15 tareas listas)",
+            uc4Detail2: "Pendiente: conciliación bancaria ($45K diferencia)",
+            uc4Detail3: "Pendiente: provisiones de cartera y ajustes cambiarios",
+            uc4Detail4: "Bloqueado: esperando 3 facturas de proveedores",
+            uc4Recommendation: "La diferencia de $45K se rastreó a 2 transacciones del 28 enero. Verificar con tesorería.",
+            // Caso 5: Marketing Digital
+            uc5Question: "¿Cómo está el rendimiento de las campañas de este mes y dónde debería reasignar presupuesto?",
+            uc5Response: "Análisis de campañas activas:",
+            uc5Detail1: "Google Ads: ROAS 4.2x (arriba del target 3.5x) — $12K invertidos",
+            uc5Detail2: "Meta Ads: ROAS 1.8x (abajo del target) — audiencia \"lookalike profesionales\" saturada",
+            uc5Detail3: "LinkedIn: CPA $45 pero leads de mayor calidad (32% tasa cierre vs 12% Meta)",
+            uc5Detail4: "Oportunidad: $3K de Meta → LinkedIn generaría ~67 leads adicionales de alto valor",
+            uc5Recommendation: "Recomiendo reasignar $3K de Meta a LinkedIn esta semana. La audiencia lookalike se agotó. En LinkedIn el costo por lead es mayor pero el valor por cierre es 3x. ¿Ejecuto la reasignación?",
             browserUrl: "app.centinela.ai",
-            sidebarAsk: "Preguntar a Centinela",
-            sidebarGraph: "Grafo de Datos",
-            sidebarSources: "Fuentes Conectadas",
-            sidebarInsights: "Insights",
-            sidebarHistory: "Log de Consultas",
-            userQuestion: "¿Cuál es el estado actual del inventario de uchuvas orgánicas?",
-            aiResponse: "Esto es lo que encontré en tus sistemas:",
-            aiResponseDetail1: "Uchuvas Orgánicas: 12,450 kg disponibles",
-            aiResponseDetail2: "Ubicación: Bodega Bogotá A (marcada como prioridad en tu ERP)",
-            aiResponseDetail3: "Certificación: USDA Organic, Fair Trade verificada",
-            aiResponseDetail4: "Alerta: 2,100 kg vencen en 14 días",
-            aiRecommendation: "Basado en tu historial de ventas: Los clientes EU típicamente aceptan inventario con vida útil corta. Considera priorizar envíos a esa región.",
             inputPlaceholder: "Pregunta lo que sea sobre tus datos...",
-            inputButton: "Preguntar",
-            metricKnowledge: "Datos Indexados",
-            metricSources: "Fuentes Conectadas",
-            metricDecisions: "Preguntas Respondidas"
+            inputButton: "Preguntar"
         },
 
-        // Stats Section - VALUE METRICS
+        // Stats Section - RESULTADOS CONCRETOS
         stats: {
-            stat1Value: "10x",
-            stat1Label: "Respuestas más rápidas a preguntas complejas",
-            stat2Value: "400+",
-            stat2Label: "Conectores de datos disponibles",
-            stat3Value: "1",
-            stat3Label: "Lugar para consultar todos tus datos",
-            stat4Value: "3sem",
-            stat4Label: "Para despliegue completo"
+            stat1Value: "85%",
+            stat1Label: "Menos tiempo en cierres contables",
+            stat2Value: "90%",
+            stat2Label: "Reconciliación automática de facturas",
+            stat3Value: "3sem",
+            stat3Label: "A producción",
+            stat4Value: "24/7",
+            stat4Label: "Monitoreo de compliance"
         },
 
         // Features Section - THE DATA STACK
@@ -595,7 +734,7 @@ const translations = {
             badge: "Infraestructura de Conocimiento",
             title: "Capa de Conocimiento.",
             titleHighlight: "Grafos de Contexto.",
-            subtitle: "Infraestructura que captura, preserva y activa el conocimiento de tu negocio. No solo datos—la lógica, relaciones y razonamiento detrás de cada decisión.",
+            subtitle: "No es un chatbot que responde preguntas. Es infraestructura que captura, preserva y activa el conocimiento de tu empresa — la lógica, relaciones y razonamiento detrás de cada decisión. Tu soberanía cognitiva.",
             // Capas de Conocimiento
             layer1Title: "Capa de Datos",
             layer1Desc: "Todas tus fuentes, unificadas",
@@ -603,35 +742,23 @@ const translations = {
             layer2Desc: "Relaciones y lógica de negocio",
             layer3Title: "Skills de Agentes",
             layer3Desc: "Especializados por vertical",
-            // Agent Skills
+            // Agent Skills - 4 casos de uso enfocados
             skillsTitle: "Skills de Agentes",
-            skillsCount: "+50 skills",
-            skill1Title: "Finanzas",
-            skill1Desc: "Flujo de caja, proyecciones, modelado financiero",
-            skill1Ex: "\"Proyecta el flujo de caja del próximo trimestre\"",
-            skill2Title: "Marketing",
-            skill2Desc: "Análisis de campañas, atribución, ROI",
-            skill2Ex: "\"¿Qué campañas generaron conversiones?\"",
+            skillsCount: "Agentes especializados",
+            skill1Title: "Revenue Intelligence",
+            skill1Desc: "Forecast, pipeline, análisis de cuentas, tendencias de ingresos",
+            skill1Ex: "\"¿Cuál es el revenue forecast para Q2 vs presupuesto?\"",
+            skill2Title: "Contabilidad & Reconciliaciones",
+            skill2Desc: "Cierres, conciliaciones, provisiones, reportes financieros",
+            skill2Ex: "\"Muéstrame facturas sin conciliar este mes\"",
             skill3Title: "Operaciones",
-            skill3Desc: "Optimización de procesos, planificación de capacidad",
-            skill3Ex: "\"Identifica cuellos de botella en producción\"",
-            skill4Title: "Análisis de Datos",
-            skill4Desc: "KPIs, tendencias, detección de anomalías",
-            skill4Ex: "\"¿Por qué subieron los ingresos la semana pasada?\"",
-            skill5Title: "Logística",
-            skill5Desc: "Inventario, envíos, cadena de suministro",
-            skill5Ex: "\"Optimiza rutas de entrega para UE\"",
-            skill6Title: "Estrategia",
-            skill6Desc: "Dimensionamiento de mercado, análisis competitivo",
-            skill6Ex: "\"Analiza oportunidad de mercado en LATAM\"",
-            skill7Title: "Contabilidad",
-            skill7Desc: "Conciliación, reportes, cumplimiento",
-            skill7Ex: "\"Concilia cuentas para cierre de Q3\"",
-            skill8Title: "RRHH y Admin",
-            skill8Desc: "Métricas de equipo, planificación de recursos",
-            skill8Ex: "\"Analiza necesidades de contratación para Q4\"",
+            skill3Desc: "Inventario, cadena de suministro, eficiencia, planificación",
+            skill3Ex: "\"¿Cuál es nuestra rotación de inventario actual?\"",
+            skill4Title: "Compliance & Normativa",
+            skill4Desc: "Declaraciones, auditorías, alertas, monitoreo regulatorio",
+            skill4Ex: "\"¿Estamos al día con las declaraciones tributarias?\"",
             // Quote & CTA
-            quote: "No es solo analytics. Memoria institucional.",
+            quote: "No es solo analytics. Memoria institucional. Soberanía cognitiva.",
             cta: "Verlo en acción"
         },
 
@@ -677,8 +804,8 @@ const translations = {
             stage4Title: "IA que entiende tu negocio",
             stage4Story: "\"Quiero preguntar cosas sin saber SQL ni depender de técnicos...\"",
             stage4Desc: "Nuestra capa de IA aprende el contexto de tu empresa: terminología, métricas clave, relaciones entre áreas. Entiende cuando preguntas \"¿cómo van las ventas?\" qué datos necesita consultar.",
-            finaleTitle: "El resultado: respuestas instantáneas",
-            finaleSubtitle: "Pregunta lo que quieras, obtén respuestas con datos reales",
+            finaleTitle: "El resultado: decisiones con contexto",
+            finaleSubtitle: "El conocimiento de tu empresa, activado y accesible para todos",
             output1Title: "Pregunta en español",
             output1Desc: "\"¿Cuánto vendimos el mes pasado vs el año anterior?\" — respuesta en segundos, con datos de todas tus fuentes.",
             output2Title: "Dashboards automáticos",
@@ -687,22 +814,22 @@ const translations = {
             ctaNote: "Sin compromiso · Configuración en 3 semanas"
         },
 
-        // Comparison Section - TRADITIONAL vs CENTINELA
+        // Comparison Section - BI tradicional / APIs genéricas vs Knowledge Layer
         comparison: {
-            title: "Una Nueva Forma de Acceder a tus Datos",
-            subtitle: "De información dispersa a inteligencia unificada",
-            traditionalTitle: "La Forma Antigua",
+            title: "BI Tradicional vs Knowledge Layer",
+            subtitle: "La diferencia no es velocidad — es soberanía",
+            traditionalTitle: "BI Tradicional / APIs genéricas",
             centinelaTitle: "Con Centinela",
-            traditional1: "Buscar en 5 sistemas para encontrar una respuesta",
-            traditional2: "Exportar datos, unir hojas de cálculo manualmente",
-            traditional3: "Esperar días por reportes personalizados",
-            traditional4: "Silos de datos sin conexión",
-            traditional5: "Preguntas limitadas por el diseño del dashboard",
-            centinela1: "Una pregunta, respuesta completa",
-            centinela2: "Todas tus fuentes, conectadas al instante",
-            centinela3: "Insights en tiempo real, sin esperas",
-            centinela4: "Datos unificados en todos tus sistemas",
-            centinela5: "Pregunta lo que sea en lenguaje natural"
+            traditional1: "Dashboards fijos que nadie actualiza",
+            traditional2: "Datos sin contexto de negocio",
+            traditional3: "Conocimiento que se va cuando la gente se va",
+            traditional4: "Dependencia de APIs externas (filtras tu valor)",
+            traditional5: "Respuestas genéricas sin tu contexto",
+            centinela1: "Conocimiento vivo que se actualiza solo",
+            centinela2: "Grafos que entienden TU lógica",
+            centinela3: "Memoria institucional que se preserva",
+            centinela4: "Soberanía sobre tu conocimiento",
+            centinela5: "Respuestas con el contexto de tu empresa"
         },
 
         // How it Works Section
@@ -723,7 +850,7 @@ const translations = {
             subtitle: "Mira cómo las empresas están transformando su acceso a datos",
             testimonial1Role: "Director de Operaciones",
             testimonial1Company: "Ocati - Exportador de Frutas Exóticas",
-            testimonial1Quote: "Antes pasábamos horas extrayendo datos de diferentes sistemas. Ahora solo preguntamos a Centinela y obtenemos respuestas en segundos. Nuestro equipo se enfoca en decisiones, no en buscar datos.",
+            testimonial1Quote: "Antes el conocimiento de la operación vivía en la cabeza de 3 personas. Ahora está en Centinela y cualquiera del equipo puede consultar con contexto completo.",
             testimonial1Metric1Value: "15+",
             testimonial1Metric1Label: "Sistemas Conectados",
             testimonial1Metric2Value: "3 semanas",
@@ -732,7 +859,7 @@ const translations = {
             testimonial1Metric3Label: "Reportes Más Rápidos",
             testimonial2Role: "CFO",
             testimonial2Company: "Banco Regional",
-            testimonial2Quote: "Reportes que tomaban 3 días en compilar ahora toman 30 segundos. Solo preguntamos en lenguaje natural y obtenemos los datos que necesitamos.",
+            testimonial2Quote: "Centinela capturó el conocimiento institucional que antes existía solo en archivos de Excel y en la cabeza de las personas. Ahora cualquier analista toma decisiones con contexto completo.",
             testimonial2Metric1Value: "30 seg",
             testimonial2Metric1Label: "Tiempo Promedio de Consulta",
             testimonial2Metric2Value: "15+",
@@ -758,9 +885,9 @@ const translations = {
 
         // CTA Section
         cta: {
-            title: "¿Listo para unificar tus datos?",
-            description: "Deja de buscar en sistemas. Deja de esperar reportes. Conecta tus fuentes de datos y empieza a hacer preguntas hoy.",
-            btnPrimary: "Conecta tus Datos",
+            title: "¿Listo para construir tu capa de conocimiento?",
+            description: "Deja de depender de datos dispersos y APIs genéricas. Construye la soberanía cognitiva de tu empresa.",
+            btnPrimary: "Solicitar demo",
             btnSecondary: "Hablemos"
         },
 
@@ -811,7 +938,15 @@ const translations = {
             q4: "¿Necesito conocimientos técnicos para usarlo?",
             a4: "No. Centinela está diseñado para usuarios de negocio. Solo escribe tu pregunta en español (o inglés) y obtén respuestas. No necesitas saber SQL, Python ni ningún lenguaje técnico.",
             q5: "¿Cómo se compara con herramientas de BI tradicionales?",
-            a5: "Las herramientas de BI requieren dashboards predefinidos y conocimiento técnico. Con Centinela, cualquier persona puede hacer cualquier pregunta sin limitarse a lo que alguien diseñó previamente. Es la diferencia entre buscar en un menú fijo y tener un chef que cocina lo que pidas."
+            a5: "Las herramientas de BI requieren dashboards predefinidos y conocimiento técnico. Con Centinela, cualquier persona puede hacer cualquier pregunta sin limitarse a lo que alguien diseñó previamente. Es la diferencia entre buscar en un menú fijo y tener un chef que cocina lo que pidas.",
+            q6: "¿Qué es la \"capa de conocimiento\"?",
+            a6: "Es la infraestructura que captura y organiza no solo tus datos, sino la lógica de negocio, relaciones entre entidades y contexto de tu empresa. Es como la \"memoria institucional\" de tu organización, accesible para todos.",
+            q7: "¿En qué se diferencia de un chatbot con IA?",
+            a7: "Un chatbot usa modelos genéricos. Centinela construye un modelo de conocimiento PROPIO de tu empresa — entiende tu terminología, tus métricas, tus relaciones de negocio. Es la diferencia entre preguntarle a un extraño y preguntarle a alguien que lleva 10 años en tu empresa.",
+            q8: "¿Mis datos alimentan modelos de terceros?",
+            a8: "No. Tu conocimiento se queda en tu infraestructura. Ofrecemos Zero Data Retention. Tu soberanía cognitiva es nuestra prioridad.",
+            q9: "¿Qué puede automatizar Centinela en mi día a día?",
+            a9: "Nuestra meta es que cada lunes, cada persona de tu equipo inicie sesión y tenga todo listo: qué debe saber, qué aprobar o rechazar para continuar con su trabajo de alto impacto. Todo lo demás — recopilar datos, generar reportes, monitorear compliance — lo hace Centinela automáticamente."
         },
 
         // Pricing Preview
@@ -848,23 +983,23 @@ const translations = {
         // About Page
         about: {
             pageTitle: "Sobre Centinela",
-            pageSubtitle: "Estamos construyendo el puente entre tus datos y tus decisiones.",
+            pageSubtitle: "Construimos la infraestructura de conocimiento que le da a las empresas soberanía sobre su propia inteligencia.",
             missionTitle: "Nuestra Misión",
-            missionText: "Cada empresa tiene datos valiosos encerrados en silos. Los estamos haciendo accesibles para todos a través de lenguaje natural.",
+            missionText: "Creemos que el conocimiento acumulado de una empresa es su activo más valioso — y el más desperdiciado. Nuestra misión es que cada organización tenga soberanía sobre su propia inteligencia: que su lógica de negocio, sus decisiones y su conocimiento institucional estén capturados, preservados y accesibles para todos, para siempre.",
             storyTitle: "Por Qué Existimos",
-            storyText1: "Vimos empresas luchar para obtener respuestas simples porque sus datos vivían en demasiados lugares. Equipos pasaban días creando reportes que deberían tomar minutos.",
-            storyText2: "Centinela cambia eso. Conectamos todas tus fuentes de datos y dejamos que cualquiera pregunte en lenguaje natural. Sin SQL. Sin esperas. Solo respuestas.",
-            teamTitle: "Construido por Ingenieros de Datos",
-            teamText: "Nuestro equipo ha construido pipelines de datos y plataformas de analytics. Conocemos el dolor de los silos de datos de primera mano, y construimos Centinela para resolverlo.",
-            valuesTitle: "Nuestros Valores",
-            value1Title: "Los Datos Deben Fluir",
-            value1Desc: "Información encerrada en silos no ayuda a nadie a tomar mejores decisiones.",
-            value2Title: "La Simplicidad Gana",
-            value2Desc: "Si necesitas SQL para obtener respuestas, hemos fallado. Solo pregunta.",
-            value3Title: "El Tiempo Real Importa",
-            value3Desc: "Datos de ayer llevan a decisiones de ayer. Te mantenemos actualizado.",
-            value4Title: "Conecta Todo",
-            value4Desc: "+400 conectores y contando. Si lo usas, podemos conectarlo."
+            storyText1: "Vimos cómo el conocimiento crítico de negocio estaba encerrado en la cabeza de 3 personas, perdido en hojas de cálculo, o disperso en sistemas desconectados. Cuando alguien se iba, años de conocimiento institucional se iban con esa persona.",
+            storyText2: "Centinela es la respuesta: una capa de conocimiento que captura, preserva y activa la inteligencia que tu empresa ha construido durante años — para que nunca dependa de una sola persona ni de un solo sistema.",
+            teamTitle: "Construido por Ingenieros de Conocimiento",
+            teamText: "Nuestro equipo ha construido infraestructura de datos y sistemas de IA para empresas en toda Latinoamérica. Conocemos el dolor de la pérdida de conocimiento de primera mano, y construimos Centinela para resolverlo.",
+            valuesTitle: "Nuestros Principios",
+            value1Title: "Soberanía Cognitiva",
+            value1Desc: "Tu empresa debe ser dueña de su inteligencia. No rentarla de una API. No perderla cuando la gente se va.",
+            value2Title: "Conocimiento Sobre Respuestas",
+            value2Desc: "Las respuestas son fáciles de replicar. Una capa de conocimiento que entiende tu lógica de negocio, no.",
+            value3Title: "El Contexto Es Todo",
+            value3Desc: "Datos sin contexto de negocio son ruido. Construimos grafos que entienden TU lógica, TUS relaciones, TUS métricas.",
+            value4Title: "Memoria Institucional",
+            value4Desc: "Cada decisión, cada patrón, cada insight que tu empresa genera debe quedar capturado y accesible — para siempre."
         },
 
         // Contact Page
@@ -946,9 +1081,90 @@ const translations = {
             faq4Q: "¿Cuánto tiempo toma la implementación?",
             faq4A: "La mayoría de las empresas están operando en 3 semanas. Despliegues Enterprise complejos pueden tomar 4-6 semanas dependiendo del número de integraciones.",
 
-            ctaTitle: "¿Listo para unificar tus datos?",
+            ctaTitle: "¿Listo para construir tu capa de conocimiento?",
             ctaSubtitle: "Comienza con una consulta gratuita. Analizaremos tu panorama de datos y recomendaremos el mejor enfoque.",
-            ctaButton: "Agendar Llamada"
+            ctaButton: "Agendar Llamada",
+
+            // Inline pricing section (landing page)
+            toggleMonthly: "Mensual",
+            toggleAnnual: "Anual",
+            saveBadge: "Ahorra 15%",
+            essentialPrice: "$3,500",
+            growthPrice: "$5,000",
+            enterprisePrice: "A medida",
+
+            // Feature table
+            tableTitle: "Compara los planes en detalle",
+            rowConnectors: "Conectores",
+            rowQueries: "Consultas",
+            rowKnowledgeLayer: "Knowledge Layer",
+            rowDashboards: "Dashboards",
+            rowVerticals: "Verticales",
+            rowSupport: "Soporte",
+            rowMeetings: "Reuniones",
+            rowImprovements: "Mejoras",
+            rowActions: "Acciones en sistemas",
+            rowWorkflows: "Workflows",
+            rowAlerts: "Alertas",
+            rowUsers: "Usuarios",
+            rowCustomIntegrations: "Integraciones custom",
+            rowSLA: "SLA",
+            rowSecurity: "Seguridad",
+            rowOnboarding: "Onboarding",
+
+            // Essential values
+            essConnectors: "+400 conectores de datos",
+            essQueries: "Lenguaje natural",
+            essKnowledge: "Básico",
+            essDashboards: "Acceso básico",
+            essVerticals: "1 vertical",
+            essSupport: "Documentación",
+            essMeetings: "—",
+            essImprovements: "—",
+            essActions: "—",
+            essWorkflows: "—",
+            essAlerts: "Básicas",
+            essUsers: "Hasta 5",
+            essCustom: "—",
+            essSLA: "—",
+            essSecurity: "Estándar",
+            essOnboarding: "Self-service",
+
+            // Growth values
+            groConnectors: "+400 conectores de datos",
+            groQueries: "Lenguaje natural",
+            groKnowledge: "Avanzado (grafos de contexto)",
+            groDashboards: "Visualizaciones automáticas",
+            groVerticals: "Hasta 3 verticales",
+            groSupport: "Equipo dedicado",
+            groMeetings: "Reuniones semanales de estrategia",
+            groImprovements: "Mejoras incrementales",
+            groActions: "—",
+            groWorkflows: "—",
+            groAlerts: "Configurables",
+            groUsers: "Hasta 20",
+            groCustom: "—",
+            groSLA: "99.5%",
+            groSecurity: "SOC 2",
+            groOnboarding: "Guiado (3 semanas)",
+
+            // Enterprise values
+            entConnectors: "+400 + custom",
+            entQueries: "Lenguaje natural",
+            entKnowledge: "Completo (grafos + agent skills)",
+            entDashboards: "Visualizaciones + reportes custom",
+            entVerticals: "Ilimitadas",
+            entSupport: "Prioritario 24/7",
+            entMeetings: "Reuniones + roadmap dedicado",
+            entImprovements: "Mejoras + desarrollo custom",
+            entActions: "Escritura en sistemas (facturas, CRM, etc.)",
+            entWorkflows: "Automatización de flujos custom",
+            entAlerts: "Alertas + triggers automáticos",
+            entUsers: "Ilimitados",
+            entCustom: "Incluidas",
+            entSLA: "99.9%",
+            entSecurity: "SOC 2 + configs custom",
+            entOnboarding: "White-glove (dedicado)"
         }
     }
 };
