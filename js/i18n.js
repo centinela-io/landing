@@ -494,7 +494,7 @@ const translations = {
             teamText2: "Centinela is the answer: a knowledge layer that captures, preserves, and activates the intelligence your company has built over years — so it never depends on a single person or a single system again.",
             teamCardTitle: "Data infrastructure & AI for Latin America",
             teamCardText: "Our team has built data infrastructure and AI systems for enterprises across Latin America. We understand the pain of knowledge loss firsthand, and we built Centinela to solve it.",
-            teamLocation: "Bogota, Colombia",
+            teamLocation: "Medellín, Colombia",
             teamRegion: "Serving all of Latin America"
         },
 
@@ -521,11 +521,12 @@ const translations = {
             infoTitle: "Other ways to reach us",
             infoSubtitle: "We're here to help.",
             emailTitle: "Email",
-            emailValue: "hello@centinela.ai",
+            emailValue: "admin@centinela.io",
             scheduleTitle: "Schedule",
             scheduleValue: "30-min call to explore your use case",
             locationTitle: "Location",
-            locationValue: "Bogota, Colombia",
+            locationValue: "Medellín, Colombia",
+            scheduleBtn: "Book now",
             successMessage: "Message sent!",
             errorMessage: "Error sending. Try again."
         },
@@ -1154,7 +1155,7 @@ const translations = {
             teamText2: "Centinela es la respuesta: una capa de conocimiento que captura, preserva y activa la inteligencia que tu empresa ha construido durante años — para que nunca dependa de una sola persona ni de un solo sistema.",
             teamCardTitle: "Infraestructura de datos e IA para Latinoamérica",
             teamCardText: "Nuestro equipo ha construido infraestructura de datos y sistemas de IA para empresas en toda Latinoamérica. Conocemos el dolor de la pérdida de conocimiento de primera mano, y construimos Centinela para resolverlo.",
-            teamLocation: "Bogotá, Colombia",
+            teamLocation: "Medellín, Colombia",
             teamRegion: "Sirviendo a toda Latinoamérica"
         },
 
@@ -1181,11 +1182,12 @@ const translations = {
             infoTitle: "Otras formas de contactarnos",
             infoSubtitle: "Estamos aquí para ayudar.",
             emailTitle: "Email",
-            emailValue: "hola@centinela.ai",
+            emailValue: "admin@centinela.io",
             scheduleTitle: "Agendar",
             scheduleValue: "Llamada de 30 min para explorar tu caso de uso",
             locationTitle: "Ubicación",
-            locationValue: "Bogotá, Colombia",
+            locationValue: "Medellín, Colombia",
+            scheduleBtn: "Agendar ahora",
             successMessage: "¡Mensaje enviado!",
             errorMessage: "Error al enviar. Intenta de nuevo."
         },
