@@ -1823,6 +1823,281 @@
             color: var(--text-secondary);
         }
 
+        /* Centinela Acts Section */
+        .acts-section {
+            padding: 100px 5%;
+            background: var(--bg-primary);
+            position: relative;
+            overflow: hidden;
+        }
+        .acts-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .acts-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .acts-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--accent-light);
+            margin-bottom: 20px;
+        }
+        .acts-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .acts-title .highlight {
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .acts-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .acts-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .act-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .act-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+        }
+        .act-card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .act-card-icon.alerts { background: rgba(99, 102, 241, 0.12); color: var(--accent); }
+        .act-card-icon.actions { background: rgba(239, 68, 68, 0.12); color: #ef4444; }
+        .act-card-icon.outputs { background: rgba(16, 185, 129, 0.12); color: #10b981; }
+        .act-card-icon svg { width: 24px; height: 24px; }
+        .act-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .act-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .act-example {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            font-style: italic;
+            position: relative;
+        }
+        .act-example::before {
+            content: '\U0001F4AC';
+            position: absolute;
+            top: -10px;
+            left: 12px;
+            font-size: 1rem;
+        }
+
+        /* Real Integrations Section */
+        .integrations-section {
+            padding: 80px 5%;
+            background: var(--bg-secondary);
+        }
+        .integrations-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .integrations-header {
+            margin-bottom: 48px;
+        }
+        .integrations-header h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .integrations-header p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .integrations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+        .integration-category {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px 16px;
+        }
+        .integration-category h4 {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        .integration-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .integration-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .integration-item .int-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* How We Work Section */
+        .how-we-work-section {
+            padding: 100px 5%;
+            background: var(--bg-primary);
+        }
+        .hww-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .hww-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .hww-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(11, 213, 224, 0.1);
+            border: 1px solid rgba(11, 213, 224, 0.2);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--cyan);
+            margin-bottom: 20px;
+        }
+        .hww-header h2 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .hww-header p {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+        .hww-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+        .hww-steps::before {
+            content: '';
+            position: absolute;
+            top: 32px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: var(--gradient-accent);
+            opacity: 0.3;
+            z-index: 0;
+        }
+        .hww-step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .hww-step-number {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .hww-step-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: var(--accent-light);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .hww-step h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .hww-step p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive for new sections */
+        @media (max-width: 1024px) {
+            .acts-grid { grid-template-columns: 1fr; }
+            .integrations-grid { grid-template-columns: repeat(2, 1fr); }
+            .hww-steps { grid-template-columns: repeat(2, 1fr); }
+            .hww-steps::before { display: none; }
+        }
+        @media (max-width: 768px) {
+            .integrations-grid { grid-template-columns: 1fr; }
+            .hww-steps { grid-template-columns: 1fr; }
+        }
+
         /* Stats Section */
         /* Stats Section - Premium Redesign */
         .stats-section {
@@ -5944,6 +6219,10 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
                     <span data-i18n="demo.tab5">Marketing Digital</span>
                 </button>
+                <button class="demo-tab" data-tab="uc6">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 11v4"/><circle cx="12" cy="9" r="1"/></svg>
+                    <span data-i18n="demo.tab6">Agroindustria</span>
+                </button>
             </div>
 
             <div class="demo-mockup reveal">
@@ -6114,6 +6393,33 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- UC6: Agroindustria -->
+                            <div class="demo-chat demo-usecase-panel" id="demoPanelUc6">
+                                <div class="demo-message user-message">
+                                    <div class="demo-message-avatar user">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    </div>
+                                    <div class="demo-message-content" data-i18n="demo.uc6Question">¿Qué proveedores tienen alertas de residualidad este mes?</div>
+                                </div>
+                                <div class="demo-message ai-message">
+                                    <div class="demo-message-avatar ai">
+                                        <img src="assets/img/Icono-Blanco.png" alt="Centinela" class="demo-ai-icon">
+                                    </div>
+                                    <div class="demo-message-content ai">
+                                        <span data-i18n="demo.uc6Response">Análisis de residualidad de proveedores este mes:</span><br><br>
+                                        <div class="demo-ai-findings">
+                                            <div class="demo-finding alert"><span class="demo-finding-icon">🚨</span><span data-i18n="demo.uc6Detail1">3 proveedores con alertas activas — 2 superan umbrales MRL de la UE</span></div>
+                                            <div class="demo-finding alert"><span class="demo-finding-icon">⚠️</span><span data-i18n="demo.uc6Detail2">Proveedor Finca El Roble: clorpirifós 0.08 mg/kg (límite: 0.01 mg/kg)</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">📉</span><span data-i18n="demo.uc6Detail3">Score de confiabilidad del proveedor impactado: 92% → 74%</span></div>
+                                            <div class="demo-finding"><span class="demo-finding-icon">🔒</span><span data-i18n="demo.uc6Detail4">Acción ejecutada: Bloqueo restrictivo aplicado en Odoo. Equipo de calidad notificado por WhatsApp</span></div>
+                                        </div>
+                                        <div class="demo-recommendation">
+                                            <div class="demo-recommendation-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4 2 7.5L12 17l-6.5 3.5 2-7.5L2 9h7z"/></svg><span>Recommendation</span></div>
+                                            <span data-i18n="demo.uc6Recommendation">Recomiendo priorizar visita técnica a Finca El Roble esta semana. Última visita hace 45 días. Puedo agregarla al calendario automatizado de visitas.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="demo-input">
                                 <input type="text" data-i18n-placeholder="demo.inputPlaceholder" placeholder="Ask anything about your data..." aria-label="Ask a question about your business data">
                                 <button data-i18n="demo.inputButton">Ask</button>
@@ -6231,6 +6537,47 @@
                 </linearGradient>
             </defs>
         </svg>
+    </section>
+
+    <!-- CENTINELA ACTS - DIFFERENTIATOR -->
+    <section class="acts-section">
+        <div class="acts-container">
+            <div class="acts-header reveal">
+                <div class="acts-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <span data-i18n="acts.badge">Más allá de preguntas</span>
+                </div>
+                <h2 class="acts-title"><span data-i18n="acts.title">Centinela no solo responde.</span> <span class="highlight" data-i18n="acts.titleHighlight">Actúa.</span></h2>
+                <p class="acts-subtitle" data-i18n="acts.subtitle">Alertas proactivas, reportes automatizados y acciones restrictivas sobre tus sistemas — todo sin intervención humana.</p>
+            </div>
+
+            <div class="acts-grid reveal">
+                <div class="act-card">
+                    <div class="act-card-icon alerts">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <h3 data-i18n="acts.act1Title">Alertas Proactivas</h3>
+                    <p data-i18n="acts.act1Desc">Notificaciones multicanal (WhatsApp, email, SMS) con la información que necesitas antes de que la pidas.</p>
+                    <div class="act-example" data-i18n="acts.act1Example">Lunes 7am por WhatsApp: 'Tienes 3 facturas de proveedores pendientes de aprobación por $125K. 2 superan el plazo de 30 días. ¿Las marco?'</div>
+                </div>
+                <div class="act-card">
+                    <div class="act-card-icon actions">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M4.93 4.93l14.14 14.14"/></svg>
+                    </div>
+                    <h3 data-i18n="acts.act2Title">Acciones Restrictivas</h3>
+                    <p data-i18n="acts.act2Desc">Bloquea, restringe o marca transacciones automáticamente en tu ERP cuando se violan reglas de negocio.</p>
+                    <div class="act-example" data-i18n="acts.act2Example">Proveedor #4523 bloqueado en Odoo: residualidad detectada sobre umbral UE. Equipo de calidad notificado por WhatsApp.</div>
+                </div>
+                <div class="act-card">
+                    <div class="act-card-icon outputs">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h3 data-i18n="acts.act3Title">Outputs Automatizados</h3>
+                    <p data-i18n="acts.act3Desc">Genera reportes, PDFs, estados financieros y scorecards listos para toma de decisiones.</p>
+                    <div class="act-example" data-i18n="acts.act3Example">Estudio de crédito para Cliente XYZ generado: Riesgo B+, límite recomendado $450K. PDF enviado al comité de crédito.</div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- KNOWLEDGE LAYER SECTION - AGENT SKILLS -->
@@ -6448,6 +6795,54 @@
                 </svg>
             </div>
 
+        </div>
+    </section>
+
+    <!-- Real Integrations - Named Systems -->
+    <section class="integrations-section">
+        <div class="integrations-container">
+            <div class="integrations-header reveal">
+                <h2 data-i18n="integrations.title">Se conecta con los sistemas que ya usas</h2>
+                <p data-i18n="integrations.subtitle">No son conectores genéricos — integraciones reales probadas en producción con nuestros clientes.</p>
+            </div>
+            <div class="integrations-grid reveal">
+                <div class="integration-category">
+                    <h4 data-i18n="integrations.cat1">ERPs y Contabilidad</h4>
+                    <div class="integration-items">
+                        <div class="integration-item"><span class="int-dot" style="background: #0FAAFF;"></span>SAP</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #00DC82;"></span>Siigo</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #714B67;"></span>Odoo</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #E8702A;"></span>DIAN</div>
+                    </div>
+                </div>
+                <div class="integration-category">
+                    <h4 data-i18n="integrations.cat2">Operaciones y CRM</h4>
+                    <div class="integration-items">
+                        <div class="integration-item"><span class="int-dot" style="background: #00A1E0;"></span>Salesforce</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #FF7A59;"></span>HubSpot</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #003580;"></span>Booking.com</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #FF5A5F;"></span>Airbnb</div>
+                    </div>
+                </div>
+                <div class="integration-category">
+                    <h4 data-i18n="integrations.cat3">Comunicación y Alertas</h4>
+                    <div class="integration-items">
+                        <div class="integration-item"><span class="int-dot" style="background: #25D366;"></span>WhatsApp</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #EA4335;"></span>Gmail</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #E01E5A;"></span>Slack</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #5865F2;"></span>Teams</div>
+                    </div>
+                </div>
+                <div class="integration-category">
+                    <h4 data-i18n="integrations.cat4">Especializadas</h4>
+                    <div class="integration-items">
+                        <div class="integration-item"><span class="int-dot" style="background: #4CAF50;"></span>Simple Agri</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #2196F3;"></span>Primoris</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #336791;"></span>PostgreSQL</div>
+                        <div class="integration-item"><span class="int-dot" style="background: #34A853;"></span>Google Sheets</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -6784,6 +7179,10 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
                             <span data-i18n="comparison.traditional5">Questions limited by dashboard design</span>
                         </div>
+                        <div class="comparison-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                            <span data-i18n="comparison.traditional6">Manual processes — someone has to do it</span>
+                        </div>
                     </div>
                 </div>
 
@@ -6817,6 +7216,10 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
                             <span data-i18n="comparison.centinela5">Ask anything in natural language</span>
                         </div>
+                        <div class="comparison-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span data-i18n="comparison.centinela6">Automated actions — Centinela does it for you</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -6834,7 +7237,7 @@
             <div class="testimonials-slider reveal" id="testimonialSlider">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">OC</div>
+                        <div class="testimonial-avatar">GH</div>
                         <div class="testimonial-info">
                             <h4 data-i18n="testimonials.testimonial1Role">Operations Director</h4>
                             <p data-i18n="testimonials.testimonial1Company">Ocati - Exotic Fruit Exporter</p>
@@ -6861,7 +7264,7 @@
 
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">RB</div>
+                        <div class="testimonial-avatar">EA</div>
                         <div class="testimonial-info">
                             <h4 data-i18n="testimonials.testimonial2Role">CFO</h4>
                             <p data-i18n="testimonials.testimonial2Company">Regional Bank</p>
@@ -6906,16 +7309,9 @@
                 <p data-i18n="videoDemo.subtitle">Descubre cómo transformamos datos dispersos en respuestas instantáneas</p>
             </div>
             <div class="video-wrapper">
-                <!-- Placeholder - Reemplazar con video/GIF real -->
-                <div class="video-placeholder" id="videoPlaceholder">
-                    <div class="video-placeholder-icon">
-                        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                    </div>
-                    <p class="video-placeholder-text" data-i18n="videoDemo.placeholder">Video próximamente</p>
-                </div>
-                <!-- Cuando tengas el GIF/video, descomenta esto y elimina el placeholder:
-                <img src="assets/img/demo.gif" alt="Centinela Demo">
-                -->
+                <video id="demoVideo" controls playsinline muted preload="metadata" style="width:100%;height:100%;object-fit:cover;border-radius:20px;">
+                    <source src="assets/Demo Centinela.mp4" type="video/mp4">
+                </video>
             </div>
         </div>
     </section>
@@ -7017,6 +7413,43 @@
                     <div class="faq-answer">
                         <p data-i18n="faq.a9">Nuestra meta es que cada lunes, cada persona de tu equipo inicie sesión y tenga todo listo: qué debe saber, qué aprobar o rechazar para continuar con su trabajo de alto impacto. Todo lo demás — recopilar datos, generar reportes, monitorear compliance — lo hace Centinela automáticamente.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work - Service Model -->
+    <section class="how-we-work-section" id="how-we-work">
+        <div class="hww-container">
+            <div class="hww-header reveal">
+                <div class="hww-badge" data-i18n="howWeWork.badge">Nuestro Proceso</div>
+                <h2 data-i18n="howWeWork.title">Cómo trabajamos</h2>
+                <p data-i18n="howWeWork.subtitle">No es un SaaS genérico — es una implementación estratégica adaptada a tu organización.</p>
+            </div>
+            <div class="hww-steps reveal">
+                <div class="hww-step">
+                    <div class="hww-step-number">1</div>
+                    <span class="hww-step-tag" data-i18n="howWeWork.step1Tag">Semana 1</span>
+                    <h3 data-i18n="howWeWork.step1Title">Diagnóstico</h3>
+                    <p data-i18n="howWeWork.step1Desc">Mapeamos tus sistemas, procesos y conocimiento crítico. Identificamos dónde se pierde conocimiento y dónde están las automatizaciones de mayor impacto.</p>
+                </div>
+                <div class="hww-step">
+                    <div class="hww-step-number">2</div>
+                    <span class="hww-step-tag" data-i18n="howWeWork.step2Tag">Semanas 2-3</span>
+                    <h3 data-i18n="howWeWork.step2Title">Implementación</h3>
+                    <p data-i18n="howWeWork.step2Desc">Conectamos tus sistemas, construimos el grafo de conocimiento y desplegamos los primeros casos de uso. Tu equipo ve resultados desde el día uno.</p>
+                </div>
+                <div class="hww-step">
+                    <div class="hww-step-number">3</div>
+                    <span class="hww-step-tag" data-i18n="howWeWork.step3Tag">Continuo</span>
+                    <h3 data-i18n="howWeWork.step3Title">Backlog Priorizado</h3>
+                    <p data-i18n="howWeWork.step3Desc">Juntos definimos un backlog de proyectos de automatización. Cada sprint entrega nuevas capacidades: bots, workflows, reportes, alertas.</p>
+                </div>
+                <div class="hww-step">
+                    <div class="hww-step-number">4</div>
+                    <span class="hww-step-tag" data-i18n="howWeWork.step4Tag">Siempre</span>
+                    <h3 data-i18n="howWeWork.step4Title">Soporte Continuo</h3>
+                    <p data-i18n="howWeWork.step4Desc">Acompañamiento permanente, optimización de modelos, transferencia de conocimiento. Tu equipo gana soberanía — no dependencia.</p>
                 </div>
             </div>
         </div>
@@ -7153,8 +7586,8 @@
                     <h4 data-i18n="footer.product">Product</h4>
                     <ul>
                         <li><a href="#features" data-i18n="footer.features">Features</a></li>
-                        <li><a href="#how" data-i18n="footer.howItWorks">How it Works</a></li>
-                        <li><a href="pages/pricing.html" data-i18n="footer.pricing">Pricing</a></li>
+                        <li><a href="#how-we-work" data-i18n="footer.howItWorks">How it Works</a></li>
+                        <li><a href="#pricing" data-i18n="footer.pricing">Pricing</a></li>
                     </ul>
                 </div>
 
@@ -7470,15 +7903,37 @@
             if (step3) graphObserver.observe(step3);
         }
 
-        // Theme toggle - Fixed
+        // Auto-play demo video on scroll, unmute on first click
+        const demoVideo = document.getElementById('demoVideo');
+        if (demoVideo) {
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        demoVideo.play().catch(() => {});
+                    } else {
+                        demoVideo.pause();
+                    }
+                });
+            }, { threshold: 0.3 });
+            videoObserver.observe(demoVideo);
+
+            // Unmute on first user interaction with the video
+            demoVideo.addEventListener('click', () => {
+                if (demoVideo.muted) {
+                    demoVideo.muted = false;
+                }
+            }, { once: true });
+        }
+
+        // Theme toggle - Default light
         const themeToggle = document.querySelector('.theme-toggle');
         const savedTheme = localStorage.getItem('centinela-theme');
 
-        // Only set theme if explicitly saved, otherwise use default (dark/no attribute)
-        if (savedTheme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
-        } else {
+        // Default to light mode; only go dark if explicitly saved
+        if (savedTheme === 'dark') {
             document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
         }
 
         if (themeToggle) {

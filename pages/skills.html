@@ -741,7 +741,7 @@
     <script>
         // Theme toggle
         const themeToggle = document.querySelector('.theme-toggle');
-        const savedTheme = localStorage.getItem('centinela-theme') || 'dark';
+        const savedTheme = localStorage.getItem('centinela-theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
 
         themeToggle?.addEventListener('click', () => {

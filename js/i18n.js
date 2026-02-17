@@ -23,7 +23,7 @@ const translations = {
             badge: "Cognitive sovereignty for your company",
             titleLine1: "Your knowledge.",
             titleLine2: "Your competitive edge.",
-            description: "Centinela builds your organization's knowledge layer — connects your systems, captures your business logic, and turns scattered data into actionable intelligence. No external API dependency.",
+            description: "Centinela builds your Organizational Brain — connects your systems, captures your business logic, and doesn't just answer questions: it executes actions, generates alerts, and automates complete workflows. Without depending on external APIs.",
             ctaPrimary: "See how it works",
             ctaSecondary: "Request demo",
             loopCapture: "Connect",
@@ -98,6 +98,15 @@ const translations = {
             uc5Detail3: "LinkedIn: CPA $45 but highest quality leads (32% close rate vs 12% Meta)",
             uc5Detail4: "Opportunity: $3K from Meta → LinkedIn would generate ~67 additional high-value leads",
             uc5Recommendation: "I recommend reallocating $3K from Meta to LinkedIn this week. The lookalike audience is exhausted. LinkedIn CPL is higher but close value is 3x. Should I execute the reallocation?",
+            // Use case 6: Agroindustry
+            tab6: "Agroindustry",
+            uc6Question: "Which suppliers have residuality alerts this month?",
+            uc6Response: "Supplier residuality analysis for this month:",
+            uc6Detail1: "3 suppliers with active alerts — 2 exceed EU MRL thresholds",
+            uc6Detail2: "Supplier Finca El Roble: chlorpyrifos 0.08 mg/kg (limit: 0.01 mg/kg)",
+            uc6Detail3: "Supplier reliability score impacted: 92% → 74%",
+            uc6Detail4: "Action executed: Restrictive block applied on Odoo. Quality team notified via WhatsApp",
+            uc6Recommendation: "I recommend prioritizing a technical visit to Finca El Roble this week. Last visit was 45 days ago. I can add it to the automated visit calendar.",
             browserUrl: "app.centinela.ai",
             inputPlaceholder: "Ask anything about your data...",
             inputButton: "Ask"
@@ -113,6 +122,23 @@ const translations = {
             stat3Label: "To production deployment",
             stat4Value: "24/7",
             stat4Label: "Compliance monitoring"
+        },
+
+        // Centinela Acts Section - DIFFERENTIATOR
+        acts: {
+            badge: "Beyond Q&A",
+            title: "Centinela doesn't just answer.",
+            titleHighlight: "It acts.",
+            subtitle: "Proactive alerts, automated reports, and restrictive actions on your systems — all without human intervention.",
+            act1Title: "Proactive Alerts",
+            act1Desc: "Multi-channel notifications (WhatsApp, email, SMS) with the information you need before you ask for it.",
+            act1Example: "Monday 7am via WhatsApp: 'You have 3 supplier invoices pending approval for $125K. 2 exceed the 30-day term. Shall I flag them?'",
+            act2Title: "Restrictive Actions",
+            act2Desc: "Automatically blocks, restricts or flags transactions in your ERP when business rules are violated.",
+            act2Example: "Supplier #4523 blocked in Odoo: residuality detected above EU threshold. Quality team notified via WhatsApp.",
+            act3Title: "Automated Outputs",
+            act3Desc: "Generates reports, PDFs, financial statements, and scorecards ready for decision-making.",
+            act3Example: "Credit study for Client XYZ generated: Risk B+, recommended limit $450K. PDF sent to credit committee."
         },
 
         // Features Section - THE DATA STACK
@@ -146,6 +172,16 @@ const translations = {
         connectors: {
             title: "+400 connectors available",
             subtitle: "We connect with any data source you use"
+        },
+
+        // Real Integrations Section
+        integrations: {
+            title: "Connects with the systems you already use",
+            subtitle: "Not generic connectors — real integrations tested in production with our clients.",
+            cat1: "ERPs & Accounting",
+            cat2: "Operations & CRM",
+            cat3: "Communication & Alerts",
+            cat4: "Specialized"
         },
 
         // Knowledge Layer Section - AGENT SKILLS
@@ -244,11 +280,13 @@ const translations = {
             traditional3: "Knowledge leaves when people leave",
             traditional4: "Dependency on external APIs (you leak your value)",
             traditional5: "Generic answers without your context",
+            traditional6: "Manual processes — someone has to do it",
             centinela1: "Living knowledge that updates itself",
             centinela2: "Graphs that understand YOUR logic",
             centinela3: "Institutional memory that's preserved",
             centinela4: "Sovereignty over your knowledge",
-            centinela5: "Answers with your company's context"
+            centinela5: "Answers with your company's context",
+            centinela6: "Automated actions — Centinela does it for you"
         },
 
         // How it Works Section
@@ -263,28 +301,47 @@ const translations = {
             step3Desc: "Ask questions in natural language. Get instant answers with data from all your connected sources."
         },
 
+        // How We Work Section - SERVICE MODEL
+        howWeWork: {
+            badge: "Our Process",
+            title: "How we work",
+            subtitle: "Not a generic SaaS — a strategic implementation tailored to your organization.",
+            step1Title: "Diagnostic",
+            step1Desc: "We map your systems, processes and critical knowledge. We identify where knowledge is lost and where the highest-impact automations are.",
+            step1Tag: "Week 1",
+            step2Title: "Implementation",
+            step2Desc: "We connect your systems, build the knowledge graph and deploy the first use cases. Your team sees results from day one.",
+            step2Tag: "Weeks 2-3",
+            step3Title: "Prioritized Backlog",
+            step3Desc: "Together we define a backlog of automation projects. Each sprint delivers new capabilities: bots, workflows, reports, alerts.",
+            step3Tag: "Ongoing",
+            step4Title: "Continuous Support",
+            step4Desc: "Ongoing accompaniment, model optimization, knowledge transfer. Your team gains sovereignty — not dependency.",
+            step4Tag: "Always"
+        },
+
         // Testimonials Section
         testimonials: {
-            title: "Results That Matter",
-            subtitle: "See how companies are transforming their data access",
+            title: "Real Results from Real Companies",
+            subtitle: "How our clients transformed their operations with Centinela",
             testimonial1Role: "Operations Director",
-            testimonial1Company: "Ocati - Exotic Fruit Exporter",
-            testimonial1Quote: "Before, the knowledge of our operation lived in 3 people's heads. Now it's in Centinela and anyone on the team can query with full context.",
-            testimonial1Metric1Value: "15+",
+            testimonial1Company: "Hotel Group — Medellín",
+            testimonial1Quote: "Before Centinela, monthly close took us 2 weeks and involved 4 people pulling data from ERP, PMS and spreadsheets. Now it takes 3 days. But what changed everything is that every Monday, each department head arrives and already has their pending items, approvals and alerts ready — without asking anyone.",
+            testimonial1Metric1Value: "12",
             testimonial1Metric1Label: "Systems Connected",
-            testimonial1Metric2Value: "3 weeks",
-            testimonial1Metric2Label: "To Full Deployment",
-            testimonial1Metric3Value: "85%",
-            testimonial1Metric3Label: "Faster Reports",
-            testimonial2Role: "CFO",
-            testimonial2Company: "Regional Bank",
-            testimonial2Quote: "Centinela captured the institutional knowledge that used to exist only in Excel files and people's heads. Now any analyst can make decisions with complete context.",
-            testimonial2Metric1Value: "30 sec",
-            testimonial2Metric1Label: "Average Query Time",
-            testimonial2Metric2Value: "15+",
-            testimonial2Metric2Label: "Data Sources",
-            testimonial2Metric3Value: "24/7",
-            testimonial2Metric3Label: "Data Access"
+            testimonial1Metric2Value: "85%",
+            testimonial1Metric2Label: "Reduction in Close Time",
+            testimonial1Metric3Value: "23",
+            testimonial1Metric3Label: "Automated Workflows",
+            testimonial2Role: "Quality & Traceability Director",
+            testimonial2Company: "Agricultural Exporter — Colombia",
+            testimonial2Quote: "Centinela doesn't just answer questions — it acts. When it detects that a supplier exceeds residuality limits, it automatically blocks them in Odoo and alerts the quality team via WhatsApp. That level of proactive control would have been impossible manually with 200+ suppliers.",
+            testimonial2Metric1Value: "4",
+            testimonial2Metric1Label: "Systems Integrated",
+            testimonial2Metric2Value: "90%",
+            testimonial2Metric2Label: "Risk Reduction",
+            testimonial2Metric3Value: "200+",
+            testimonial2Metric3Label: "Suppliers Monitored 24/7"
         },
 
         // Resources Section
@@ -401,15 +458,27 @@ const translations = {
 
         // About Page
         about: {
-            pageTitle: "About Centinela",
-            pageSubtitle: "Building the knowledge infrastructure that gives companies sovereignty over their own intelligence.",
-            missionTitle: "Our Mission",
-            missionText: "We believe a company's accumulated knowledge is its most valuable asset — and its most wasted one. Our mission is for every organization to have sovereignty over its own intelligence: its business logic, decisions, and institutional knowledge captured, preserved, and accessible to everyone, forever.",
-            storyTitle: "Why We Exist",
-            storyText1: "We saw how critical business knowledge was locked inside 3 people's heads, lost in spreadsheets, or scattered across disconnected systems. When someone left, years of institutional knowledge went with them.",
-            storyText2: "Centinela is the answer: a knowledge layer that captures, preserves, and activates the intelligence your company has built over years — so it never depends on a single person or a single system again.",
-            teamTitle: "Built by Knowledge Engineers",
-            teamText: "Our team has built data infrastructure and AI systems for enterprises across Latin America. We understand the pain of knowledge loss firsthand, and we built Centinela to solve it.",
+            heroBadge: "The Organizational Brain",
+            heroTitle1: "We are ",
+            heroTitle2: "Centinela",
+            pageSubtitle: "We build the knowledge infrastructure that gives companies sovereignty over their own intelligence.",
+            whatWeDoBadge: "What we build",
+            whatWeDoTitle: "The Knowledge Layer for your organization",
+            whatWeDoText1: "Centinela is not another AI chatbot. It is the organizational brain of your company: it connects your systems, captures your business logic, and doesn't just answer questions — it executes actions, generates alerts, and automates complete workflows.",
+            whatWeDoText2: "We believe that a company's accumulated knowledge is its most valuable asset — and the most wasted. Our mission is for every organization to have sovereignty over its own intelligence.",
+            whoWeServeBadge: "Verticals",
+            whoWeServeTitle: "Who we serve",
+            whoWeServeSubtitle: "We work with companies that generate critical knowledge and can't afford to lose it.",
+            vertical1Title: "Agroindustry",
+            vertical1Desc: "Traceability, residuality, supplier management, quality control, and export compliance.",
+            vertical2Title: "Hospitality",
+            vertical2Desc: "Multi-property operations, revenue management, guest analytics, and automated closing.",
+            vertical3Title: "Finance & Accounting",
+            vertical3Desc: "Reconciliations, closes, compliance, tax filings, and financial reporting.",
+            vertical4Title: "Operations",
+            vertical4Desc: "Inventory, supply chain, efficiency metrics, and cross-system automation.",
+            approachBadge: "Our principles",
+            approachSubtitle: "The convictions that guide every decision we make.",
             valuesTitle: "Our Principles",
             value1Title: "Cognitive Sovereignty",
             value1Desc: "Your company should own its intelligence. Not rent it from an API. Not lose it when people leave.",
@@ -418,7 +487,15 @@ const translations = {
             value3Title: "Context Is Everything",
             value3Desc: "Data without business context is noise. We build graphs that understand YOUR logic, YOUR relationships, YOUR metrics.",
             value4Title: "Institutional Memory",
-            value4Desc: "Every decision, every pattern, every insight your company generates should be captured and accessible — forever."
+            value4Desc: "Every decision, every pattern, every insight your company generates should be captured and accessible — forever.",
+            teamBadge: "Our team",
+            teamSectionTitle: "Built by Knowledge Engineers",
+            teamText1: "We saw how critical business knowledge was locked inside people's heads, lost in spreadsheets, or scattered across disconnected systems. When someone left, years of institutional knowledge went with them.",
+            teamText2: "Centinela is the answer: a knowledge layer that captures, preserves, and activates the intelligence your company has built over years — so it never depends on a single person or a single system again.",
+            teamCardTitle: "Data infrastructure & AI for Latin America",
+            teamCardText: "Our team has built data infrastructure and AI systems for enterprises across Latin America. We understand the pain of knowledge loss firsthand, and we built Centinela to solve it.",
+            teamLocation: "Bogota, Colombia",
+            teamRegion: "Serving all of Latin America"
         },
 
         // Contact Page
@@ -448,7 +525,9 @@ const translations = {
             scheduleTitle: "Schedule",
             scheduleValue: "30-min call to explore your use case",
             locationTitle: "Location",
-            locationValue: "Bogota, Colombia"
+            locationValue: "Bogota, Colombia",
+            successMessage: "Message sent!",
+            errorMessage: "Error sending. Try again."
         },
 
         // Pricing Page
@@ -604,7 +683,7 @@ const translations = {
             badge: "Soberanía cognitiva para tu empresa",
             titleLine1: "Tu conocimiento.",
             titleLine2: "Tu ventaja competitiva.",
-            description: "Centinela construye la capa de conocimiento de tu organización — conecta tus sistemas, captura tu lógica de negocio y convierte datos dispersos en inteligencia accionable. Sin depender de APIs externas.",
+            description: "Centinela construye el Cerebro Organizacional de tu empresa — conecta tus sistemas, captura tu lógica de negocio y no solo responde preguntas: ejecuta acciones, genera alertas y automatiza workflows completos. Sin depender de APIs externas.",
             ctaPrimary: "Ver cómo funciona",
             ctaSecondary: "Solicitar demo",
             loopCapture: "Conectar",
@@ -679,6 +758,15 @@ const translations = {
             uc5Detail3: "LinkedIn: CPA $45 pero leads de mayor calidad (32% tasa cierre vs 12% Meta)",
             uc5Detail4: "Oportunidad: $3K de Meta → LinkedIn generaría ~67 leads adicionales de alto valor",
             uc5Recommendation: "Recomiendo reasignar $3K de Meta a LinkedIn esta semana. La audiencia lookalike se agotó. En LinkedIn el costo por lead es mayor pero el valor por cierre es 3x. ¿Ejecuto la reasignación?",
+            // Caso 6: Agroindustria
+            tab6: "Agroindustria",
+            uc6Question: "¿Qué proveedores tienen alertas de residualidad este mes?",
+            uc6Response: "Análisis de residualidad de proveedores este mes:",
+            uc6Detail1: "3 proveedores con alertas activas — 2 superan umbrales MRL de la UE",
+            uc6Detail2: "Proveedor Finca El Roble: clorpirifós 0.08 mg/kg (límite: 0.01 mg/kg)",
+            uc6Detail3: "Score de confiabilidad del proveedor impactado: 92% → 74%",
+            uc6Detail4: "Acción ejecutada: Bloqueo restrictivo aplicado en Odoo. Equipo de calidad notificado por WhatsApp",
+            uc6Recommendation: "Recomiendo priorizar visita técnica a Finca El Roble esta semana. Última visita hace 45 días. Puedo agregarla al calendario automatizado de visitas.",
             browserUrl: "app.centinela.ai",
             inputPlaceholder: "Pregunta lo que sea sobre tus datos...",
             inputButton: "Preguntar"
@@ -694,6 +782,23 @@ const translations = {
             stat3Label: "A producción",
             stat4Value: "24/7",
             stat4Label: "Monitoreo de compliance"
+        },
+
+        // Sección Centinela Actúa - DIFERENCIADOR
+        acts: {
+            badge: "Más allá de preguntas",
+            title: "Centinela no solo responde.",
+            titleHighlight: "Actúa.",
+            subtitle: "Alertas proactivas, reportes automatizados y acciones restrictivas sobre tus sistemas — todo sin intervención humana.",
+            act1Title: "Alertas Proactivas",
+            act1Desc: "Notificaciones multicanal (WhatsApp, email, SMS) con la información que necesitas antes de que la pidas.",
+            act1Example: "Lunes 7am por WhatsApp: 'Tienes 3 facturas de proveedores pendientes de aprobación por $125K. 2 superan el plazo de 30 días. ¿Las marco?'",
+            act2Title: "Acciones Restrictivas",
+            act2Desc: "Bloquea, restringe o marca transacciones automáticamente en tu ERP cuando se violan reglas de negocio.",
+            act2Example: "Proveedor #4523 bloqueado en Odoo: residualidad detectada sobre umbral UE. Equipo de calidad notificado por WhatsApp.",
+            act3Title: "Outputs Automatizados",
+            act3Desc: "Genera reportes, PDFs, estados financieros y scorecards listos para toma de decisiones.",
+            act3Example: "Estudio de crédito para Cliente XYZ generado: Riesgo B+, límite recomendado $450K. PDF enviado al comité de crédito."
         },
 
         // Features Section - THE DATA STACK
@@ -727,6 +832,16 @@ const translations = {
         connectors: {
             title: "+400 conectores disponibles",
             subtitle: "Conectamos con cualquier fuente de datos que uses"
+        },
+
+        // Sección Integraciones Reales
+        integrations: {
+            title: "Se conecta con los sistemas que ya usas",
+            subtitle: "No son conectores genéricos — integraciones reales probadas en producción con nuestros clientes.",
+            cat1: "ERPs y Contabilidad",
+            cat2: "Operaciones y CRM",
+            cat3: "Comunicación y Alertas",
+            cat4: "Especializadas"
         },
 
         // Knowledge Layer Section - AGENT SKILLS
@@ -825,11 +940,13 @@ const translations = {
             traditional3: "Conocimiento que se va cuando la gente se va",
             traditional4: "Dependencia de APIs externas (filtras tu valor)",
             traditional5: "Respuestas genéricas sin tu contexto",
+            traditional6: "Procesos manuales — alguien lo tiene que hacer",
             centinela1: "Conocimiento vivo que se actualiza solo",
             centinela2: "Grafos que entienden TU lógica",
             centinela3: "Memoria institucional que se preserva",
             centinela4: "Soberanía sobre tu conocimiento",
-            centinela5: "Respuestas con el contexto de tu empresa"
+            centinela5: "Respuestas con el contexto de tu empresa",
+            centinela6: "Acciones automatizadas — Centinela lo hace por ti"
         },
 
         // How it Works Section
@@ -844,28 +961,47 @@ const translations = {
             step3Desc: "Haz preguntas en lenguaje natural. Obtén respuestas instantáneas con datos de todas tus fuentes conectadas."
         },
 
+        // Sección Cómo Trabajamos - MODELO DE SERVICIO
+        howWeWork: {
+            badge: "Nuestro Proceso",
+            title: "Cómo trabajamos",
+            subtitle: "No es un SaaS genérico — es una implementación estratégica adaptada a tu organización.",
+            step1Title: "Diagnóstico",
+            step1Desc: "Mapeamos tus sistemas, procesos y conocimiento crítico. Identificamos dónde se pierde conocimiento y dónde están las automatizaciones de mayor impacto.",
+            step1Tag: "Semana 1",
+            step2Title: "Implementación",
+            step2Desc: "Conectamos tus sistemas, construimos el grafo de conocimiento y desplegamos los primeros casos de uso. Tu equipo ve resultados desde el día uno.",
+            step2Tag: "Semanas 2-3",
+            step3Title: "Backlog Priorizado",
+            step3Desc: "Juntos definimos un backlog de proyectos de automatización. Cada sprint entrega nuevas capacidades: bots, workflows, reportes, alertas.",
+            step3Tag: "Continuo",
+            step4Title: "Soporte Continuo",
+            step4Desc: "Acompañamiento permanente, optimización de modelos, transferencia de conocimiento. Tu equipo gana soberanía — no dependencia.",
+            step4Tag: "Siempre"
+        },
+
         // Testimonials Section
         testimonials: {
-            title: "Resultados que Importan",
-            subtitle: "Mira cómo las empresas están transformando su acceso a datos",
-            testimonial1Role: "Director de Operaciones",
-            testimonial1Company: "Ocati - Exportador de Frutas Exóticas",
-            testimonial1Quote: "Antes el conocimiento de la operación vivía en la cabeza de 3 personas. Ahora está en Centinela y cualquiera del equipo puede consultar con contexto completo.",
-            testimonial1Metric1Value: "15+",
+            title: "Resultados reales de empresas reales",
+            subtitle: "Cómo nuestros clientes transformaron sus operaciones con Centinela",
+            testimonial1Role: "Directora de Operaciones",
+            testimonial1Company: "Grupo Hotelero — Medellín",
+            testimonial1Quote: "Antes de Centinela, el cierre mensual nos tomaba 2 semanas e involucraba 4 personas sacando datos de ERP, PMS y hojas de cálculo. Ahora toma 3 días. Pero lo que realmente lo cambió todo es que cada lunes, cada jefe de área llega y ya tiene sus pendientes, aprobaciones y alertas listas — sin preguntarle a nadie.",
+            testimonial1Metric1Value: "12",
             testimonial1Metric1Label: "Sistemas Conectados",
-            testimonial1Metric2Value: "3 semanas",
-            testimonial1Metric2Label: "Para Despliegue",
-            testimonial1Metric3Value: "85%",
-            testimonial1Metric3Label: "Reportes Más Rápidos",
-            testimonial2Role: "CFO",
-            testimonial2Company: "Banco Regional",
-            testimonial2Quote: "Centinela capturó el conocimiento institucional que antes existía solo en archivos de Excel y en la cabeza de las personas. Ahora cualquier analista toma decisiones con contexto completo.",
-            testimonial2Metric1Value: "30 seg",
-            testimonial2Metric1Label: "Tiempo Promedio de Consulta",
-            testimonial2Metric2Value: "15+",
-            testimonial2Metric2Label: "Fuentes de Datos",
-            testimonial2Metric3Value: "24/7",
-            testimonial2Metric3Label: "Acceso a Datos"
+            testimonial1Metric2Value: "85%",
+            testimonial1Metric2Label: "Reducción en Tiempo de Cierre",
+            testimonial1Metric3Value: "23",
+            testimonial1Metric3Label: "Workflows Automatizados",
+            testimonial2Role: "Director de Calidad y Trazabilidad",
+            testimonial2Company: "Exportadora Agrícola — Colombia",
+            testimonial2Quote: "Centinela no solo responde preguntas — actúa. Cuando detecta que un proveedor supera los límites de residualidad, automáticamente lo bloquea en Odoo y alerta al equipo de calidad por WhatsApp. Ese nivel de control proactivo habría sido imposible manualmente con 200+ proveedores.",
+            testimonial2Metric1Value: "4",
+            testimonial2Metric1Label: "Sistemas Integrados",
+            testimonial2Metric2Value: "90%",
+            testimonial2Metric2Label: "Reducción de Riesgo",
+            testimonial2Metric3Value: "200+",
+            testimonial2Metric3Label: "Proveedores Monitoreados 24/7"
         },
 
         // Resources Section
@@ -982,15 +1118,27 @@ const translations = {
 
         // About Page
         about: {
-            pageTitle: "Sobre Centinela",
+            heroBadge: "El Cerebro Organizacional",
+            heroTitle1: "Somos ",
+            heroTitle2: "Centinela",
             pageSubtitle: "Construimos la infraestructura de conocimiento que le da a las empresas soberanía sobre su propia inteligencia.",
-            missionTitle: "Nuestra Misión",
-            missionText: "Creemos que el conocimiento acumulado de una empresa es su activo más valioso — y el más desperdiciado. Nuestra misión es que cada organización tenga soberanía sobre su propia inteligencia: que su lógica de negocio, sus decisiones y su conocimiento institucional estén capturados, preservados y accesibles para todos, para siempre.",
-            storyTitle: "Por Qué Existimos",
-            storyText1: "Vimos cómo el conocimiento crítico de negocio estaba encerrado en la cabeza de 3 personas, perdido en hojas de cálculo, o disperso en sistemas desconectados. Cuando alguien se iba, años de conocimiento institucional se iban con esa persona.",
-            storyText2: "Centinela es la respuesta: una capa de conocimiento que captura, preserva y activa la inteligencia que tu empresa ha construido durante años — para que nunca dependa de una sola persona ni de un solo sistema.",
-            teamTitle: "Construido por Ingenieros de Conocimiento",
-            teamText: "Nuestro equipo ha construido infraestructura de datos y sistemas de IA para empresas en toda Latinoamérica. Conocemos el dolor de la pérdida de conocimiento de primera mano, y construimos Centinela para resolverlo.",
+            whatWeDoBadge: "Lo que construimos",
+            whatWeDoTitle: "La Capa de Conocimiento para tu organización",
+            whatWeDoText1: "Centinela no es otro chatbot de IA. Es el cerebro organizacional de tu empresa: conecta tus sistemas, captura tu lógica de negocio y no solo responde preguntas — ejecuta acciones, genera alertas y automatiza workflows completos.",
+            whatWeDoText2: "Creemos que el conocimiento acumulado de una empresa es su activo más valioso — y el más desperdiciado. Nuestra misión es que cada organización tenga soberanía sobre su propia inteligencia.",
+            whoWeServeBadge: "Verticales",
+            whoWeServeTitle: "A quién servimos",
+            whoWeServeSubtitle: "Trabajamos con empresas que generan conocimiento crítico y no pueden darse el lujo de perderlo.",
+            vertical1Title: "Agroindustria",
+            vertical1Desc: "Trazabilidad, residualidad, gestión de proveedores, control de calidad y cumplimiento de exportación.",
+            vertical2Title: "Hotelería",
+            vertical2Desc: "Operaciones multi-propiedad, revenue management, analytics de huéspedes y cierres automatizados.",
+            vertical3Title: "Finanzas y Contabilidad",
+            vertical3Desc: "Conciliaciones, cierres, compliance, declaraciones tributarias y reportes financieros.",
+            vertical4Title: "Operaciones",
+            vertical4Desc: "Inventario, cadena de suministro, métricas de eficiencia y automatización entre sistemas.",
+            approachBadge: "Nuestros principios",
+            approachSubtitle: "Las convicciones que guían cada decisión que tomamos.",
             valuesTitle: "Nuestros Principios",
             value1Title: "Soberanía Cognitiva",
             value1Desc: "Tu empresa debe ser dueña de su inteligencia. No rentarla de una API. No perderla cuando la gente se va.",
@@ -999,7 +1147,15 @@ const translations = {
             value3Title: "El Contexto Es Todo",
             value3Desc: "Datos sin contexto de negocio son ruido. Construimos grafos que entienden TU lógica, TUS relaciones, TUS métricas.",
             value4Title: "Memoria Institucional",
-            value4Desc: "Cada decisión, cada patrón, cada insight que tu empresa genera debe quedar capturado y accesible — para siempre."
+            value4Desc: "Cada decisión, cada patrón, cada insight que tu empresa genera debe quedar capturado y accesible — para siempre.",
+            teamBadge: "Nuestro equipo",
+            teamSectionTitle: "Construido por Ingenieros de Conocimiento",
+            teamText1: "Vimos cómo el conocimiento crítico de negocio estaba encerrado en la cabeza de las personas, perdido en hojas de cálculo, o disperso en sistemas desconectados. Cuando alguien se iba, años de conocimiento institucional se iban con esa persona.",
+            teamText2: "Centinela es la respuesta: una capa de conocimiento que captura, preserva y activa la inteligencia que tu empresa ha construido durante años — para que nunca dependa de una sola persona ni de un solo sistema.",
+            teamCardTitle: "Infraestructura de datos e IA para Latinoamérica",
+            teamCardText: "Nuestro equipo ha construido infraestructura de datos y sistemas de IA para empresas en toda Latinoamérica. Conocemos el dolor de la pérdida de conocimiento de primera mano, y construimos Centinela para resolverlo.",
+            teamLocation: "Bogotá, Colombia",
+            teamRegion: "Sirviendo a toda Latinoamérica"
         },
 
         // Contact Page
@@ -1029,7 +1185,9 @@ const translations = {
             scheduleTitle: "Agendar",
             scheduleValue: "Llamada de 30 min para explorar tu caso de uso",
             locationTitle: "Ubicación",
-            locationValue: "Bogotá, Colombia"
+            locationValue: "Bogotá, Colombia",
+            successMessage: "¡Mensaje enviado!",
+            errorMessage: "Error al enviar. Intenta de nuevo."
         },
 
         // Pricing Page

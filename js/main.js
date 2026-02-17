@@ -8,7 +8,7 @@
 // ==========================================================================
 class ThemeManager {
     constructor() {
-        this.theme = localStorage.getItem('centinela-theme') || 'dark';
+        this.theme = localStorage.getItem('centinela-theme') || 'light';
         this.init();
     }
 
