@@ -23,23 +23,23 @@ const translations = {
             badge: "Cognitive sovereignty for your company",
             titleLine1: "Your knowledge.",
             titleLine2: "Your competitive edge.",
-            description: "Centinela builds your Organizational Brain — connects your systems, captures your business logic, and doesn't just answer questions: it executes actions, generates alerts, and automates complete workflows. Without depending on external APIs.",
+            description: "Centinela builds your Organizational Brain — connects your systems, captures your business logic, performs analysis, executes actions, generates alerts, and automates complete workflows. Without depending on external APIs.",
             ctaPrimary: "See how it works",
             ctaSecondary: "Request demo",
             loopCapture: "Connect",
-            loopEmbed: "Model",
-            loopOwn: "Decide"
+            loopEmbed: "Explore",
+            loopOwn: "Act"
         },
 
         // The Problem Section - Knowledge Loss
         problem: {
             sectionLabel: "The hidden cost",
-            headline: "Your company knows more than it can use",
+            headline: "Critical knowledge scattered across systems and people",
             point1: "Critical knowledge lives in 3 people's heads",
             point2: "Every new employee starts from zero",
             point3: "Decisions are made with incomplete data",
             point4: "Business logic isn't documented",
-            question: "What if your organization's accumulated knowledge was one question away?",
+            question: "Your organization's accumulated knowledge, one question away.",
             ctaText: "Build your knowledge layer →"
         },
 
@@ -53,7 +53,7 @@ const translations = {
             title: "Knowledge activated by vertical",
             subtitle: "Every department has its own knowledge layer. See how Centinela responds with real context from your company.",
             // Tab labels
-            tab1: "Reconciliations",
+            tab1: "Reconciliation",
             tab2: "Revenue Intelligence",
             tab3: "Compliance",
             tab4: "Operations",
@@ -117,7 +117,7 @@ const translations = {
             stat1Value: "85%",
             stat1Label: "Less time on accounting closes",
             stat2Value: "90%",
-            stat2Label: "Automatic invoice reconciliation",
+            stat2Label: "Automatic invoice reconciliation rate",
             stat3Value: "3wk",
             stat3Label: "To production deployment",
             stat4Value: "24/7",
@@ -127,9 +127,9 @@ const translations = {
         // Centinela Acts Section - DIFFERENTIATOR
         acts: {
             badge: "Beyond Q&A",
-            title: "Centinela doesn't just answer.",
-            titleHighlight: "It acts.",
-            subtitle: "Proactive alerts, automated reports, and restrictive actions on your systems — all without human intervention.",
+            title: "Centinela analyzes, decides, and",
+            titleHighlight: "acts.",
+            subtitle: "Extends your team's capacity with proactive alerts, automated reports, and restrictive actions on your systems — augmenting performance without increasing headcount.",
             act1Title: "Proactive Alerts",
             act1Desc: "Multi-channel notifications (WhatsApp, email, SMS) with the information you need before you ask for it.",
             act1Example: "Monday 7am via WhatsApp: 'You have 3 supplier invoices pending approval for $125K. 2 exceed the 30-day term. Shall I flag them?'",
@@ -189,7 +189,7 @@ const translations = {
             badge: "Knowledge Infrastructure",
             title: "Knowledge Layer.",
             titleHighlight: "Context Graphs.",
-            subtitle: "Not a chatbot that answers questions. It's infrastructure that captures, preserves, and activates your company's knowledge — the logic, relationships, and reasoning behind every decision. Your cognitive sovereignty.",
+            subtitle: "Infrastructure that captures, preserves, and activates your company's knowledge — the logic, relationships, and reasoning behind every decision. Your cognitive sovereignty.",
             // Knowledge Layers
             layer1Title: "Data Layer",
             layer1Desc: "All your sources, unified",
@@ -203,8 +203,8 @@ const translations = {
             skill1Title: "Revenue Intelligence",
             skill1Desc: "Forecast, pipeline, account analysis, revenue trends",
             skill1Ex: "\"What's the revenue forecast for Q2 vs budget?\"",
-            skill2Title: "Accounting & Reconciliations",
-            skill2Desc: "Closes, reconciliations, provisions, financial reporting",
+            skill2Title: "Accounting & Reconciliation",
+            skill2Desc: "Closes, reconciliation, provisions, financial reporting",
             skill2Ex: "\"Show me unreconciled invoices this month\"",
             skill3Title: "Operations",
             skill3Desc: "Inventory, supply chain, efficiency, capacity planning",
@@ -213,7 +213,7 @@ const translations = {
             skill4Desc: "Tax filings, audits, alerts, regulatory monitoring",
             skill4Ex: "\"Are we up to date on tax filings?\"",
             // Quote & CTA
-            quote: "Not just analytics. Institutional memory. Cognitive sovereignty.",
+            quote: "Institutional memory. Cognitive sovereignty. Your competitive edge.",
             cta: "See it in action"
         },
 
@@ -247,17 +247,17 @@ const translations = {
         // Journey Scrollytelling Section
         journey: {
             stage1Title: "We connect your systems",
-            stage1Story: "\"I have data in SAP, HubSpot, spreadsheets... how do I unify them?\"",
+            stage1Story: "SAP, HubSpot, spreadsheets — all unified",
             stage1Desc: "We automatically connect to all your data sources. ERP, CRM, databases, files. +400 connectors available, or we build custom integrations for you.",
             seeConnectors: "See available connectors",
             stage2Title: "We model your information",
-            stage2Story: "\"My data is messy, with duplicates and different formats...\"",
+            stage2Story: "Clean, structured, deduplicated data",
             stage2Desc: "We clean, transform and structure all your information into a unified model. We eliminate duplicates, standardize formats and create relationships between your data.",
             stage3Title: "Knowledge Graph",
-            stage3Story: "\"Nobody knows what each field means or where it comes from...\"",
+            stage3Story: "Traceability and context for every field",
             stage3Desc: "We create a knowledge graph that understands relationships between your data: metrics, entities, KPIs. Complete traceability and context.",
             stage4Title: "AI that understands your business",
-            stage4Story: "\"I want to ask questions without knowing SQL or depending on technicians...\"",
+            stage4Story: "Natural language — no SQL, no technicians needed",
             stage4Desc: "Our AI layer learns your company's context: terminology, key metrics, relationships between areas. It understands when you ask \"how are sales going?\" what data it needs to query.",
             finaleTitle: "The result: decisions with context",
             finaleSubtitle: "Your company's knowledge, activated and accessible to everyone",
@@ -305,7 +305,7 @@ const translations = {
         howWeWork: {
             badge: "Our Process",
             title: "How we work",
-            subtitle: "Not a generic SaaS — a strategic implementation tailored to your organization.",
+            subtitle: "A strategic implementation tailored to your organization — from diagnostic to continuous support.",
             step1Title: "Diagnostic",
             step1Desc: "We map your systems, processes and critical knowledge. We identify where knowledge is lost and where the highest-impact automations are.",
             step1Tag: "Week 1",
@@ -437,7 +437,7 @@ const translations = {
 
         // Footer
         footer: {
-            description: "Centinela connects all your data sources and lets you query them in natural language. No SQL required. No more data silos.",
+            description: "We build the knowledge infrastructure that gives companies sovereignty over their own intelligence. Every decision, informed. Every process, automated.",
             product: "Product",
             features: "Features",
             howItWorks: "How it Works",
@@ -464,7 +464,7 @@ const translations = {
             pageSubtitle: "We build the knowledge infrastructure that gives companies sovereignty over their own intelligence.",
             whatWeDoBadge: "What we build",
             whatWeDoTitle: "The Knowledge Layer for your organization",
-            whatWeDoText1: "Centinela is not another AI chatbot. It is the organizational brain of your company: it connects your systems, captures your business logic, and doesn't just answer questions — it executes actions, generates alerts, and automates complete workflows.",
+            whatWeDoText1: "Centinela is the organizational brain of your company: it connects your systems, captures your business logic, performs analysis, executes actions, generates alerts, and automates complete workflows.",
             whatWeDoText2: "We believe that a company's accumulated knowledge is its most valuable asset — and the most wasted. Our mission is for every organization to have sovereignty over its own intelligence.",
             whoWeServeBadge: "Verticals",
             whoWeServeTitle: "Who we serve",
@@ -612,8 +612,8 @@ const translations = {
             rowOnboarding: "Onboarding",
 
             // Essential values
-            essConnectors: "+400 data connectors",
-            essQueries: "Natural language",
+            essConnectors: "Up to 5 syncs",
+            essQueries: "Up to 200 queries/month",
             essKnowledge: "Basic",
             essDashboards: "Basic access",
             essVerticals: "1 vertical",
@@ -630,8 +630,8 @@ const translations = {
             essOnboarding: "Self-service",
 
             // Growth values
-            groConnectors: "+400 data connectors",
-            groQueries: "Natural language",
+            groConnectors: "Up to 15 syncs",
+            groQueries: "Unlimited queries",
             groKnowledge: "Advanced (context graphs)",
             groDashboards: "Automatic visualizations",
             groVerticals: "Up to 3 verticals",
@@ -648,8 +648,8 @@ const translations = {
             groOnboarding: "Guided (3 weeks)",
 
             // Enterprise values
-            entConnectors: "+400 + custom",
-            entQueries: "Natural language",
+            entConnectors: "Unlimited + custom",
+            entQueries: "Unlimited queries",
             entKnowledge: "Complete (graphs + agent skills)",
             entDashboards: "Visualizations + custom reports",
             entVerticals: "Unlimited",
@@ -684,23 +684,23 @@ const translations = {
             badge: "Soberanía cognitiva para tu empresa",
             titleLine1: "Tu conocimiento.",
             titleLine2: "Tu ventaja competitiva.",
-            description: "Centinela construye el Cerebro Organizacional de tu empresa — conecta tus sistemas, captura tu lógica de negocio y no solo responde preguntas: ejecuta acciones, genera alertas y automatiza workflows completos. Sin depender de APIs externas.",
+            description: "Centinela construye el Cerebro Organizacional de tu empresa — conecta tus sistemas, captura tu lógica de negocio, realiza análisis, ejecuta acciones, genera alertas y automatiza workflows completos. Sin depender de APIs externas.",
             ctaPrimary: "Ver cómo funciona",
             ctaSecondary: "Solicitar demo",
-            loopCapture: "Conectar",
-            loopEmbed: "Modelar",
-            loopOwn: "Decidir"
+            loopCapture: "Conecta",
+            loopEmbed: "Explora",
+            loopOwn: "Actúa"
         },
 
         // The Problem Section - Pérdida de conocimiento
         problem: {
             sectionLabel: "El costo oculto",
-            headline: "Tu empresa sabe más de lo que puede usar",
+            headline: "Conocimiento crítico disperso entre sistemas y personas",
             point1: "El conocimiento vive en la cabeza de 3 personas",
             point2: "Cada nuevo empleado parte de cero",
             point3: "Las decisiones se toman con datos incompletos",
             point4: "La lógica de negocio no está documentada",
-            question: "¿Qué pasaría si el conocimiento acumulado de tu organización estuviera a una pregunta de distancia?",
+            question: "El conocimiento acumulado de tu organización, a una pregunta de distancia.",
             ctaText: "Construye tu capa de conocimiento →"
         },
 
@@ -714,7 +714,7 @@ const translations = {
             title: "Conocimiento activado por vertical",
             subtitle: "Cada departamento tiene su propia capa de conocimiento. Mira cómo Centinela responde con contexto real de tu empresa.",
             // Tab labels
-            tab1: "Reconciliaciones",
+            tab1: "Conciliaciones",
             tab2: "Revenue Intelligence",
             tab3: "Compliance",
             tab4: "Operaciones",
@@ -778,7 +778,7 @@ const translations = {
             stat1Value: "85%",
             stat1Label: "Menos tiempo en cierres contables",
             stat2Value: "90%",
-            stat2Label: "Reconciliación automática de facturas",
+            stat2Label: "Conciliación automática de facturas",
             stat3Value: "3sem",
             stat3Label: "A producción",
             stat4Value: "24/7",
@@ -788,9 +788,9 @@ const translations = {
         // Sección Centinela Actúa - DIFERENCIADOR
         acts: {
             badge: "Más allá de preguntas",
-            title: "Centinela no solo responde.",
-            titleHighlight: "Actúa.",
-            subtitle: "Alertas proactivas, reportes automatizados y acciones restrictivas sobre tus sistemas — todo sin intervención humana.",
+            title: "Centinela analiza, decide y",
+            titleHighlight: "actúa.",
+            subtitle: "Extiende la capacidad de tu equipo con alertas proactivas, reportes automatizados y acciones restrictivas sobre tus sistemas — más rendimiento sin aumentar headcount.",
             act1Title: "Alertas Proactivas",
             act1Desc: "Notificaciones multicanal (WhatsApp, email, SMS) con la información que necesitas antes de que la pidas.",
             act1Example: "Lunes 7am por WhatsApp: 'Tienes 3 facturas de proveedores pendientes de aprobación por $125K. 2 superan el plazo de 30 días. ¿Las marco?'",
@@ -850,7 +850,7 @@ const translations = {
             badge: "Infraestructura de Conocimiento",
             title: "Capa de Conocimiento.",
             titleHighlight: "Grafos de Contexto.",
-            subtitle: "No es un chatbot que responde preguntas. Es infraestructura que captura, preserva y activa el conocimiento de tu empresa — la lógica, relaciones y razonamiento detrás de cada decisión. Tu soberanía cognitiva.",
+            subtitle: "Infraestructura que captura, preserva y activa el conocimiento de tu empresa — la lógica, relaciones y razonamiento detrás de cada decisión. Tu soberanía cognitiva.",
             // Capas de Conocimiento
             layer1Title: "Capa de Datos",
             layer1Desc: "Todas tus fuentes, unificadas",
@@ -864,7 +864,7 @@ const translations = {
             skill1Title: "Revenue Intelligence",
             skill1Desc: "Forecast, pipeline, análisis de cuentas, tendencias de ingresos",
             skill1Ex: "\"¿Cuál es el revenue forecast para Q2 vs presupuesto?\"",
-            skill2Title: "Contabilidad & Reconciliaciones",
+            skill2Title: "Contabilidad & Conciliaciones",
             skill2Desc: "Cierres, conciliaciones, provisiones, reportes financieros",
             skill2Ex: "\"Muéstrame facturas sin conciliar este mes\"",
             skill3Title: "Operaciones",
@@ -874,7 +874,7 @@ const translations = {
             skill4Desc: "Declaraciones, auditorías, alertas, monitoreo regulatorio",
             skill4Ex: "\"¿Estamos al día con las declaraciones tributarias?\"",
             // Quote & CTA
-            quote: "No es solo analytics. Memoria institucional. Soberanía cognitiva.",
+            quote: "Memoria institucional. Soberanía cognitiva. Tu ventaja competitiva.",
             cta: "Verlo en acción"
         },
 
@@ -908,17 +908,17 @@ const translations = {
         // Journey Scrollytelling Section
         journey: {
             stage1Title: "Conectamos tus sistemas",
-            stage1Story: "\"Tengo datos en SAP, HubSpot, hojas de cálculo... ¿cómo los uno?\"",
+            stage1Story: "SAP, HubSpot, hojas de cálculo — todo unificado",
             stage1Desc: "Nos conectamos automáticamente a todas tus fuentes de datos. ERP, CRM, bases de datos, archivos. +400 conectores disponibles, o creamos integraciones custom para ti.",
             seeConnectors: "Ver conectores disponibles",
             stage2Title: "Modelamos tu información",
-            stage2Story: "\"Mis datos están sucios, con duplicados y formatos diferentes...\"",
+            stage2Story: "Datos limpios, estructurados, deduplicados",
             stage2Desc: "Limpiamos, transformamos y estructuramos toda tu información en un modelo unificado. Eliminamos duplicados, estandarizamos formatos y creamos relaciones entre tus datos.",
             stage3Title: "Grafo de conocimiento",
-            stage3Story: "\"Nadie sabe qué significa cada campo o de dónde viene...\"",
+            stage3Story: "Trazabilidad y contexto para cada campo",
             stage3Desc: "Creamos un grafo de conocimiento que entiende las relaciones entre tus datos: métricas, entidades, KPIs. Trazabilidad completa y contexto.",
             stage4Title: "IA que entiende tu negocio",
-            stage4Story: "\"Quiero preguntar cosas sin saber SQL ni depender de técnicos...\"",
+            stage4Story: "Lenguaje natural — sin SQL, sin depender de técnicos",
             stage4Desc: "Nuestra capa de IA aprende el contexto de tu empresa: terminología, métricas clave, relaciones entre áreas. Entiende cuando preguntas \"¿cómo van las ventas?\" qué datos necesita consultar.",
             finaleTitle: "El resultado: decisiones con contexto",
             finaleSubtitle: "El conocimiento de tu empresa, activado y accesible para todos",
@@ -966,7 +966,7 @@ const translations = {
         howWeWork: {
             badge: "Nuestro Proceso",
             title: "Cómo trabajamos",
-            subtitle: "No es un SaaS genérico — es una implementación estratégica adaptada a tu organización.",
+            subtitle: "Una implementación estratégica adaptada a tu organización — desde diagnóstico hasta soporte continuo.",
             step1Title: "Diagnóstico",
             step1Desc: "Mapeamos tus sistemas, procesos y conocimiento crítico. Identificamos dónde se pierde conocimiento y dónde están las automatizaciones de mayor impacto.",
             step1Tag: "Semana 1",
@@ -1098,7 +1098,7 @@ const translations = {
 
         // Footer
         footer: {
-            description: "Centinela conecta todas tus fuentes de datos y te permite consultarlas en lenguaje natural. Sin SQL. Sin más silos de datos.",
+            description: "Construimos la infraestructura de conocimiento que le da a las empresas soberanía sobre su propia inteligencia. Cada decisión, informada. Cada proceso, automatizado.",
             product: "Producto",
             features: "Características",
             howItWorks: "Cómo Funciona",
@@ -1125,7 +1125,7 @@ const translations = {
             pageSubtitle: "Construimos la infraestructura de conocimiento que le da a las empresas soberanía sobre su propia inteligencia.",
             whatWeDoBadge: "Lo que construimos",
             whatWeDoTitle: "La Capa de Conocimiento para tu organización",
-            whatWeDoText1: "Centinela no es otro chatbot de IA. Es el cerebro organizacional de tu empresa: conecta tus sistemas, captura tu lógica de negocio y no solo responde preguntas — ejecuta acciones, genera alertas y automatiza workflows completos.",
+            whatWeDoText1: "Centinela es el cerebro organizacional de tu empresa: conecta tus sistemas, captura tu lógica de negocio, realiza análisis, ejecuta acciones, genera alertas y automatiza workflows completos.",
             whatWeDoText2: "Creemos que el conocimiento acumulado de una empresa es su activo más valioso — y el más desperdiciado. Nuestra misión es que cada organización tenga soberanía sobre su propia inteligencia.",
             whoWeServeBadge: "Verticales",
             whoWeServeTitle: "A quién servimos",
@@ -1273,8 +1273,8 @@ const translations = {
             rowOnboarding: "Onboarding",
 
             // Essential values
-            essConnectors: "+400 conectores de datos",
-            essQueries: "Lenguaje natural",
+            essConnectors: "Hasta 5 sincronizaciones",
+            essQueries: "Hasta 200 consultas/mes",
             essKnowledge: "Básico",
             essDashboards: "Acceso básico",
             essVerticals: "1 vertical",
@@ -1291,8 +1291,8 @@ const translations = {
             essOnboarding: "Self-service",
 
             // Growth values
-            groConnectors: "+400 conectores de datos",
-            groQueries: "Lenguaje natural",
+            groConnectors: "Hasta 15 sincronizaciones",
+            groQueries: "Consultas ilimitadas",
             groKnowledge: "Avanzado (grafos de contexto)",
             groDashboards: "Visualizaciones automáticas",
             groVerticals: "Hasta 3 verticales",
@@ -1309,8 +1309,8 @@ const translations = {
             groOnboarding: "Guiado (3 semanas)",
 
             // Enterprise values
-            entConnectors: "+400 + custom",
-            entQueries: "Lenguaje natural",
+            entConnectors: "Ilimitadas + custom",
+            entQueries: "Consultas ilimitadas",
             entKnowledge: "Completo (grafos + agent skills)",
             entDashboards: "Visualizaciones + reportes custom",
             entVerticals: "Ilimitadas",
