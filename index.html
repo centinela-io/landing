@@ -1635,32 +1635,32 @@
             font-weight: 600;
         }
 
-        /* Tier Cards */
+        /* Tier Cards - Agility-style */
         .pricing-tiers {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
             margin-bottom: 3rem;
+            align-items: start;
         }
 
         .pricing-tier-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
             position: relative;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .pricing-tier-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
         }
 
         .pricing-tier-popular {
             border-color: var(--accent);
-            box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(99, 102, 241, 0.2);
+            box-shadow: 0 0 0 1px var(--accent), 0 8px 32px rgba(99, 102, 241, 0.15);
         }
 
         .pricing-popular-badge {
@@ -1670,35 +1670,70 @@
             transform: translateX(-50%);
             background: var(--gradient-accent);
             color: white;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            padding: 4px 16px;
+            padding: 5px 18px;
             border-radius: 100px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .pricing-tier-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-tier-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(11, 213, 224, 0.1));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .pricing-tier-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--accent);
+        }
+
+        .pricing-tier-icon.enterprise-icon {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(99, 102, 241, 0.1));
+        }
+
+        .pricing-tier-icon.enterprise-icon svg {
+            stroke: #a855f7;
+        }
+
+        .pricing-tier-popular .pricing-tier-icon {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(11, 213, 224, 0.15));
         }
 
         .pricing-tier-name {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             font-weight: 700;
             color: var(--text-primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.35rem;
         }
 
         .pricing-tier-tagline {
             font-size: 0.9rem;
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
+            line-height: 1.4;
         }
 
         .pricing-tier-price {
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
         .pricing-amount {
-            font-size: 2.5rem;
+            font-size: 2.75rem;
             font-weight: 800;
             color: var(--text-primary);
+            line-height: 1.1;
         }
 
         .pricing-period {
@@ -1706,10 +1741,67 @@
             color: var(--text-secondary);
         }
 
+        .pricing-tier-note {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+            margin-bottom: 1.5rem;
+        }
+
         .pricing-tier-cta {
             width: 100%;
             display: block;
             text-align: center;
+        }
+
+        .pricing-tier-divider {
+            height: 1px;
+            background: var(--border-color);
+            margin: 1.5rem 0;
+        }
+
+        /* Feature list inside cards */
+        .pricing-feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .pricing-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.875rem;
+            line-height: 1.4;
+        }
+
+        .pricing-feature-item svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .pricing-feature-item.included svg {
+            stroke: #10b981;
+        }
+
+        .pricing-feature-item.included span {
+            color: var(--text-primary);
+        }
+
+        .pricing-feature-item.excluded svg {
+            stroke: var(--text-tertiary);
+            opacity: 0.5;
+        }
+
+        .pricing-feature-item.excluded span {
+            color: var(--text-tertiary);
         }
 
         /* Feature Comparison Table */
@@ -7752,37 +7844,89 @@
                 </div>
             </div>
 
-            <!-- 3 Tier Cards -->
+            <!-- 3 Tier Cards - Agility-style -->
             <div class="pricing-tiers reveal">
                 <!-- Essential -->
                 <div class="pricing-tier-card">
-                    <div class="pricing-tier-name" data-i18n="pricing.essentialName">Essential</div>
-                    <div class="pricing-tier-tagline" data-i18n="pricing.essentialTagline">Conexión de datos self-service</div>
+                    <div class="pricing-tier-header">
+                        <div class="pricing-tier-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <div class="pricing-tier-name" data-i18n="pricing.essentialName">Essential</div>
+                        <div class="pricing-tier-tagline" data-i18n="pricing.essentialTagline">Conexión de datos self-service</div>
+                    </div>
                     <div class="pricing-tier-price">
                         <span class="pricing-amount" data-i18n="pricing.essentialPrice">$3,500</span>
                         <span class="pricing-period" data-i18n="pricing.perMonth">/mes</span>
                     </div>
+                    <div class="pricing-tier-note" data-i18n="pricing.essentialNote">Conecta y consulta por tu cuenta</div>
                     <a href="pages/contact.html" class="btn btn-secondary pricing-tier-cta" data-i18n="pricing.getStarted">Comenzar</a>
+                    <div class="pricing-tier-divider"></div>
+                    <ul class="pricing-feature-list">
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.essConnectors">Hasta 5 sincronizaciones</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.essQueries">Hasta 200 consultas/mes</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureNL">Consultas en lenguaje natural</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureDashboard">Acceso básico a dashboards</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.essVerticals">1 vertical</span></li>
+                        <li class="pricing-feature-item excluded"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span data-i18n="pricing.featureNoSupport">Sin soporte dedicado</span></li>
+                        <li class="pricing-feature-item excluded"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span data-i18n="pricing.featureNoMeetings">Sin reuniones estratégicas</span></li>
+                        <li class="pricing-feature-item excluded"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span data-i18n="pricing.featureNoAutomations">Sin automatizaciones</span></li>
+                    </ul>
                 </div>
                 <!-- Growth (Popular) -->
                 <div class="pricing-tier-card pricing-tier-popular">
                     <div class="pricing-popular-badge" data-i18n="pricing.popular">Más Popular</div>
-                    <div class="pricing-tier-name" data-i18n="pricing.growthName">Growth</div>
-                    <div class="pricing-tier-tagline" data-i18n="pricing.growthTagline">Soporte completo y mejora continua</div>
+                    <div class="pricing-tier-header">
+                        <div class="pricing-tier-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        </div>
+                        <div class="pricing-tier-name" data-i18n="pricing.growthName">Growth</div>
+                        <div class="pricing-tier-tagline" data-i18n="pricing.growthTagline">Soporte completo y mejora continua</div>
+                    </div>
                     <div class="pricing-tier-price">
                         <span class="pricing-amount" data-i18n="pricing.growthPrice">$5,000</span>
                         <span class="pricing-period" data-i18n="pricing.perMonth">/mes</span>
                     </div>
+                    <div class="pricing-tier-note" data-i18n="pricing.growthNote">Todo lo que necesitas para escalar</div>
                     <a href="pages/contact.html" class="btn btn-primary pricing-tier-cta" data-i18n="pricing.getStarted">Comenzar</a>
+                    <div class="pricing-tier-divider"></div>
+                    <ul class="pricing-feature-list">
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.groConnectors">Hasta 15 sincronizaciones</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.groQueries">Consultas ilimitadas</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureAutoViz">Visualizaciones automáticas</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.groKnowledge">Avanzado (grafos de contexto)</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.groVerticals">Hasta 3 verticales</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureSupport">Equipo de soporte dedicado</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureMeetings">Reuniones semanales de estrategia</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureImprovements">Mejoras incrementales</span></li>
+                        <li class="pricing-feature-item excluded"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span data-i18n="pricing.featureNoActions">Sin acciones en sistemas</span></li>
+                    </ul>
                 </div>
                 <!-- Enterprise -->
                 <div class="pricing-tier-card">
-                    <div class="pricing-tier-name" data-i18n="pricing.enterpriseName">Enterprise</div>
-                    <div class="pricing-tier-tagline" data-i18n="pricing.enterpriseTagline">Automatización completa y acciones</div>
+                    <div class="pricing-tier-header">
+                        <div class="pricing-tier-icon enterprise-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div class="pricing-tier-name" data-i18n="pricing.enterpriseName">Enterprise</div>
+                        <div class="pricing-tier-tagline" data-i18n="pricing.enterpriseTagline">Automatización completa y acciones</div>
+                    </div>
                     <div class="pricing-tier-price">
                         <span class="pricing-amount" data-i18n="pricing.enterprisePrice">A medida</span>
                     </div>
+                    <div class="pricing-tier-note" data-i18n="pricing.enterpriseNote">Automatización total de datos</div>
                     <a href="pages/contact.html" class="btn btn-secondary pricing-tier-cta" data-i18n="pricing.contactSales">Contactar Ventas</a>
+                    <div class="pricing-tier-divider"></div>
+                    <ul class="pricing-feature-list">
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureEverything">Todo en Growth</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.entConnectors">Ilimitadas + custom</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureActions">Acciones y automatizaciones</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureWorkflows">Automatización de flujos custom</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureAlerts">Alertas y triggers automáticos</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featurePriority">Soporte prioritario (24/7)</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.featureCustom">Integraciones personalizadas</span></li>
+                        <li class="pricing-feature-item included"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="pricing.entVerticals">Ilimitadas</span></li>
+                    </ul>
                 </div>
             </div>
 
@@ -7892,7 +8036,7 @@
         </div>
     </footer>
 
-    <script src="js/i18n.js?v=4"></script>
+    <script src="js/i18n.js?v=5"></script>
     <script>
         // Graph animation
         class SubtleGraph {
