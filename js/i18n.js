@@ -20,10 +20,10 @@ const translations = {
 
         // Hero Section - COGNITIVE SOVEREIGNTY
         hero: {
-            badge: "Cognitive sovereignty for your company",
+            badge: "The infrastructure for organizational intelligence",
             titleLine1: "Your knowledge.",
             titleLine2: "Your competitive edge.",
-            description: "Centinela builds your Organizational Brain — connects your systems, captures your business logic, performs analysis, executes actions, generates alerts, and automates complete workflows. Without depending on external APIs.",
+            description: "Centinela is a next-gen knowledge infrastructure — purpose-built for regulated industries. It connects your systems, captures your business logic, performs analysis, executes actions, and automates complete workflows.",
             ctaPrimary: "See how it works",
             ctaSecondary: "Request demo",
             loopCapture: "Connect",
@@ -129,7 +129,7 @@ const translations = {
             badge: "Beyond Q&A",
             title: "Centinela analyzes, decides, and",
             titleHighlight: "acts.",
-            subtitle: "Extends your team's capacity with proactive alerts, automated reports, and restrictive actions on your systems — augmenting performance without increasing headcount.",
+            subtitle: "Scale your enterprise with software before headcount. Proactive alerts, automated reports, and restrictive actions on your systems — augmenting performance without growing your team.",
             act1Title: "Proactive Alerts",
             act1Desc: "Multi-channel notifications (WhatsApp, email, SMS) with the information you need before you ask for it.",
             act1Example: "Monday 7am via WhatsApp: 'You have 3 supplier invoices pending approval for $125K. 2 exceed the 30-day term. Shall I flag them?'",
@@ -144,7 +144,7 @@ const translations = {
         // Features Section - THE DATA STACK
         features: {
             title: "How It Works",
-            subtitle: "All your data sources, unified and queryable",
+            subtitle: "Empower anyone to uncover insights, automate workflows, and drive actions with AI",
             feature1Title: "Connect Everything",
             feature1Desc: "ERPs, CRMs, databases, spreadsheets, APIs—connect every data source your business uses. +400 connectors available.",
             feature1Item1: "+400 pre-built connectors",
@@ -176,8 +176,8 @@ const translations = {
 
         // Real Integrations Section
         integrations: {
-            title: "Connects with the systems you already use",
-            subtitle: "Not generic connectors — real integrations tested in production with our clients.",
+            title: "Your existing applications, integrated with AI",
+            subtitle: "Centinela seamlessly integrates with all your enterprise data sources, eliminating the need to navigate multiple systems.",
             cat1: "ERPs & Accounting",
             cat2: "Operations & CRM",
             cat3: "Communication & Alerts",
@@ -189,7 +189,7 @@ const translations = {
             badge: "Knowledge Infrastructure",
             title: "Knowledge Layer.",
             titleHighlight: "Context Graphs.",
-            subtitle: "Infrastructure that captures, preserves, and activates your company's knowledge — the logic, relationships, and reasoning behind every decision. Your cognitive sovereignty.",
+            subtitle: "One platform, with your entire knowledge base. Context graphs, decision infrastructure, and agent evaluation that capture, preserve, and activate your company's intelligence. Your cognitive sovereignty.",
             // Knowledge Layers
             layer1Title: "Data Layer",
             layer1Desc: "All your sources, unified",
@@ -258,9 +258,9 @@ const translations = {
             stage3Desc: "We create a knowledge graph that understands relationships between your data: metrics, entities, KPIs. Complete traceability and context.",
             stage4Title: "AI that understands your business",
             stage4Story: "Natural language — no SQL, no technicians needed",
-            stage4Desc: "Our AI layer learns your company's context: terminology, key metrics, relationships between areas. It understands when you ask \"how are sales going?\" what data it needs to query.",
+            stage4Desc: "Like a new team member, Centinela's memory management system incorporates your business SOPs, enterprise objectives, and strategic initiatives. It understands your terminology, metrics, and relationships.",
             finaleTitle: "The result: decisions with context",
-            finaleSubtitle: "Your company's knowledge, activated and accessible to everyone",
+            finaleSubtitle: "One platform, with your entire knowledge base — activated and accessible to everyone",
             output1Title: "Ask in plain English",
             output1Desc: "\"How much did we sell last month vs last year?\" — answer in seconds, with data from all your sources.",
             output2Title: "Automatic dashboards",
@@ -305,7 +305,7 @@ const translations = {
         howWeWork: {
             badge: "Our Process",
             title: "How we work",
-            subtitle: "A strategic implementation tailored to your organization — from diagnostic to continuous support.",
+            subtitle: "Purpose-built for regulated industries. A strategic implementation tailored to your organization — from diagnostic to continuous support.",
             step1Title: "Diagnostic",
             step1Desc: "We map your systems, processes and critical knowledge. We identify where knowledge is lost and where the highest-impact automations are.",
             step1Tag: "Week 1",
@@ -361,8 +361,8 @@ const translations = {
 
         // CTA Section
         cta: {
-            title: "Ready to build your knowledge layer?",
-            description: "Stop depending on scattered data and generic APIs. Build your company's cognitive sovereignty.",
+            title: "Invite Centinela to your team",
+            description: "Centinela manages complex analysis and operational workflows — including finance, audit, compliance, and operations. Build your company's cognitive sovereignty.",
             btnPrimary: "Request demo",
             btnSecondary: "Let's talk"
         },
@@ -480,8 +480,8 @@ const translations = {
             pageSubtitle: "We build the knowledge infrastructure that gives companies sovereignty over their own intelligence.",
             whatWeDoBadge: "What we build",
             whatWeDoTitle: "The Knowledge Layer for your organization",
-            whatWeDoText1: "Centinela is the organizational brain of your company: it connects your systems, captures your business logic, performs analysis, executes actions, generates alerts, and automates complete workflows.",
-            whatWeDoText2: "We believe that a company's accumulated knowledge is its most valuable asset — and the most wasted. Our mission is for every organization to have sovereignty over its own intelligence.",
+            whatWeDoText1: "Centinela is a next-gen knowledge infrastructure, purpose-built for regulated industries. It connects your systems, captures your business logic, performs analysis, executes actions, and automates complete workflows.",
+            whatWeDoText2: "Like a new team member, Centinela incorporates user preferences, business SOPs, enterprise objectives, and strategic initiatives. Our mission is for every organization to have sovereignty over its own intelligence.",
             whoWeServeBadge: "Verticals",
             whoWeServeTitle: "Who we serve",
             whoWeServeSubtitle: "We work with companies that generate critical knowledge and can't afford to lose it.",
@@ -697,10 +697,10 @@ const translations = {
 
         // Hero Section - SOBERANÍA COGNITIVA
         hero: {
-            badge: "Soberanía cognitiva para tu empresa",
+            badge: "La infraestructura para la inteligencia organizacional",
             titleLine1: "Tu conocimiento.",
             titleLine2: "Tu ventaja competitiva.",
-            description: "Centinela construye el Cerebro Organizacional de tu empresa — conecta tus sistemas, captura tu lógica de negocio, realiza análisis, ejecuta acciones, genera alertas y automatiza workflows completos. Sin depender de APIs externas.",
+            description: "Centinela es una infraestructura de conocimiento de nueva generación — diseñada para industrias reguladas. Conecta tus sistemas, captura tu lógica de negocio, realiza análisis, ejecuta acciones y automatiza workflows completos.",
             ctaPrimary: "Ver cómo funciona",
             ctaSecondary: "Solicitar demo",
             loopCapture: "Conecta",
@@ -806,7 +806,7 @@ const translations = {
             badge: "Más allá de preguntas",
             title: "Centinela analiza, decide y",
             titleHighlight: "actúa.",
-            subtitle: "Extiende la capacidad de tu equipo con alertas proactivas, reportes automatizados y acciones restrictivas sobre tus sistemas — más rendimiento sin aumentar headcount.",
+            subtitle: "Escala tu empresa con software antes que con headcount. Alertas proactivas, reportes automatizados y acciones restrictivas sobre tus sistemas — más rendimiento sin crecer el equipo.",
             act1Title: "Alertas Proactivas",
             act1Desc: "Notificaciones multicanal (WhatsApp, email, SMS) con la información que necesitas antes de que la pidas.",
             act1Example: "Lunes 7am por WhatsApp: 'Tienes 3 facturas de proveedores pendientes de aprobación por $125K. 2 superan el plazo de 30 días. ¿Las marco?'",
@@ -821,7 +821,7 @@ const translations = {
         // Features Section - THE DATA STACK
         features: {
             title: "Cómo Funciona",
-            subtitle: "Todas tus fuentes de datos, unificadas y consultables",
+            subtitle: "Empodera a cualquiera para descubrir insights, automatizar workflows y ejecutar acciones con IA",
             feature1Title: "Conecta Todo",
             feature1Desc: "ERPs, CRMs, bases de datos, hojas de cálculo, APIs—conecta cada fuente de datos que tu empresa usa. +400 conectores disponibles.",
             feature1Item1: "+400 conectores pre-construidos",
@@ -853,8 +853,8 @@ const translations = {
 
         // Sección Integraciones Reales
         integrations: {
-            title: "Se conecta con los sistemas que ya usas",
-            subtitle: "No son conectores genéricos — integraciones reales probadas en producción con nuestros clientes.",
+            title: "Tus aplicaciones actuales, integradas con IA",
+            subtitle: "Centinela se integra con todas tus fuentes de datos empresariales, eliminando la necesidad de navegar múltiples sistemas.",
             cat1: "ERPs y Contabilidad",
             cat2: "Operaciones y CRM",
             cat3: "Comunicación y Alertas",
@@ -866,7 +866,7 @@ const translations = {
             badge: "Infraestructura de Conocimiento",
             title: "Capa de Conocimiento.",
             titleHighlight: "Grafos de Contexto.",
-            subtitle: "Infraestructura que captura, preserva y activa el conocimiento de tu empresa — la lógica, relaciones y razonamiento detrás de cada decisión. Tu soberanía cognitiva.",
+            subtitle: "Una plataforma, con toda tu base de conocimiento. Grafos de contexto, infraestructura de decisión y evaluación de agentes que capturan, preservan y activan la inteligencia de tu empresa. Tu soberanía cognitiva.",
             // Capas de Conocimiento
             layer1Title: "Capa de Datos",
             layer1Desc: "Todas tus fuentes, unificadas",
@@ -935,9 +935,9 @@ const translations = {
             stage3Desc: "Creamos un grafo de conocimiento que entiende las relaciones entre tus datos: métricas, entidades, KPIs. Trazabilidad completa y contexto.",
             stage4Title: "IA que entiende tu negocio",
             stage4Story: "Lenguaje natural — sin SQL, sin depender de técnicos",
-            stage4Desc: "Nuestra capa de IA aprende el contexto de tu empresa: terminología, métricas clave, relaciones entre áreas. Entiende cuando preguntas \"¿cómo van las ventas?\" qué datos necesita consultar.",
+            stage4Desc: "Como un nuevo miembro del equipo, el sistema de memoria de Centinela incorpora los SOPs de tu negocio, objetivos empresariales e iniciativas estratégicas. Entiende tu terminología, métricas y relaciones.",
             finaleTitle: "El resultado: decisiones con contexto",
-            finaleSubtitle: "El conocimiento de tu empresa, activado y accesible para todos",
+            finaleSubtitle: "Una plataforma, con toda tu base de conocimiento — activada y accesible para todos",
             output1Title: "Pregunta en español",
             output1Desc: "\"¿Cuánto vendimos el mes pasado vs el año anterior?\" — respuesta en segundos, con datos de todas tus fuentes.",
             output2Title: "Dashboards automáticos",
@@ -982,7 +982,7 @@ const translations = {
         howWeWork: {
             badge: "Nuestro Proceso",
             title: "Cómo trabajamos",
-            subtitle: "Una implementación estratégica adaptada a tu organización — desde diagnóstico hasta soporte continuo.",
+            subtitle: "Diseñado para industrias reguladas. Una implementación estratégica adaptada a tu organización — desde diagnóstico hasta soporte continuo.",
             step1Title: "Diagnóstico",
             step1Desc: "Mapeamos tus sistemas, procesos y conocimiento crítico. Identificamos dónde se pierde conocimiento y dónde están las automatizaciones de mayor impacto.",
             step1Tag: "Semana 1",
@@ -1038,8 +1038,8 @@ const translations = {
 
         // CTA Section
         cta: {
-            title: "¿Listo para construir tu capa de conocimiento?",
-            description: "Deja de depender de datos dispersos y APIs genéricas. Construye la soberanía cognitiva de tu empresa.",
+            title: "Invita a Centinela a tu equipo",
+            description: "Centinela gestiona análisis complejos y workflows operacionales — incluyendo finanzas, auditoría, compliance y operaciones. Construye la soberanía cognitiva de tu empresa.",
             btnPrimary: "Solicitar demo",
             btnSecondary: "Hablemos"
         },
@@ -1157,8 +1157,8 @@ const translations = {
             pageSubtitle: "Construimos la infraestructura de conocimiento que le da a las empresas soberanía sobre su propia inteligencia.",
             whatWeDoBadge: "Lo que construimos",
             whatWeDoTitle: "La Capa de Conocimiento para tu organización",
-            whatWeDoText1: "Centinela es el cerebro organizacional de tu empresa: conecta tus sistemas, captura tu lógica de negocio, realiza análisis, ejecuta acciones, genera alertas y automatiza workflows completos.",
-            whatWeDoText2: "Creemos que el conocimiento acumulado de una empresa es su activo más valioso — y el más desperdiciado. Nuestra misión es que cada organización tenga soberanía sobre su propia inteligencia.",
+            whatWeDoText1: "Centinela es una infraestructura de conocimiento de nueva generación, diseñada para industrias reguladas. Conecta tus sistemas, captura tu lógica de negocio, realiza análisis, ejecuta acciones y automatiza workflows completos.",
+            whatWeDoText2: "Como un nuevo miembro del equipo, Centinela incorpora las preferencias de usuario, SOPs de negocio, objetivos empresariales e iniciativas estratégicas. Nuestra misión es que cada organización tenga soberanía sobre su propia inteligencia.",
             whoWeServeBadge: "Verticales",
             whoWeServeTitle: "A quién servimos",
             whoWeServeSubtitle: "Trabajamos con empresas que generan conocimiento crítico y no pueden darse el lujo de perderlo.",
