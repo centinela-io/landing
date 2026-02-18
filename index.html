@@ -5920,6 +5920,193 @@
             stroke: var(--accent);
         }
 
+        /* AI Security Section */
+        .ai-security-section {
+            margin-bottom: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .ai-security-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ai-security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 8px 16px;
+            background: rgba(168, 85, 247, 0.1);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a855f7;
+            margin-bottom: 1.5rem;
+        }
+
+        .ai-security-badge svg {
+            width: 16px;
+            height: 16px;
+            stroke: #a855f7;
+        }
+
+        .ai-security-header h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .ai-security-header > p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+            line-height: 1.7;
+        }
+
+        .powered-by-pangea {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 8px 20px;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .powered-by-pangea strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .pangea-divider {
+            color: var(--border-color);
+        }
+
+        .pangea-cs {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+
+        /* AI Threat Grid */
+        .ai-threat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .ai-threat-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ai-threat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #a855f7, #6366f1);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .ai-threat-card:hover {
+            border-color: #a855f7;
+            transform: translateY(-6px);
+            box-shadow: 0 16px 32px rgba(168, 85, 247, 0.15);
+        }
+
+        .ai-threat-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .ai-threat-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(99, 102, 241, 0.1));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .ai-threat-icon svg {
+            width: 26px;
+            height: 26px;
+            stroke: #a855f7;
+        }
+
+        .ai-threat-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .ai-threat-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* AI Security Stats */
+        .ai-security-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            padding: 2rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+        }
+
+        .ai-stat {
+            text-align: center;
+        }
+
+        .ai-stat-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a855f7, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+        }
+
+        .ai-stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .ai-stat-divider {
+            width: 1px;
+            height: 50px;
+            background: var(--border-color);
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .certifications-grid {
@@ -5943,6 +6130,10 @@
             .shield-inner svg {
                 width: 45px;
                 height: 45px;
+            }
+
+            .ai-threat-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -5971,6 +6162,28 @@
 
             .trust-cta .btn {
                 width: 100%;
+            }
+
+            .ai-threat-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ai-security-header h3 {
+                font-size: 1.5rem;
+            }
+
+            .ai-security-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .ai-stat-divider {
+                width: 60px;
+                height: 1px;
+            }
+
+            .ai-stat-value {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -7122,6 +7335,72 @@
                 </div>
             </div>
 
+            <!-- AI Security Section - Powered by Pangea -->
+            <div class="ai-security-section reveal">
+                <div class="ai-security-header">
+                    <div class="ai-security-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        <span data-i18n="security.aiBadge">AI Security</span>
+                    </div>
+                    <h3 data-i18n="security.aiTitle">Seguridad nativa para agentes de IA</h3>
+                    <p data-i18n="security.aiSubtitle">Protección en tiempo real contra amenazas específicas de IA. Guardrails enterprise-grade que bloquean ataques, previenen fuga de datos y aseguran que cada interacción con tus agentes sea segura.</p>
+                    <div class="powered-by-pangea">
+                        <span data-i18n="security.poweredBy">Powered by</span>
+                        <strong>Pangea</strong> <span class="pangea-divider">|</span> <span class="pangea-cs">CrowdStrike</span>
+                    </div>
+                </div>
+
+                <!-- AI Threat Protection Cards -->
+                <div class="ai-threat-grid">
+                    <div class="ai-threat-card">
+                        <div class="ai-threat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                        </div>
+                        <h4 data-i18n="security.aiThreat1Title">Prompt Injection</h4>
+                        <p data-i18n="security.aiThreat1Desc">Detección y bloqueo automático de intentos de manipulación de prompts y jailbreaks en tiempo real.</p>
+                    </div>
+                    <div class="ai-threat-card">
+                        <div class="ai-threat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h4 data-i18n="security.aiThreat2Title">Data Leakage</h4>
+                        <p data-i18n="security.aiThreat2Desc">Prevención de fuga de datos sensibles y PII. Redacción, enmascaramiento y cifrado automático.</p>
+                    </div>
+                    <div class="ai-threat-card">
+                        <div class="ai-threat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4M12 16h.01"/></svg>
+                        </div>
+                        <h4 data-i18n="security.aiThreat3Title">AI Guardrails</h4>
+                        <p data-i18n="security.aiThreat3Desc">Guardrails enterprise-grade para agentes y aplicaciones de IA. Control de gobernanza, tópicos y contenido.</p>
+                    </div>
+                    <div class="ai-threat-card">
+                        <div class="ai-threat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h4 data-i18n="security.aiThreat4Title">Audit Trail</h4>
+                        <p data-i18n="security.aiThreat4Desc">Todas las acciones registradas y citadas para transparencia. Historial completo disponible para auditoría.</p>
+                    </div>
+                </div>
+
+                <!-- AI Security Stats -->
+                <div class="ai-security-stats">
+                    <div class="ai-stat">
+                        <span class="ai-stat-value">169+</span>
+                        <span class="ai-stat-label" data-i18n="security.aiStat1">Técnicas de ataque detectadas</span>
+                    </div>
+                    <div class="ai-stat-divider"></div>
+                    <div class="ai-stat">
+                        <span class="ai-stat-value">&gt;99%</span>
+                        <span class="ai-stat-label" data-i18n="security.aiStat2">Precisión de detección</span>
+                    </div>
+                    <div class="ai-stat-divider"></div>
+                    <div class="ai-stat">
+                        <span class="ai-stat-value">~5-40ms</span>
+                        <span class="ai-stat-label" data-i18n="security.aiStat3">Latencia de guardrails</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Trust Banner -->
             <div class="trust-banner reveal">
                 <div class="trust-text">
@@ -7613,7 +7892,7 @@
         </div>
     </footer>
 
-    <script src="js/i18n.js?v=3"></script>
+    <script src="js/i18n.js?v=4"></script>
     <script>
         // Graph animation
         class SubtleGraph {
