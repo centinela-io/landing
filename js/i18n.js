@@ -20,10 +20,10 @@ const translations = {
 
         // Hero Section - COGNITIVE SOVEREIGNTY
         hero: {
-            badge: "The infrastructure for organizational intelligence",
+            badge: "Cognitive sovereignty for your company",
             titleLine1: "Your knowledge.",
             titleLine2: "Your competitive edge.",
-            description: "Centinela is a next-gen knowledge infrastructure — purpose-built for regulated industries. It connects your systems, captures your business logic, performs analysis, executes actions, and automates complete workflows.",
+            description: "The infrastructure for organizational intelligence — purpose-built for regulated industries. Centinela connects your systems, captures your business logic, performs analysis, executes actions, and automates complete workflows.",
             ctaPrimary: "See how it works",
             ctaSecondary: "Request demo",
             loopCapture: "Connect",
@@ -697,10 +697,10 @@ const translations = {
 
         // Hero Section - SOBERANÍA COGNITIVA
         hero: {
-            badge: "La infraestructura para la inteligencia organizacional",
+            badge: "Soberanía cognitiva para tu empresa",
             titleLine1: "Tu conocimiento.",
             titleLine2: "Tu ventaja competitiva.",
-            description: "Centinela es una infraestructura de conocimiento de nueva generación — diseñada para industrias reguladas. Conecta tus sistemas, captura tu lógica de negocio, realiza análisis, ejecuta acciones y automatiza workflows completos.",
+            description: "La infraestructura para la inteligencia organizacional — diseñada para industrias reguladas. Centinela conecta tus sistemas, captura tu lógica de negocio, realiza análisis, ejecuta acciones y automatiza workflows completos.",
             ctaPrimary: "Ver cómo funciona",
             ctaSecondary: "Solicitar demo",
             loopCapture: "Conecta",
